@@ -39,4 +39,6 @@
   "U" 'undo-tree-visualize
   "f" 'avy-goto-char-timer
   "F" 'avy-goto-line
+
+  "g b" 'helm-bookmarks
 )
