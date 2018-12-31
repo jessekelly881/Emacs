@@ -30,3 +30,10 @@
 (general-create-definer settings-leader-key :prefix "SPC s")
 
 ;;Core Bindings
+(general-def 'normal
+  "<escape>" 'save-buffer
+  "<SPC><SPC>" 'helm-M-x
+  "q" 'delete-frame
+  "Q" 'kill-emacs
+  "U" 'undo-tree-visualize
+)
