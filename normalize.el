@@ -6,6 +6,7 @@
 (scroll-bar-mode -1)
 (visual-line-mode t)
 (show-paren-mode 1)
+(electric-pair-mode)
 (global-auto-revert-mode 1)
 (global-prettify-symbols-mode 1)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
