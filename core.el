@@ -1,3 +1,4 @@
+;;Core Packages. Used Throughout Config.
 (use-package helm)
 (use-package avy)
 (use-package which-key :config (which-key-mode))
@@ -7,6 +8,9 @@
 (use-package yasnippet)
 (use-package linum-relative :config (global-linum-mode t) (linum-relative-toggle))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
+
+;;Misc. Non-Core Packages.
+(use-package markdown-mode)
 
 ;;Mode Line
 (setq-default mode-line-format
