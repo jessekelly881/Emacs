@@ -8,7 +8,7 @@
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
 
 ;;Mode Line
-(setq mode-line-format
+(setq-default mode-line-format
   (list
    "%m. "
    "%b. "
