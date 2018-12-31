@@ -20,7 +20,6 @@
 ;;Mode Specific Configs.
 (load (expand-file-name "el.el" user-emacs-directory))    ;;Emacs Lisp
 (load (expand-file-name "py.el" user-emacs-directory))   ;;Python
-(load (expand-file-name "pug.el" user-emacs-directory))   ;;Pug
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
