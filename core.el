@@ -1,5 +1,7 @@
 ;;Core Packages. Used Throughout Config.
 (use-package helm)
+(use-package general)
+(use-package evil :config (evil-mode 1))
 (use-package avy)
 (use-package which-key :config (which-key-mode))
 (use-package hydra)
@@ -12,6 +14,9 @@
 
 ;;Misc. Non-Core Packages.
 (use-package markdown-mode)
+(use-package auto-complete
+  :config (ac-config-default))
+
 
 ;;Mode Line
 (setq-default mode-line-format
