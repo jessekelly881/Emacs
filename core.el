@@ -8,6 +8,7 @@
 (use-package evil :config (evil-mode 1))
 (use-package general)
 (use-package yasnippet)
+(use-package projectile :config (projectile-global-mode))
 (use-package linum-relative :config (global-linum-mode t) (linum-relative-toggle))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
 (use-package magit)
