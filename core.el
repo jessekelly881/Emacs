@@ -8,6 +8,7 @@
 (use-package yasnippet)
 (use-package linum-relative :config (global-linum-mode t) (linum-relative-toggle))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
+(use-package magit)
 
 ;;Misc. Non-Core Packages.
 (use-package markdown-mode)
