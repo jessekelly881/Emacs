@@ -33,12 +33,9 @@
 
 ;;Setup Package Repositories
 (require 'package)
-(setq save-package-archives '(
-       ("org"   . "http://orgmode.org/elpa/")
-       ("gnu"   . "http://elpa.gnu.org/packages/")
-       ("melpa" . "http://melpa.org/packages/")
-       ("melpa-stable" . "http://stable.melpa.org/packages/"))
-)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 (package-refresh-contents)
 (package-install 'use-package)
