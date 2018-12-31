@@ -1,4 +1,5 @@
 (use-package helm)
+(use-package avy)
 (use-package which-key :config (which-key-mode))
 (use-package hydra)
 (use-package evil :config (evil-mode 1))
@@ -36,4 +37,6 @@
   "q" 'delete-frame
   "Q" 'kill-emacs
   "U" 'undo-tree-visualize
+  "f" 'avy-goto-char-timer
+  "F" 'avy-goto-line
 )
