@@ -1,5 +1,9 @@
 ;;Core Packages. Used Throughout Config.
 (use-package helm)
+(use-package yasnippet :config (yas-global-mode 1))
+(use-package helm-c-yasnippet)
+(use-package ag)
+(use-package helm-ag)
 (use-package general)
 (use-package evil :config (evil-mode 1))
 (use-package avy)
@@ -22,6 +26,7 @@
 ;;Mode Line
 (setq-default mode-line-format
   (list
+   " "
    "%m. "
    "%b. "
    "line %l. "
@@ -41,6 +46,8 @@
 (general-create-definer buffer-leader-key :prefix "SPC b")
 (general-create-definer project-leader-key :prefix "SPC p")
 (general-create-definer settings-leader-key :prefix "SPC s")
+(general-create-definer insert-leader-key :prefix "SPC i")
+(general-create-definer info-leader-key :prefix "SPC I")
 
 ;;Core Bindings
 (general-def 'normal
@@ -53,7 +60,27 @@
   "F" 'avy-goto-line
 
   "g b" 'helm-bookmarks
+
+  "?" 'helm-ag
 )
 
-;;Org
-(use-package org-bullets :config (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+;;Org: Hide Leading Stars
+;;Borrowed From: https://www.reddit.com/r/emacs/comments/98flwy/does_anyone_know_a_good_alternative_to_orgbullets/
+(defun chunyang-org-mode-remove-stars ()
+  (font-lock-add-keywords
+   nil
+   '(("^\\*+ "
+      (0
+       (prog1 nil
+         (put-text-property (match-beginning 0) (match-end 0)
+                            'invisible t)))))))
+
+(add-hook 'org-mode-hook #'chunyang-org-mode-remove-stars)
+(setq org-indent-indentation-per-level 2)
+
+;; Info
+(info-leader-key  :keymaps 'normal
+  "w" 'count-words
+  "l" 'count-lines-page
+)
