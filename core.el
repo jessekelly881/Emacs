@@ -11,7 +11,6 @@
 (use-package hydra)
 (use-package evil :config (evil-mode 1))
 (use-package general)
-(use-package yasnippet)
 (use-package projectile :config (projectile-global-mode))
 (use-package linum-relative :config (global-linum-mode t) (linum-relative-toggle))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
@@ -37,7 +36,7 @@
 
 ;;Mode Specific Configs.
 (load (expand-file-name "el.el" user-emacs-directory))    ;;Emacs Lisp
-(load (expand-file-name "py.el" user-emacs-directory))   ;;Python
+(load (expand-file-name "py.el" user-emacs-directory))    ;;Python
 (load (expand-file-name "web.el" user-emacs-directory))   ;;Web Stuff
 
 ;;Leader Keys
