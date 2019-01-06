@@ -21,6 +21,7 @@
 (use-package magit)
 
 ;;Misc. Non-Core Packages.
+(use-package olivetti) ;;Centered text
 (use-package lorem-ipsum)
 (use-package markdown-mode)
 (use-package auto-complete
