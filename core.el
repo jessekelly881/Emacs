@@ -21,6 +21,7 @@
 (use-package magit)
 
 ;;Misc. Non-Core Packages.
+(use-package lorem-ipsum)
 (use-package markdown-mode)
 (use-package auto-complete
   :config (ac-config-default))
@@ -88,4 +89,9 @@
 (info-leader-key  :keymaps 'normal
   "w" 'count-words
   "l" 'count-lines-page
+)
+
+;; Insert
+(insert-leader-key :keymaps 'normal
+  "l" 'lorem-ipsum-insert-paragraphs
 )
