@@ -4,6 +4,10 @@
 (use-package helm-c-yasnippet)
 (use-package ag)
 (use-package helm-ag)
+(use-package expand-region :config
+  (setq er/try-expand-list
+    (append er/try-expand-list '(mark-paragraph mark-page))))
+
 (use-package general)
 (use-package evil :config (evil-mode 1))
 (use-package avy)
@@ -61,6 +65,8 @@
   "g b" 'helm-bookmarks
 
   "?" 'helm-ag
+
+  "m" 'er/expand-region
 )
 
 
