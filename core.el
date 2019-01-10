@@ -4,6 +4,7 @@
 ;;Core Packages. Used Throughout Config.
 (use-package helm)
 (use-package helm-swoop)
+(use-package helm-mode-manager)
 (use-package yasnippet :config (yas-global-mode 1))
 (use-package helm-c-yasnippet)
 (use-package ag)
@@ -97,7 +98,19 @@
                             'invisible t)))))))
 
 (add-hook 'org-mode-hook #'chunyang-org-mode-remove-stars)
-(setq org-indent-indentation-per-level 2)
+
+;;Hide #+ Tags
+;;Match all tags: ^#.*$
+(defun org-mode-hide-metadata ()
+  (font-lock-add-keywords
+   nil
+   '(("^#.*$"
+      (0
+       (prog1 nil
+         (put-text-property (match-beginning 0) (match-end 0)
+                            'invisible t)))))))
+
+(add-hook 'org-mode-hook #'org-mode-hide-metadata)
 
 ;; Info
 (info-leader-key  :keymaps 'normal
