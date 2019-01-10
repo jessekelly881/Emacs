@@ -1,5 +1,9 @@
+(defconst emacs-start-time (current-time))
+
+
 ;;Core Packages. Used Throughout Config.
 (use-package helm)
+(use-package helm-swoop)
 (use-package yasnippet :config (yas-global-mode 1))
 (use-package helm-c-yasnippet)
 (use-package ag)
@@ -9,6 +13,13 @@
     (append er/try-expand-list '(mark-paragraph mark-page))))
 
 (use-package general)
+
+(use-package chronos)
+(use-package helm-chronos :init
+  (setq helm-chronos-standard-timers
+    '( ""
+       "")))
+
 (use-package evil :config (evil-mode 1))
 (use-package avy)
 (use-package which-key :config (which-key-mode))
@@ -48,6 +59,7 @@
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
 (general-create-definer file-leader-key :prefix "SPC f")
+(general-create-definer set-leader-key :prefix "SPC s")
 (general-create-definer buffer-leader-key :prefix "SPC b")
 (general-create-definer project-leader-key :prefix "SPC p")
 (general-create-definer settings-leader-key :prefix "SPC s")
