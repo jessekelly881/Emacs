@@ -70,6 +70,7 @@
 (general-def 'normal
   "<escape>" 'save-buffer
   "<SPC><SPC>" 'helm-M-x
+  "/" 'helm-swoop
   "q" 'delete-frame
   "Q" 'kill-emacs
   "U" 'undo-tree-visualize
