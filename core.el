@@ -38,7 +38,8 @@
 (use-package markdown-mode)
 (use-package auto-complete
   :config (ac-config-default))
-
+(use-package nand2tetris ;;Nand2Tetris Course. HDL Code
+  :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
 
 ;;Mode Line
 (setq-default mode-line-format
