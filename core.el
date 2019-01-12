@@ -39,7 +39,10 @@
 (use-package auto-complete
   :config (ac-config-default))
 (use-package nand2tetris ;;Nand2Tetris Course. HDL Code
-  :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
+  :config
+  (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
+  (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
+  )
 
 ;;Mode Line
 (setq-default mode-line-format
@@ -122,4 +125,9 @@
 ;; Insert
 (insert-leader-key :keymaps 'normal
   "l" 'lorem-ipsum-insert-paragraphs
+)
+
+;; Mark Hydra
+(use-package multiple-cursors)
+(defhydra hydra-mark (:hint nil)
 )
