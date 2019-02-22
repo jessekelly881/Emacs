@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/docs/" "~/.config/")
+("~/Dropbox/.emacs.d/" "~/Dropbox/.config/" "~/Dropbox/dev/projects/websites/Homepage/" "~/Dropbox/dev/projects/websites/The Real Under/" "~/Dropbox/docs/" "~/Dropbox/.config/zsh/oh-my-zsh/" "~/.emacs.d/" "~/docs/" "~/.config/")

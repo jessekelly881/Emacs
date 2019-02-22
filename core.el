@@ -1,4 +1,6 @@
 (defconst emacs-start-time (current-time))
+(set-face-attribute 'default nil :height 80) ;;Set font size for UI
+(load-theme 'tango-dark)
 
 
 ;;Core Packages. Used Throughout Config.
@@ -36,6 +38,7 @@
 (use-package olivetti) ;;Centered text
 (use-package lorem-ipsum)
 (use-package markdown-mode)
+(use-package company)
 (use-package auto-complete
   :config (ac-config-default))
 (use-package nand2tetris ;;Nand2Tetris Course. HDL Code
@@ -43,6 +46,20 @@
   (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
   (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
   )
+
+;; Typescript
+(use-package tide) ;;Centered text
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  (company-mode +1))
+(add-hook 'before-save-hook 'tide-format-before-save)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
 
 ;;Mode Line
 (setq-default mode-line-format
@@ -52,6 +69,7 @@
    "%b. "
    "line %l. "
    ))
+
 
 ;;Highlight Curent Line
 (global-hl-line-mode +1)
