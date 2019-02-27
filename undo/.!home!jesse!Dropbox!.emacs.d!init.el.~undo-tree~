@@ -1,0 +1,19 @@
+"e1fc6dcda3f54f625f8e7b47f719b0cbf56f66b8"
+#s(undo-tree [nil (#1=[nil nil ((1145 . 1384) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -1145) (1142 . 1144) (797 . 801) (#(" " 0 1 (fontified nil)) . 797) (#("
+" 0 1 (fontified nil)) . -1139) (797 . 798) (1138 . 1139) (796 . 797) (#(" " 0 1 (fontified nil)) . 796) (786 . 1138) (#(" " 0 1 (fontified nil)) . 786) (756 . 787) (675 . 679) (#(" " 0 1 (fontified nil)) . 675) (#("
+" 0 1 (fontified nil)) . -753) (675 . 676) (752 . 753) (674 . 675) (#(" " 0 1 (fontified nil)) . 674) (664 . 752) (#(" " 0 1 (fontified nil)) . 664) (398 . 665) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    (\"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
+ '(package-selected-packages
+   (quote
+    (coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 746 (fontified nil)) . -398) (t 23669 20524 733330 848000)) nil (23670 45600 285203 60000) 0 nil]) nil nil (23670 45600 285221 567000) 0 nil] #1# 1193 1 nil)

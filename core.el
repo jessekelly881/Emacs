@@ -39,6 +39,7 @@
 (use-package lorem-ipsum)
 (use-package markdown-mode)
 (use-package company)
+(use-package coffee-mode)
 (use-package auto-complete
   :config (ac-config-default))
 (use-package nand2tetris ;;Nand2Tetris Course. HDL Code
@@ -59,6 +60,9 @@
   (company-mode +1))
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;;Django
+(use-package python-django)
 
 
 ;;Mode Line
@@ -149,3 +153,17 @@
 (use-package multiple-cursors)
 (defhydra hydra-mark (:hint nil)
 )
+
+;; Unlimited Undo Tree
+(global-undo-tree-mode)
+(setq undo-tree-auto-save-history t)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+
+
+;; Mu4e Email
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+
+;;Python
+(use-package elpy)
+(elpy-enable)

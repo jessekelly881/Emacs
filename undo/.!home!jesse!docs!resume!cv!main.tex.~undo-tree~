@@ -1,0 +1,20 @@
+"9aa876b35ce55a352fd8fdc609c5c3d52618cdf2"
+#s(undo-tree [nil (#1=[nil nil ((#("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+" 0 41 (fontified t face font-lock-comment-delimiter-face) 41 42 (fontified t face font-lock-comment-face) 42 44 (fontified t face font-lock-comment-delimiter-face) 44 57 (fontified t face font-lock-comment-face) 57 59 (fontified t face font-lock-comment-delimiter-face) 59 74 (fontified t face font-lock-comment-face) 74 76 (fontified t face font-lock-comment-delimiter-face) 76 98 (fontified t face font-lock-comment-face) 98 99 (fontified t face font-lock-comment-delimiter-face) 99 100 (fontified t face font-lock-comment-face) 100 102 (fontified t face font-lock-comment-delimiter-face) 102 133 (fontified t face font-lock-comment-face) 133 135 (fontified t face font-lock-comment-delimiter-face) 135 165 (fontified t face font-lock-comment-face) 165 166 (fontified t face font-lock-comment-delimiter-face) 166 167 (fontified t face font-lock-comment-face) 167 169 (fontified t face font-lock-comment-delimiter-face) 169 178 (fontified t face font-lock-comment-face) 178 180 (fontified t face font-lock-comment-delimiter-face) 180 209 (fontified t face font-lock-comment-face) 209 211 (fontified t face font-lock-comment-delimiter-face) 211 267 (fontified t face font-lock-comment-face) 267 269 (fontified t face font-lock-comment-delimiter-face) 269 330 (fontified t face font-lock-comment-face) 330 331 (fontified t face font-lock-comment-delimiter-face) 331 332 (fontified t face font-lock-comment-face) 332 334 (fontified t face font-lock-comment-delimiter-face) 334 343 (fontified t face font-lock-comment-face) 343 345 (fontified t face font-lock-comment-delimiter-face) 345 389 (fontified t face font-lock-comment-face) 389 390 (fontified t face font-lock-comment-delimiter-face) 390 391 (fontified t face font-lock-comment-face) 391 432 (fontified t face font-lock-comment-delimiter-face) 432 433 (fontified t face font-lock-comment-face) 433 434 (fontified t)) . 1) (undo-tree-id0 . -433) (undo-tree-id1 . -434) (undo-tree-id2 . -433) (undo-tree-id3 . -434) (undo-tree-id4 . -434) (undo-tree-id5 . -433) (undo-tree-id6 . -433) (undo-tree-id7 . -391) (undo-tree-id8 . -391) (undo-tree-id9 . -389) (undo-tree-id10 . -389) (undo-tree-id11 . -343) (undo-tree-id12 . -343) (undo-tree-id13 . -332) (undo-tree-id14 . -332) (undo-tree-id15 . -330) (undo-tree-id16 . -330) (undo-tree-id17 . -267) (undo-tree-id18 . -267) (undo-tree-id19 . -209) (undo-tree-id20 . -209) (undo-tree-id21 . -178) (undo-tree-id22 . -178) (undo-tree-id23 . -167) (undo-tree-id24 . -167) (undo-tree-id25 . -165) (undo-tree-id26 . -165) (undo-tree-id27 . -133) (undo-tree-id28 . -133) (undo-tree-id29 . -433) (undo-tree-id30 . -433) (undo-tree-id31 . -433) 434 (t 23669 52469 972275 251000)) nil (23670 35510 36137 194000) 0 nil]) nil nil (23670 35510 36240 389000) 0 nil] #1# 715 1 nil)

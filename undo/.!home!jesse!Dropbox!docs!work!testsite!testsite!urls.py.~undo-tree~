@@ -1,0 +1,24 @@
+"d9e1d30c6d8e3e75b6111a6021d206e97ed3a125"
+#s(undo-tree [nil ([nil ([nil (#2=[nil nil ((170 . 171) 169) nil (23670 14561 462430 728000) 0 nil]) ((nil rear-nonsticky nil 169 . 170) (nil fontified nil 1 . 170) (1 . 170)) nil (23670 14561 462468 905000) 0 nil]) ((#("\"\"\"testsite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+\"\"\"
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+" 0 1 (syntax-table #1=(15) fontified t face font-lock-doc-face) 1 500 (fontified t face font-lock-doc-face) 500 558 (fontified t face font-lock-doc-face) 558 630 (fontified t face font-lock-doc-face) 630 631 (fontified t syntax-table #1# face font-lock-doc-face) 631 632 (fontified t) 632 636 (fontified t face font-lock-keyword-face) 636 652 (fontified t) 652 658 (fontified t face font-lock-keyword-face) 658 665 (fontified t) 665 669 (fontified t face font-lock-keyword-face) 669 682 (fontified t) 682 688 (fontified t face font-lock-keyword-face) 688 704 (fontified t) 704 715 (fontified t face font-lock-variable-name-face) 715 729 (fontified t) 729 730 (fontified t syntax-table #1# face font-lock-string-face) 730 736 (fontified t face font-lock-string-face) 736 737 (fontified t syntax-table #1# face font-lock-string-face) 737 747 (fontified t) 747 748 (fontified t syntax-table #1# face font-lock-string-face) 748 758 (fontified t face font-lock-string-face) 758 759 (fontified t syntax-table #1# face font-lock-string-face) 759 772 (fontified t) 772 773 (fontified t syntax-table #1# face font-lock-string-face) 773 779 (fontified t face font-lock-string-face) 779 780 (fontified t syntax-table #1# face font-lock-string-face) 780 802 (fontified t)) . 1) (undo-tree-id0 . -30) (undo-tree-id1 . -802) (undo-tree-id2 . -802) (undo-tree-id3 . -802) (undo-tree-id4 . -802) (undo-tree-id5 . -631) (undo-tree-id6 . -631) (undo-tree-id7 . -631) (undo-tree-id8 . -631) (undo-tree-id9 . -704) (undo-tree-id10 . -704) (undo-tree-id11 . -704) (undo-tree-id12 . -718) (undo-tree-id13 . -704) (undo-tree-id14 . -704) (undo-tree-id15 . -704) (undo-tree-id16 . -718) (undo-tree-id17 . -704) (undo-tree-id18 . -704) (undo-tree-id19 . -704) (undo-tree-id20 . -718) (undo-tree-id21 . -30) (undo-tree-id22 . -30) (undo-tree-id23 . -31) (undo-tree-id24 . -31) (undo-tree-id25 . -109) (undo-tree-id26 . -109) (undo-tree-id27 . -169) (undo-tree-id28 . -169) (undo-tree-id29 . -179) (undo-tree-id30 . -179) (undo-tree-id31 . -194) (undo-tree-id32 . -194) (undo-tree-id33 . -242) (undo-tree-id34 . -242) (undo-tree-id35 . -310) (undo-tree-id36 . -310) (undo-tree-id37 . -328) (undo-tree-id38 . -328) (undo-tree-id39 . -384) (undo-tree-id40 . -384) (undo-tree-id41 . -456) (undo-tree-id42 . -456) (undo-tree-id43 . -482) (undo-tree-id44 . -482) (undo-tree-id45 . -558) (undo-tree-id46 . -558) (undo-tree-id47 . -628) (undo-tree-id48 . -628) (undo-tree-id49 . -632) (undo-tree-id50 . -632) (undo-tree-id51 . -665) (undo-tree-id52 . -665) (undo-tree-id53 . -703) (undo-tree-id54 . -703) (undo-tree-id55 . -704) (undo-tree-id56 . -704) (undo-tree-id57 . -720) (undo-tree-id58 . -720) (undo-tree-id59 . -763) (undo-tree-id60 . -763) (undo-tree-id61 . -800) (undo-tree-id62 . -800) (t 23670 14482 184695 884000)) nil (23670 14561 463424 141000) 0 nil]) nil nil (23670 14561 463510 420000) 0 nil] #2# 1362 3 nil)
