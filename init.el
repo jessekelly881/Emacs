@@ -44,6 +44,8 @@
  '(helm-selection ((t (:background "color-233" :foreground "brightwhite" :underline t))))
  '(helm-separator ((t (:background "color-233" :foreground "white"))))
  '(helm-source-header ((t (:background "color-233" :foreground "white" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
+ '(helm-swoop-target-line-face ((t (:background "unspecified-bg" :foreground "color-52"))))
+ '(helm-swoop-target-word-face ((t (:background "unspecified-bg" :foreground "color-52" :underline t :weight bold))))
  '(highlight-indentation-face ((t (:background "#122930"))))
  '(hl-line ((t (:background "color-234" :underline t :weight semi-bold))))
  '(mode-line ((t (:inherit variable-pitch :background "color-233" :foreground "brightwhite" :box nil :weight bold))))

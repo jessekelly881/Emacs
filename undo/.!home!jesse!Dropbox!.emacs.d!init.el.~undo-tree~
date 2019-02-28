@@ -1,5 +1,5 @@
-"73920b6977d58745188f836b3bce79c49254465f"
-#s(undo-tree [nil (#1=[nil nil ((1665 . 3956) (#("(custom-set-faces
+"5ac2d2f78bbd7a95de54e007e8254022f4c6e3c0"
+#s(undo-tree [nil (#1=[nil nil ((1665 . 4166) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -9,7 +9,7 @@
  '(avy-lead-face ((t (:foreground \"color-52\" :underline t :weight bold))))
  '(avy-lead-face-0 ((t (:foreground \"color-52\" :underline t :weight bold))))
  '(avy-lead-face-1 ((t (:foreground \"color-52\" :underline t :weight bold))))
- '(avy-lead-face-2 ((t (:foreground \"brightwhite\" :underline t :weight bold))))
+ '(avy-lead-face-2 ((t (:foreground \"color-52\" :underline t :weight bold))))
  '(font-lock-comment-delimiter-face ((t (:inherit default :foreground \"color-234\"))))
  '(font-lock-comment-face ((t (:inherit default :foreground \"color-232\"))))
  '(fringe ((t nil)))
@@ -20,6 +20,7 @@
  '(helm-selection ((t (:background \"color-233\" :foreground \"brightwhite\" :underline t))))
  '(helm-separator ((t (:background \"color-233\" :foreground \"white\"))))
  '(helm-source-header ((t (:background \"color-233\" :foreground \"white\" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
+ '(helm-swoop-target-line-face ((t (:background \"unspecified-bg\" :foreground \"color-52\"))))
  '(highlight-indentation-face ((t (:background \"#122930\"))))
  '(hl-line ((t (:background \"color-234\" :underline t :weight semi-bold))))
  '(mode-line ((t (:inherit variable-pitch :background \"color-233\" :foreground \"brightwhite\" :box nil :weight bold))))
@@ -30,7 +31,7 @@
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
  '(region ((t (:background \"#1D1F21\" :weight bold))))
- '(show-paren-match ((t (:background \"#unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2294 (fontified nil)) . -1665) (1662 . 1664) (1207 . 1211) (#(" " 0 1 (fontified nil)) . 1207) (#("
+ '(show-paren-match ((t (:background \"#unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2383 (fontified nil)) . -1665) (1662 . 1664) (1207 . 1211) (#(" " 0 1 (fontified nil)) . 1207) (#("
 " 0 1 (fontified nil)) . -1659) (1207 . 1208) (1658 . 1659) (1206 . 1207) (#(" " 0 1 (fontified nil)) . 1206) (1196 . 1658) (#(" " 0 1 (fontified nil)) . 1196) (1166 . 1197) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
 " 0 1 (fontified nil)) . -1163) (884 . 885) (1162 . 1163) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1162) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
 " 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
@@ -48,4 +49,4 @@
     (\"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
  '(package-selected-packages
    (quote
-    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1266 (fontified nil)) . -398) (t 23672 22528 478929 382000)) nil (23672 22545 350259 395000) 0 nil]) nil nil (23672 22545 350280 941000) 0 nil] #1# 3836 1 nil)
+    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1266 (fontified nil)) . -398) (t 23672 22672 88924 620000)) nil (23672 22716 122635 25000) 0 nil]) nil nil (23672 22716 122657 178000) 0 nil] #1# 3925 1 nil)
