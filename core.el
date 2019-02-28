@@ -75,21 +75,21 @@
 (use-package python-django)
 
 
-;;Themes
+;;Theme
 (use-package blackboard-theme)
 (use-package clues-theme)
 (use-package sublime-themes)
+(use-package monochrome-theme)
 
 (load-theme 'graham t)
-
-(set-face-foreground 'mode-line "white")
-(set-face-background 'mode-line "#151515")
 
 
 (defun on-frame-open (&optional frame)
   "If the FRAME created in terminal don't load background color."
   (unless (display-graphic-p frame)
-    (set-face-background 'default "unspecified-bg" frame)))
+    (set-face-background 'default "unspecified-bg" frame)
+    (set-face-background 'font-lock-comment-face "unspecified-bg" frame)
+    ))
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
