@@ -147,6 +147,7 @@
 (general-def 'visual
   "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
+  "r" 'replace-string
   )
 
 
