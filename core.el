@@ -1,14 +1,11 @@
 (defconst emacs-start-time (current-time))
 (set-face-attribute 'default nil :height 80) ;;Set font size for UI
-;;(load-theme 'dracula)
-
-;;(if (display-graphic-p))
-
 
 
 ;;Core Packages. Used Throughout Config.
 (use-package helm)
 (use-package helm-swoop)
+(use-package helm-themes)
 (use-package helm-mode-manager)
 (use-package yasnippet :config (yas-global-mode 1))
 (use-package helm-c-yasnippet)
@@ -40,7 +37,9 @@
 (use-package evil :config (evil-mode 1))
 (use-package general)
 (use-package projectile :config (projectile-global-mode))
-(use-package linum-relative :config (global-linum-mode t) (linum-relative-toggle))
+(use-package linum-relative
+  ;; :config (global-linum-mode t) (linum-relative-toggle)
+  )
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
 (use-package magit)
 
@@ -75,6 +74,24 @@
 ;;Django
 (use-package python-django)
 
+
+;;Themes
+(use-package blackboard-theme)
+(use-package clues-theme)
+(use-package sublime-themes)
+
+(load-theme 'graham t)
+
+(set-face-foreground 'mode-line "white")
+(set-face-background 'mode-line "#151515")
+
+
+(defun on-frame-open (&optional frame)
+  "If the FRAME created in terminal don't load background color."
+  (unless (display-graphic-p frame)
+    (set-face-background 'default "unspecified-bg" frame)))
+
+(add-hook 'after-make-frame-functions 'on-frame-open)
 
 ;;Mode Line
 (setq-default mode-line-format
@@ -139,6 +156,15 @@
                             'invisible t)))))))
 
 (add-hook 'org-mode-hook #'chunyang-org-mode-remove-stars)
+
+;;Org Normalize Headers Size
+(custom-set-faces
+  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
+  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
+  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
+  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+)
 
 ;;Hide #+ Tags
 ;;Match all tags: ^#.*$

@@ -1,19 +1,30 @@
-"319b2c54790c79b8e1626f6208c4ebd3510a353e"
-#s(undo-tree [nil (#1=[nil nil ((1249 . 1488) (#("(custom-set-faces
+"5a5efd3091173c5d7b3ba29c2514c5dedfff81e7"
+#s(undo-tree [nil (#1=[nil nil ((1648 . 2481) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )" 0 239 (fontified nil)) . -1249) (1246 . 1248) (864 . 868) (#(" " 0 1 (fontified nil)) . 864) (#("
-" 0 1 (fontified nil)) . -1243) (864 . 865) (1242 . 1243) (863 . 864) (#(" " 0 1 (fontified nil)) . 863) (853 . 1242) (#(" " 0 1 (fontified nil)) . 853) (823 . 854) (675 . 679) (#(" " 0 1 (fontified nil)) . 675) (#("
-" 0 1 (fontified nil)) . -820) (675 . 676) (819 . 820) (674 . 675) (#(" " 0 1 (fontified nil)) . 674) (664 . 819) (#(" " 0 1 (fontified nil)) . 664) (398 . 665) (#("(custom-set-variables
+ '(default ((t (:background nil))))
+ '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
+ '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
+ '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+ '(org-level-5 ((t (:inherit outline-5 :height 1.0)))))" 0 548 (fontified nil)) . -1648) (1645 . 1647) (1207 . 1211) (#(" " 0 1 (fontified nil)) . 1207) (#("
+" 0 1 (fontified nil)) . -1642) (1207 . 1208) (1641 . 1642) (1206 . 1207) (#(" " 0 1 (fontified nil)) . 1206) (1196 . 1641) (#(" " 0 1 (fontified nil)) . 1196) (1166 . 1197) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
+" 0 1 (fontified nil)) . -1163) (884 . 885) (1162 . 1163) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1162) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
+" 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
+" 0 1 (fontified nil)) . -737) (669 . 738) (#(" " 0 1 (fontified nil)) . 669) (398 . 670) (#("(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   [\"black\" \"red3\" \"ForestGreen\" \"yellow3\" \"blue\" \"magenta3\" \"DeepSkyBlue\" \"gray50\"])
  '(custom-safe-themes
    (quote
-    (\"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
+    (\"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
  '(package-selected-packages
    (quote
-    (crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 850 (fontified nil)) . -398) (t 23671 50903 323185 440000)) nil (23671 50946 23743 260000) 0 nil]) nil nil (23671 50946 23762 44000) 0 nil] #1# 1297 1 nil)
+    (sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1249 (fontified nil)) . -398) (t 23671 59484 689878 640000)) nil (23671 59514 214853 789000) 0 nil]) nil nil (23671 59514 214874 577000) 0 nil] #1# 2073 1 nil)

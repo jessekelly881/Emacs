@@ -1,2 +1,2 @@
-"dafeabd048672d3adda349c5ddd83424dd252540"
-#s(undo-tree [nil (#1=[nil nil ((nil rear-nonsticky nil 109 . 110) (nil fontified nil 61 . 110) (61 . 110) (#("emacs --daemon" 0 14 (fontified t face font-lock-string-face)) . 61) (t 23638 48946 603036 748000)) nil (23670 47642 730111 155000) 0 nil]) nil nil (23670 47642 730121 132000) 0 nil] #1# 54 1 nil)
+"b69bf8698693ddfba63fb11be9f97639c5522c7b"
+#s(undo-tree #1=[nil ([nil nil ((55 . 56) (#("t" 0 1 (face font-lock-string-face fontified t)) . -55) 56 (42 . 56) (#("$EDITOR" 0 7 (face font-lock-string-face fontified t)) . 42) (t 23671 48417 406600 737000)) ((42 . 49) (#("emacsclient -t" 0 13 (fontified nil face font-lock-string-face) 13 14 (face font-lock-string-face fontified nil)) . 42) (undo-tree-id0 . -12) (55 . 56) (#("c" 0 1 (fontified t face font-lock-string-face)) . 55) (t 23671 51480 179989 849000)) (23671 51480 40842 592000) 0 nil]) nil nil (23671 55351 261878 663000) 0 nil] #1# 119 1 nil)
