@@ -1,6 +1,9 @@
 (defconst emacs-start-time (current-time))
 (set-face-attribute 'default nil :height 80) ;;Set font size for UI
-(load-theme 'tango-dark)
+;;(load-theme 'dracula)
+
+;;(if (display-graphic-p))
+
 
 
 ;;Core Packages. Used Throughout Config.
@@ -23,7 +26,14 @@
     '( ""
        "")))
 
-(use-package evil :config (evil-mode 1))
+(use-package evil :config
+  (evil-mode 1))
+(setq evil-normal-state-cursor '("#FFFF4D" box) ;;Pale Yellow
+          evil-insert-state-cursor '("#B30000" hbar) ;;Dark Red
+          evil-visual-state-cursor '("grey" hbar)
+          evil-replace-state-cursor '("#FF4D4D" hbar)) ;;Pinkish
+
+
 (use-package avy)
 (use-package which-key :config (which-key-mode))
 (use-package hydra)
@@ -35,6 +45,7 @@
 (use-package magit)
 
 ;;Misc. Non-Core Packages.
+(use-package crux)
 (use-package olivetti) ;;Centered text
 (use-package lorem-ipsum)
 (use-package markdown-mode)
@@ -49,7 +60,7 @@
   )
 
 ;; Typescript
-(use-package tide) ;;Centered text
+(use-package tide)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -105,10 +116,14 @@
   "F" 'avy-goto-line
 
   "g b" 'helm-bookmarks
+  "g c" 'crux-find-user-init-file
 
   "?" 'helm-ag
 
   "m" 'er/expand-region
+
+  "TAB" 'next-buffer
+  "<backtab>" 'previous-buffer
 )
 
 
@@ -127,16 +142,16 @@
 
 ;;Hide #+ Tags
 ;;Match all tags: ^#.*$
-(defun org-mode-hide-metadata ()
-  (font-lock-add-keywords
-   nil
-   '(("^#.*$"
-      (0
-       (prog1 nil
-         (put-text-property (match-beginning 0) (match-end 0)
-                            'invisible t)))))))
+;; (defun org-mode-hide-metadata ()
+;;   (font-lock-add-keywords
+;;    nil
+;;    '(("^#.*$"
+;;       (0
+;;        (prog1 nil
+;;          (put-text-property (match-beginning 0) (match-end 0)
+;;                             'invisible t)))))))
 
-(add-hook 'org-mode-hook #'org-mode-hide-metadata)
+;;(add-hook 'org-mode-hook #'org-mode-hide-metadata)
 
 ;; Info
 (info-leader-key  :keymaps 'normal
@@ -161,7 +176,6 @@
 
 
 ;; Mu4e Email
-
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 
 ;;Python

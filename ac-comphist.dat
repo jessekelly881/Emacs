@@ -1,4 +1,6 @@
-((("helm-chronos-add-timer" .
+((("dracula" .
+   [1 0 0 0 0 0 0])
+  ("helm-chronos-add-timer" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
   ("normal" .
    [1 0 0 0 0 0])
