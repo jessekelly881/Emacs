@@ -144,6 +144,12 @@
 )
 
 
+(general-def 'visual
+  "#" 'comment-or-uncomment-region
+  "<SPC><SPC>" 'helm-M-x
+  )
+
+
 ;;Org: Hide Leading Stars
 (defun chunyang-org-mode-remove-stars ()
   (font-lock-add-keywords
