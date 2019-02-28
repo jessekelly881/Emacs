@@ -4,7 +4,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(visual-line-mode t)
+(global-visual-line-mode t)
 (show-paren-mode 1)
 (electric-pair-mode)
 (global-auto-revert-mode 1)

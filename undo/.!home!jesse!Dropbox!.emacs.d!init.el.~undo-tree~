@@ -1,5 +1,5 @@
-"136e0a4d7e8e3d12bdbd83a8714c06256c646dfe"
-#s(undo-tree [nil (#1=[nil nil ((1732 . 4292) (#("(custom-set-faces
+"da966d64586ae9dbc8225f9d6a2ffd7d501a816c"
+#s(undo-tree [nil (#1=[nil nil ((1732 . 4466) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -22,8 +22,10 @@
  '(helm-source-header ((t (:background \"color-233\" :foreground \"white\" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
  '(helm-swoop-target-line-face ((t (:background \"unspecified-bg\" :foreground \"color-52\"))))
  '(helm-swoop-target-word-face ((t (:background \"unspecified-bg\" :foreground \"color-52\" :underline t :weight bold))))
- '(highlight-indentation-face ((t (:background \"#122930\"))))
+ '(highlight-indentation-face ((t (:background \"color-234\"))))
  '(hl-line ((t (:background \"color-234\" :underline t :weight semi-bold))))
+ '(linum ((t (:background \"color-236\" :foreground \"color-232\"))))
+ '(linum-relative-current-face ((t (:background \"unspecified-bg\" :foreground \"brightwhite\" :weight bold))))
  '(markdown-comment-face ((t nil)))
  '(mode-line ((t (:inherit variable-pitch :background \"color-233\" :foreground \"brightwhite\" :box nil :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background \"color-233\" :foreground \"color-244\"))))
@@ -33,7 +35,7 @@
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
  '(region ((t (:background \"#1D1F21\" :weight bold))))
- '(show-paren-match ((t (:background \"#unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2558 (fontified nil)) . -1732) (1729 . 1731) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
+ '(show-paren-match ((t (:background \"#unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2734 (fontified nil)) . -1732) (1729 . 1731) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
 " 0 1 (fontified nil)) . -1726) (1274 . 1275) (1725 . 1726) (1273 . 1274) (#(" " 0 1 (fontified nil)) . 1273) (1263 . 1725) (#(" " 0 1 (fontified nil)) . 1263) (1233 . 1264) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
 " 0 1 (fontified nil)) . -1230) (884 . 885) (1229 . 1230) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1229) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
 " 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
@@ -51,4 +53,4 @@
     (\"39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4\" \"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
  '(package-selected-packages
    (quote
-    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1333 (fontified nil)) . -398) (t 23672 24323 162203 228000)) nil (23672 25448 902739 145000) 0 nil]) nil nil (23672 25448 902759 468000) 0 nil] #1# 4167 1 nil)
+    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1333 (fontified nil)) . -398) (t 23672 27111 685444 37000)) nil (23672 27255 439359 708000) 0 nil]) nil nil (23672 27255 439380 766000) 0 nil] #1# 4343 1 nil)

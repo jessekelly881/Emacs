@@ -48,6 +48,8 @@
  '(helm-swoop-target-word-face ((t (:background "unspecified-bg" :foreground "color-52" :underline t :weight bold))))
  '(highlight-indentation-face ((t (:background "color-234"))))
  '(hl-line ((t (:background "color-234" :underline t :weight semi-bold))))
+ '(linum ((t (:background "color-236" :foreground "color-232"))))
+ '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
  '(markdown-comment-face ((t nil)))
  '(mode-line ((t (:inherit variable-pitch :background "color-233" :foreground "brightwhite" :box nil :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "color-233" :foreground "color-244"))))

@@ -1,30 +1,30 @@
-((("dracula" .
-   [1 0 0 0 0 0 0])
-  ("helm-chronos-add-timer" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("normal" .
-   [1 0 0 0 0 0])
-  (":keymap" .
-   [1 0 0 0 0 0 0])
-  ("set-leader-key" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("set" .
-   [1 0 0])
-  ("use-package" .
-   [1 0 0 0 0 0 0 0 0 0 1])
-  ("setq" .
-   [2 0 0 0])
-  ("org-indent-indentation-per-level" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":config" .
-   [3 0 0 0 0 0 0])
-  ("nand2tetris-mode" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("telephone-line-lhs" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("telephone-line-evil-tag-segment" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+((("load-theme" .
+   [2 0 0 0 0 0 0 0 0 0])
   ("Python" .
    [2 0 0 0 0 0])
-  ("load-theme" .
-   [2 0 0 0 0 0 0 0 0 0])))
+  ("telephone-line-evil-tag-segment" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("telephone-line-lhs" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("nand2tetris-mode" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  (":config" .
+   [3 0 0 0 0 0 0])
+  ("org-indent-indentation-per-level" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [2 0 0 0])
+  ("use-package" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("set" .
+   [1 0 0])
+  ("set-leader-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  (":keymap" .
+   [1 0 0 0 0 0 0])
+  ("normal" .
+   [1 0 0 0 0 0])
+  ("helm-chronos-add-timer" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dracula" .
+   [1 0 0 0 0 0 0])))
