@@ -29,11 +29,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((((class color) (min-colors 10)) (:foreground "light gray" :background "black"))))
- '(avy-goto-char-timer-face ((t (:foreground "brightwhite" :underline t :weight bold))))
- '(avy-lead-face ((t (:foreground "brightwhite" :underline t :weight bold))))
- '(avy-lead-face-0 ((t (:foreground "brightwhite" :underline t :weight bold))))
- '(avy-lead-face-1 ((t (:foreground "brightwhite" :underline t :weight bold))))
- '(avy-lead-face-2 ((t (:foreground "brightwhite" :underline t :weight bold))))
+ '(avy-goto-char-timer-face ((t (:foreground "color-52" :underline t :weight bold))))
+ '(avy-lead-face ((t (:foreground "color-52" :underline t :weight bold))))
+ '(avy-lead-face-0 ((t (:foreground "color-52" :underline t :weight bold))))
+ '(avy-lead-face-1 ((t (:foreground "color-52" :underline t :weight bold))))
+ '(avy-lead-face-2 ((t (:foreground "color-52" :underline t :weight bold))))
  '(font-lock-comment-delimiter-face ((t (:inherit default :foreground "color-234"))))
  '(font-lock-comment-face ((t (:inherit default :foreground "color-232"))))
  '(fringe ((t nil)))
