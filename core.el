@@ -107,9 +107,9 @@
 (global-hl-line-mode +1)
 
 ;;Mode Specific Configs.
-(load (expand-file-name "el.el" user-emacs-directory))    ;;Emacs Lisp
-(load (expand-file-name "py.el" user-emacs-directory))    ;;Python
-(load (expand-file-name "web.el" user-emacs-directory))   ;;Web Stuff
+(load (expand-file-name "el.el" user-emacs-directory))
+(load (expand-file-name "py.el" user-emacs-directory))
+(load (expand-file-name "web.el" user-emacs-directory))
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
@@ -145,7 +145,6 @@
 
 
 ;;Org: Hide Leading Stars
-;;Borrowed From: https://www.reddit.com/r/emacs/comments/98flwy/does_anyone_know_a_good_alternative_to_orgbullets/
 (defun chunyang-org-mode-remove-stars ()
   (font-lock-add-keywords
    nil
@@ -166,18 +165,6 @@
   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
 )
 
-;;Hide #+ Tags
-;;Match all tags: ^#.*$
-;; (defun org-mode-hide-metadata ()
-;;   (font-lock-add-keywords
-;;    nil
-;;    '(("^#.*$"
-;;       (0
-;;        (prog1 nil
-;;          (put-text-property (match-beginning 0) (match-end 0)
-;;                             'invisible t)))))))
-
-;;(add-hook 'org-mode-hook #'org-mode-hide-metadata)
 
 ;; Info
 (info-leader-key  :keymaps 'normal
