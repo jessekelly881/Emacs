@@ -81,7 +81,7 @@
 (use-package sublime-themes)
 (use-package monochrome-theme)
 
-(load-theme 'graham t)
+(load-theme 'monochrome t)
 
 
 (defun on-frame-open (&optional frame)
