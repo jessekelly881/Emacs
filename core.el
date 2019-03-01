@@ -3,7 +3,7 @@
 
 
 ;;Core Packages. Used Throughout Config.
-(use-package helm)
+(use-package helm :config (setq helm-follow-mode-persistent t))
 (use-package helm-swoop)
 (use-package helm-themes)
 (use-package helm-mode-manager)
@@ -69,6 +69,8 @@
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1))
+
+
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
@@ -94,6 +96,7 @@
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
+(use-package highlight)
 ;;Mode Line
 (setq-default mode-line-format
   (list
@@ -123,7 +126,9 @@
 (general-create-definer info-leader-key :prefix "SPC I")
 
 ;;Core Bindings
+
 (general-def 'normal
+  "C-m" 'hlt-unhighlight-region
   "<escape>" 'save-buffer
   "<SPC><SPC>" 'helm-M-x
   "/" 'helm-swoop
@@ -139,6 +144,7 @@
   "?" 'helm-ag
 
   "m" 'er/expand-region
+  "M" 'my/mark-region
 
   "TAB" 'next-buffer
   "<backtab>" 'previous-buffer
@@ -149,7 +155,10 @@
   "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
   "r" 'replace-string
+  "m" 'hlt-highlight-region
+  "n" 'narrow-to-region
   )
+
 
 
 ;;Org: Hide Leading Stars

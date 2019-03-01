@@ -1,5 +1,5 @@
-"d7464c9b3f92cbde98a9abf564ecee9a2bff2c44"
-#s(undo-tree [nil (#1=[nil nil ((1732 . 4465) (#("(custom-set-faces
+"5ba2e525517d38424006f8f58ff4a6306f6528ff"
+#s(undo-tree [nil (#1=[nil nil ((1787 . 4597) (#("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -22,6 +22,7 @@
  '(helm-source-header ((t (:background \"color-233\" :foreground \"white\" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
  '(helm-swoop-target-line-face ((t (:background \"unspecified-bg\" :foreground \"color-52\"))))
  '(helm-swoop-target-word-face ((t (:background \"unspecified-bg\" :foreground \"color-52\" :underline t :weight bold))))
+ '(highlight ((t (:background \"   unspecified-bg\" :foreground \"color-52\"))))
  '(highlight-indentation-face ((t (:background \"color-234\"))))
  '(hl-line ((t (:background \"color-234\" :underline t :weight semi-bold))))
  '(linum ((t (:background \"color-236\" :foreground \"color-232\"))))
@@ -35,8 +36,8 @@
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
  '(region ((t (:background \"#1D1F21\" :weight bold))))
- '(show-paren-match ((t (:background \"unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2733 (fontified nil)) . -1732) (1729 . 1731) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
-" 0 1 (fontified nil)) . -1726) (1274 . 1275) (1725 . 1726) (1273 . 1274) (#(" " 0 1 (fontified nil)) . 1273) (1263 . 1725) (#(" " 0 1 (fontified nil)) . 1263) (1233 . 1264) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
+ '(show-paren-match ((t (:background \"unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 2810 (fontified nil)) . -1787) (1784 . 1786) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
+" 0 1 (fontified nil)) . -1781) (1274 . 1275) (1780 . 1781) (1273 . 1274) (#(" " 0 1 (fontified nil)) . 1273) (1263 . 1780) (#(" " 0 1 (fontified nil)) . 1263) (1233 . 1264) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
 " 0 1 (fontified nil)) . -1230) (884 . 885) (1229 . 1230) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1229) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
 " 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
 " 0 1 (fontified nil)) . -737) (669 . 738) (#(" " 0 1 (fontified nil)) . 669) (398 . 670) (#("(custom-set-variables
@@ -53,4 +54,4 @@
     (\"39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4\" \"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
  '(package-selected-packages
    (quote
-    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1333 (fontified nil)) . -398) (t 23672 28648 418726 468000)) nil (23672 28694 658710 760000) 0 nil]) nil nil (23672 28694 658733 363000) 0 nil] #1# 4342 1 nil)
+    (highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1388 (fontified nil)) . -398) (t 23673 27450 586595 536000)) nil (23673 29628 173818 706000) 0 nil]) nil nil (23673 29628 173839 561000) 0 nil] #1# 4474 1 nil)

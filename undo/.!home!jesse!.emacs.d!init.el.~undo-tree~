@@ -1,5 +1,115 @@
-"2f564a170f9bcd012ca6a51f238f3e033c5f02f6"
-#s(undo-tree [nil ([nil ([nil ([nil (#1=[nil nil ((1760 . 4570) ("(custom-set-faces
+"5ba2e525517d38424006f8f58ff4a6306f6528ff"
+#s(undo-tree [nil ([nil ([nil ([nil ([nil ([nil (#1=[nil nil ((1787 . 4597) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((((class color) (min-colors 10)) (:foreground \"light gray\" :background \"black\"))))
+ '(avy-goto-char-timer-face ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-0 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-1 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-2 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(font-lock-comment-delimiter-face ((t (:inherit default :foreground \"color-234\"))))
+ '(font-lock-comment-face ((t (:background \"color-236\" :foreground \"color-232\" :slant italic))))
+ '(fringe ((t nil)))
+ '(helm-candidate-number ((t (:background \"color-16\" :foreground \"white\"))))
+ '(helm-grep-match ((t (:foreground \"brightwhite\" :weight bold))))
+ '(helm-header ((t (:inherit header-line :background \"color-16\" :foreground \"brightwhite\"))))
+ '(helm-match ((t (:foreground \"brightwhite\" :weight bold))))
+ '(helm-selection ((t (:background \"color-233\" :foreground \"brightwhite\" :underline t))))
+ '(helm-separator ((t (:background \"color-233\" :foreground \"white\"))))
+ '(helm-source-header ((t (:background \"color-233\" :foreground \"white\" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
+ '(helm-swoop-target-line-face ((t (:background \"unspecified-bg\" :foreground \"color-52\"))))
+ '(helm-swoop-target-word-face ((t (:background \"unspecified-bg\" :foreground \"color-52\" :underline t :weight bold))))
+ '(highlight ((t (:background \"   unspecified-bg\" :foreground \"color-52\"))))
+ '(highlight-indentation-face ((t (:background \"color-234\"))))
+ '(hl-line ((t (:background \"color-234\" :underline t :weight semi-bold))))
+ '(linum ((t (:background \"color-236\" :foreground \"color-232\"))))
+ '(linum-relative-current-face ((t (:background \"unspecified-bg\" :foreground \"brightwhite\" :weight bold))))
+ '(markdown-comment-face ((t nil)))
+ '(mode-line ((t (:inherit variable-pitch :background \"color-233\" :foreground \"brightwhite\" :box nil :weight bold))))
+ '(mode-line-inactive ((t (:inherit mode-line :background \"color-233\" :foreground \"color-244\"))))
+ '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
+ '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
+ '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+ '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+ '(region ((t (:background \"#1D1F21\" :weight bold))))
+ '(show-paren-match ((t (:background \"unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 247 (fontified nil) 247 248 (fontified nil) 248 330 (fontified nil) 330 331 (fontified nil) 331 332 (fontified nil) 332 335 (fontified nil) 335 359 (fontified nil) 359 360 (fontified nil) 360 416 (fontified nil) 416 417 (fontified nil) 417 418 (fontified nil) 418 421 (fontified nil) 421 434 (fontified nil) 434 435 (fontified nil) 435 491 (fontified nil) 491 492 (fontified nil) 492 493 (fontified nil) 493 496 (fontified nil) 496 511 (fontified nil) 511 512 (fontified nil) 512 568 (fontified nil) 568 569 (fontified nil) 569 570 (fontified nil) 570 573 (fontified nil) 573 588 (fontified nil) 588 589 (fontified nil) 589 645 (fontified nil) 645 646 (fontified nil) 646 647 (fontified nil) 647 650 (fontified nil) 650 665 (fontified nil) 665 666 (fontified nil) 666 722 (fontified nil) 722 723 (fontified nil) 723 724 (fontified nil) 724 727 (fontified nil) 727 759 (fontified nil) 759 760 (fontified nil) 760 808 (fontified nil) 808 809 (fontified nil) 809 810 (fontified nil) 810 813 (fontified nil) 813 835 (fontified nil) 835 836 (fontified nil) 836 905 (fontified nil) 905 906 (fontified nil) 906 907 (fontified nil) 907 910 (fontified nil) 910 916 (fontified nil) 916 917 (fontified nil) 917 926 (fontified nil) 926 927 (fontified nil) 927 928 (fontified nil) 928 931 (fontified nil) 931 952 (fontified nil) 952 953 (fontified nil) 953 1003 (fontified nil) 1003 1004 (fontified nil) 1004 1005 (fontified nil) 1005 1008 (fontified nil) 1008 1023 (fontified nil) 1023 1024 (fontified nil) 1024 1070 (fontified nil) 1070 1071 (fontified nil) 1071 1072 (fontified nil) 1072 1075 (fontified nil) 1075 1086 (fontified nil) 1086 1087 (fontified nil) 1087 1164 (fontified nil) 1164 1165 (fontified nil) 1165 1166 (fontified nil) 1166 1169 (fontified nil) 1169 1179 (fontified nil) 1179 1180 (fontified nil) 1180 1226 (fontified nil) 1226 1227 (fontified nil) 1227 1228 (fontified nil) 1228 1231 (fontified nil) 1231 1245 (fontified nil) 1245 1246 (fontified nil) 1246 1316 (fontified nil) 1316 1317 (fontified nil) 1317 1318 (fontified nil) 1318 1321 (fontified nil) 1321 1335 (fontified nil) 1335 1336 (fontified nil) 1336 1387 (fontified nil) 1387 1388 (fontified nil) 1388 1389 (fontified nil) 1389 1392 (fontified nil) 1392 1410 (fontified nil) 1410 1411 (fontified nil) 1411 1534 (fontified nil) 1534 1535 (fontified nil) 1535 1536 (fontified nil) 1536 1539 (fontified nil) 1539 1566 (fontified nil) 1566 1567 (fontified nil) 1567 1626 (fontified nil) 1626 1627 (fontified nil) 1627 1628 (fontified nil) 1628 1631 (fontified nil) 1631 1658 (fontified nil) 1658 1659 (fontified nil) 1659 1744 (fontified nil) 1744 1745 (fontified nil) 1745 1746 (fontified nil) 1746 1749 (fontified nil) 1749 1758 (fontified nil) 1758 1759 (fontified nil) 1759 1821 (fontified nil) 1821 1822 (fontified nil) 1822 1823 (fontified nil) 1823 1826 (fontified nil) 1826 1852 (fontified nil) 1852 1853 (fontified nil) 1853 1884 (fontified nil) 1884 1885 (fontified nil) 1885 1886 (fontified nil) 1886 1889 (fontified nil) 1889 1896 (fontified nil) 1896 1897 (fontified nil) 1897 1959 (fontified nil) 1959 1960 (fontified nil) 1960 1961 (fontified nil) 1961 1964 (fontified nil) 1964 1969 (fontified nil) 1969 1970 (fontified nil) 1970 2025 (fontified nil) 2025 2026 (fontified nil) 2026 2027 (fontified nil) 2027 2030 (fontified nil) 2030 2057 (fontified nil) 2057 2058 (fontified nil) 2058 2133 (fontified nil) 2133 2134 (fontified nil) 2134 2135 (fontified nil) 2135 2138 (fontified nil) 2138 2159 (fontified nil) 2159 2160 (fontified nil) 2160 2169 (fontified nil) 2169 2170 (fontified nil) 2170 2171 (fontified nil) 2171 2174 (fontified nil) 2174 2183 (fontified nil) 2183 2184 (fontified nil) 2184 2287 (fontified nil) 2287 2288 (fontified nil) 2288 2289 (fontified nil) 2289 2292 (fontified nil) 2292 2310 (fontified nil) 2310 2311 (fontified nil) 2311 2385 (fontified nil) 2385 2386 (fontified nil) 2386 2387 (fontified nil) 2387 2390 (fontified nil) 2390 2401 (fontified nil) 2401 2402 (fontified nil) 2402 2440 (fontified nil) 2440 2441 (fontified nil) 2441 2442 (fontified nil) 2442 2445 (fontified nil) 2445 2456 (fontified nil) 2456 2457 (fontified nil) 2457 2495 (fontified nil) 2495 2496 (fontified nil) 2496 2497 (fontified nil) 2497 2500 (fontified nil) 2500 2511 (fontified nil) 2511 2512 (fontified nil) 2512 2550 (fontified nil) 2550 2551 (fontified nil) 2551 2552 (fontified nil) 2552 2555 (fontified nil) 2555 2566 (fontified nil) 2566 2567 (fontified nil) 2567 2605 (fontified nil) 2605 2606 (fontified nil) 2606 2607 (fontified nil) 2607 2610 (fontified nil) 2610 2621 (fontified nil) 2621 2622 (fontified nil) 2622 2660 (fontified nil) 2660 2661 (fontified nil) 2661 2662 (fontified nil) 2662 2665 (fontified nil) 2665 2671 (fontified nil) 2671 2672 (fontified nil) 2672 2714 (fontified nil) 2714 2715 (fontified nil) 2715 2716 (fontified nil) 2716 2719 (fontified nil) 2719 2735 (fontified nil) 2735 2736 (fontified nil) 2736 2808 (fontified nil) 2808 2809 (fontified nil) 2809 2810 (fontified nil)) . -1787) (1784 . 1786) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
+" 0 1 (fontified nil)) . -1781) (1274 . 1275) (1780 . 1781) (1273 . 1274) (#(" " 0 1 (fontified nil)) . 1273) (1263 . 1780) (#(" " 0 1 (fontified nil)) . 1263) (1233 . 1264) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
+" 0 1 (fontified nil)) . -1230) (884 . 885) (1229 . 1230) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1229) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
+" 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
+" 0 1 (fontified nil)) . -737) (669 . 738) (#(" " 0 1 (fontified nil)) . 669) (398 . 670) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   [\"black\" \"red3\" \"ForestGreen\" \"yellow3\" \"blue\" \"magenta3\" \"DeepSkyBlue\" \"gray50\"])
+ '(custom-safe-themes
+   (quote
+    (\"39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4\" \"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
+ '(package-selected-packages
+   (quote
+    (highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 275 (fontified nil) 275 339 (fontified nil) 339 340 (fontified nil) 340 341 (fontified nil) 341 344 (fontified nil) 344 371 (fontified nil) 371 452 (fontified nil) 452 453 (fontified nil) 453 454 (fontified nil) 454 457 (fontified nil) 457 479 (fontified nil) 479 485 (fontified nil) 485 490 (fontified nil) 490 835 (fontified nil) 835 836 (fontified nil) 836 837 (fontified nil) 837 840 (fontified nil) 840 869 (fontified nil) 869 875 (fontified nil) 875 880 (fontified nil) 880 1376 (fontified nil) 1376 1377 (fontified nil) 1377 1378 (fontified nil)) . -398)) nil (23673 27450 424613 833000) 0 nil]) ((1777 . 4587) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((((class color) (min-colors 10)) (:foreground \"light gray\" :background \"black\"))))
+ '(avy-goto-char-timer-face ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-0 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-1 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(avy-lead-face-2 ((t (:foreground \"color-52\" :underline t :weight bold))))
+ '(font-lock-comment-delimiter-face ((t (:inherit default :foreground \"color-234\"))))
+ '(font-lock-comment-face ((t (:background \"color-236\" :foreground \"color-232\" :slant italic))))
+ '(fringe ((t nil)))
+ '(helm-candidate-number ((t (:background \"color-16\" :foreground \"white\"))))
+ '(helm-grep-match ((t (:foreground \"brightwhite\" :weight bold))))
+ '(helm-header ((t (:inherit header-line :background \"color-16\" :foreground \"brightwhite\"))))
+ '(helm-match ((t (:foreground \"brightwhite\" :weight bold))))
+ '(helm-selection ((t (:background \"color-233\" :foreground \"brightwhite\" :underline t))))
+ '(helm-separator ((t (:background \"color-233\" :foreground \"white\"))))
+ '(helm-source-header ((t (:background \"color-233\" :foreground \"white\" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
+ '(helm-swoop-target-line-face ((t (:background \"unspecified-bg\" :foreground \"color-52\"))))
+ '(helm-swoop-target-word-face ((t (:background \"unspecified-bg\" :foreground \"color-52\" :underline t :weight bold))))
+ '(highlight ((t (:background \"   unspecified-bg\" :foreground \"color-52\"))))
+ '(highlight-indentation-face ((t (:background \"color-234\"))))
+ '(hl-line ((t (:background \"color-234\" :underline t :weight semi-bold))))
+ '(linum ((t (:background \"color-236\" :foreground \"color-232\"))))
+ '(linum-relative-current-face ((t (:background \"unspecified-bg\" :foreground \"brightwhite\" :weight bold))))
+ '(markdown-comment-face ((t nil)))
+ '(mode-line ((t (:inherit variable-pitch :background \"color-233\" :foreground \"brightwhite\" :box nil :weight bold))))
+ '(mode-line-inactive ((t (:inherit mode-line :background \"color-233\" :foreground \"color-244\"))))
+ '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
+ '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
+ '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
+ '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+ '(region ((t (:background \"#1D1F21\" :weight bold))))
+ '(show-paren-match ((t (:background \"unspecified-bg\" :foreground \"color-52\" :weight bold)))))" 0 237 (fontified nil) 237 240 (fontified nil) 240 247 (fontified nil) 247 248 (fontified nil) 248 330 (fontified nil) 330 331 (fontified nil) 331 332 (fontified nil) 332 335 (fontified nil) 335 359 (fontified nil) 359 360 (fontified nil) 360 416 (fontified nil) 416 417 (fontified nil) 417 418 (fontified nil) 418 421 (fontified nil) 421 434 (fontified nil) 434 435 (fontified nil) 435 491 (fontified nil) 491 492 (fontified nil) 492 493 (fontified nil) 493 496 (fontified nil) 496 511 (fontified nil) 511 512 (fontified nil) 512 568 (fontified nil) 568 569 (fontified nil) 569 570 (fontified nil) 570 573 (fontified nil) 573 588 (fontified nil) 588 589 (fontified nil) 589 645 (fontified nil) 645 646 (fontified nil) 646 647 (fontified nil) 647 650 (fontified nil) 650 665 (fontified nil) 665 666 (fontified nil) 666 722 (fontified nil) 722 723 (fontified nil) 723 724 (fontified nil) 724 727 (fontified nil) 727 759 (fontified nil) 759 760 (fontified nil) 760 808 (fontified nil) 808 809 (fontified nil) 809 810 (fontified nil) 810 813 (fontified nil) 813 835 (fontified nil) 835 836 (fontified nil) 836 905 (fontified nil) 905 906 (fontified nil) 906 907 (fontified nil) 907 910 (fontified nil) 910 916 (fontified nil) 916 917 (fontified nil) 917 926 (fontified nil) 926 927 (fontified nil) 927 928 (fontified nil) 928 931 (fontified nil) 931 952 (fontified nil) 952 953 (fontified nil) 953 1003 (fontified nil) 1003 1004 (fontified nil) 1004 1005 (fontified nil) 1005 1008 (fontified nil) 1008 1023 (fontified nil) 1023 1024 (fontified nil) 1024 1070 (fontified nil) 1070 1071 (fontified nil) 1071 1072 (fontified nil) 1072 1075 (fontified nil) 1075 1086 (fontified nil) 1086 1087 (fontified nil) 1087 1164 (fontified nil) 1164 1165 (fontified nil) 1165 1166 (fontified nil) 1166 1169 (fontified nil) 1169 1179 (fontified nil) 1179 1180 (fontified nil) 1180 1226 (fontified nil) 1226 1227 (fontified nil) 1227 1228 (fontified nil) 1228 1231 (fontified nil) 1231 1245 (fontified nil) 1245 1246 (fontified nil) 1246 1316 (fontified nil) 1316 1317 (fontified nil) 1317 1318 (fontified nil) 1318 1321 (fontified nil) 1321 1335 (fontified nil) 1335 1336 (fontified nil) 1336 1387 (fontified nil) 1387 1388 (fontified nil) 1388 1389 (fontified nil) 1389 1392 (fontified nil) 1392 1410 (fontified nil) 1410 1411 (fontified nil) 1411 1534 (fontified nil) 1534 1535 (fontified nil) 1535 1536 (fontified nil) 1536 1539 (fontified nil) 1539 1566 (fontified nil) 1566 1567 (fontified nil) 1567 1626 (fontified nil) 1626 1627 (fontified nil) 1627 1628 (fontified nil) 1628 1631 (fontified nil) 1631 1658 (fontified nil) 1658 1659 (fontified nil) 1659 1744 (fontified nil) 1744 1745 (fontified nil) 1745 1746 (fontified nil) 1746 1749 (fontified nil) 1749 1758 (fontified nil) 1758 1759 (fontified nil) 1759 1821 (fontified nil) 1821 1822 (fontified nil) 1822 1823 (fontified nil) 1823 1826 (fontified nil) 1826 1852 (fontified nil) 1852 1853 (fontified nil) 1853 1884 (fontified nil) 1884 1885 (fontified nil) 1885 1886 (fontified nil) 1886 1889 (fontified nil) 1889 1896 (fontified nil) 1896 1897 (fontified nil) 1897 1959 (fontified nil) 1959 1960 (fontified nil) 1960 1961 (fontified nil) 1961 1964 (fontified nil) 1964 1969 (fontified nil) 1969 1970 (fontified nil) 1970 2025 (fontified nil) 2025 2026 (fontified nil) 2026 2027 (fontified nil) 2027 2030 (fontified nil) 2030 2057 (fontified nil) 2057 2058 (fontified nil) 2058 2133 (fontified nil) 2133 2134 (fontified nil) 2134 2135 (fontified nil) 2135 2138 (fontified nil) 2138 2159 (fontified nil) 2159 2160 (fontified nil) 2160 2169 (fontified nil) 2169 2170 (fontified nil) 2170 2171 (fontified nil) 2171 2174 (fontified nil) 2174 2183 (fontified nil) 2183 2184 (fontified nil) 2184 2287 (fontified nil) 2287 2288 (fontified nil) 2288 2289 (fontified nil) 2289 2292 (fontified nil) 2292 2310 (fontified nil) 2310 2311 (fontified nil) 2311 2385 (fontified nil) 2385 2386 (fontified nil) 2386 2387 (fontified nil) 2387 2390 (fontified nil) 2390 2401 (fontified nil) 2401 2402 (fontified nil) 2402 2440 (fontified nil) 2440 2441 (fontified nil) 2441 2442 (fontified nil) 2442 2445 (fontified nil) 2445 2456 (fontified nil) 2456 2457 (fontified nil) 2457 2495 (fontified nil) 2495 2496 (fontified nil) 2496 2497 (fontified nil) 2497 2500 (fontified nil) 2500 2511 (fontified nil) 2511 2512 (fontified nil) 2512 2550 (fontified nil) 2550 2551 (fontified nil) 2551 2552 (fontified nil) 2552 2555 (fontified nil) 2555 2566 (fontified nil) 2566 2567 (fontified nil) 2567 2605 (fontified nil) 2605 2606 (fontified nil) 2606 2607 (fontified nil) 2607 2610 (fontified nil) 2610 2621 (fontified nil) 2621 2622 (fontified nil) 2622 2660 (fontified nil) 2660 2661 (fontified nil) 2661 2662 (fontified nil) 2662 2665 (fontified nil) 2665 2671 (fontified nil) 2671 2672 (fontified nil) 2672 2714 (fontified nil) 2714 2715 (fontified nil) 2715 2716 (fontified nil) 2716 2719 (fontified nil) 2719 2735 (fontified nil) 2735 2736 (fontified nil) 2736 2808 (fontified nil) 2808 2809 (fontified nil) 2809 2810 (fontified nil)) . -1777) (1774 . 1776) (1274 . 1278) (#(" " 0 1 (fontified nil)) . 1274) (#("
+" 0 1 (fontified nil)) . -1771) (1274 . 1275) (1770 . 1771) (1273 . 1274) (#(" " 0 1 (fontified nil)) . 1273) (1263 . 1770) (#(" " 0 1 (fontified nil)) . 1263) (1233 . 1264) (884 . 888) (#(" " 0 1 (fontified nil)) . 884) (#("
+" 0 1 (fontified nil)) . -1230) (884 . 885) (1229 . 1230) (883 . 884) (#(" " 0 1 (fontified nil)) . 883) (873 . 1229) (#(" " 0 1 (fontified nil)) . 873) (850 . 874) (#("
+" 0 1 (fontified nil)) . -850) (765 . 851) (#(" " 0 1 (fontified nil)) . 765) (737 . 766) (#("
+" 0 1 (fontified nil)) . -737) (669 . 738) (#(" " 0 1 (fontified nil)) . 669) (398 . 670) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   [\"black\" \"red3\" \"ForestGreen\" \"yellow3\" \"blue\" \"magenta3\" \"DeepSkyBlue\" \"gray50\"])
+ '(custom-safe-themes
+   (quote
+    (\"39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4\" \"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
+ '(package-selected-packages
+   (quote
+    (evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 245 (fontified nil) 245 248 (fontified nil) 248 275 (fontified nil) 275 339 (fontified nil) 339 340 (fontified nil) 340 341 (fontified nil) 341 344 (fontified nil) 344 371 (fontified nil) 371 452 (fontified nil) 452 453 (fontified nil) 453 454 (fontified nil) 454 457 (fontified nil) 457 479 (fontified nil) 479 485 (fontified nil) 485 490 (fontified nil) 490 835 (fontified nil) 835 836 (fontified nil) 836 837 (fontified nil) 837 840 (fontified nil) 840 869 (fontified nil) 869 875 (fontified nil) 875 880 (fontified nil) 880 1359 (fontified nil) 1359 1360 (fontified nil) 1360 1361 (fontified nil)) . -398)) nil (23673 21090 618376 846000) 0 nil]) ((1760 . 4570) ("(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -162,4 +272,4 @@
     (\"39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4\" \"58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265\" \"43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0\" \"274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e\" \"a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e\" default)))
  '(package-selected-packages
    (quote
-    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1333 (fontified nil)) . -398)) nil (23673 19541 469836 5000) 0 nil]) ((4466 . 4504) (t 23672 28694 805391 586000)) nil (23672 31853 47674 327000) 0 nil]) nil nil (23672 31853 47682 84000) 0 nil] #1# 13123 4 nil)
+    (monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode company tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package \"use-package\" ##))))" 0 1333 (fontified nil)) . -398)) nil (23673 19541 469836 5000) 0 nil]) ((4466 . 4504) (t 23672 28694 805391 586000)) nil (23672 31853 47674 327000) 0 nil]) nil nil (23672 31853 47682 84000) 0 nil] #1# 22018 6 nil)
