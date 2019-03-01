@@ -31,6 +31,7 @@
           evil-replace-state-cursor '("#FF4D4D" hbar)) ;;Pinkish
 
 (use-package evil-exchange :config (evil-exchange-install))
+(use-package evil-surround :config (global-evil-surround-mode 1))
 
 
 (use-package avy)
