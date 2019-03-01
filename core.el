@@ -30,6 +30,8 @@
           evil-visual-state-cursor '("grey" hbar)
           evil-replace-state-cursor '("#FF4D4D" hbar)) ;;Pinkish
 
+(use-package evil-exchange :config (evil-exchange-install))
+
 
 (use-package avy)
 (use-package which-key :config (which-key-mode))
