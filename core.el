@@ -127,12 +127,17 @@
 
 ;;Core Bindings
 
+(defun my/quit ()
+  (interactive)
+  (if (buffer-narrowed-p) (widen) (delete-frame))) ;; If narrowed widen, else delete frame
+
+
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
   "<escape>" 'save-buffer
   "<SPC><SPC>" 'helm-M-x
   "/" 'helm-swoop
-  "q" 'delete-frame
+  "q" 'my/quit
   "Q" 'kill-emacs
   "U" 'undo-tree-visualize
   "f" 'avy-goto-char-timer
@@ -150,13 +155,16 @@
   "<backtab>" 'previous-buffer
 )
 
+(defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
+(defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
+
 
 (general-def 'visual
   "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
   "r" 'replace-string
-  "m" 'hlt-highlight-region
-  "n" 'narrow-to-region
+  "m" 'my/highlight-region
+  "n" 'my/narrow
   )
 
 
