@@ -145,6 +145,7 @@
 
   "g b" 'helm-bookmarks
   "g c" 'crux-find-user-init-file
+  "g f" 'helm-imenu
 
   "?" 'helm-ag
 
