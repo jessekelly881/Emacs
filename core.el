@@ -126,10 +126,13 @@
 (general-create-definer info-leader-key :prefix "SPC I")
 
 ;;Core Bindings
-
+(setq fancy-buffer-narrowed-p nil)
 (defun my/quit ()
   (interactive)
-  (if (buffer-narrowed-p) (widen) (delete-frame))) ;; If narrowed widen, else delete frame
+  (cond
+   ((buffer-narrowed-p) (widen))
+   (fancy-buffer-narrowed-p (progn (fancy-widen) (setq fancy-buffer-narrowed-p nil)))
+   (t (delete-frame)))) ;; If narrowed widen, else delete frame
 
 
 (general-def 'normal
@@ -159,13 +162,24 @@
 (defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
 (defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
 
+(defun my/fancy-narrow ()
+  (interactive)
+  (fancy-narrow-to-region (point) (mark))
+  (evil-normal-state)
+  (setq fancy-buffer-narrowed-p t)
+  )
+
+(use-package fold-this)
+
 
 (general-def 'visual
   "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
+  "c" 'my/fancy-narrow
+  "C" 'my/narrow
   "r" 'replace-string
   "m" 'my/highlight-region
-  "n" 'my/narrow
+  "f" 'fold-this
   )
 
 

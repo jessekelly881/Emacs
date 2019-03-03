@@ -1,4 +1,6 @@
-((("this" .
+((("fancy-buffer-narrowed-p" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("this" .
    [1 0 0 0])
   ("Test" .
    [1 0 0 0])
@@ -37,7 +39,7 @@
   ("use-package" .
    [2 0 0 0 0 0 0 0 0 0 1])
   ("setq" .
-   [2 0 0 0])
+   [4 0 0 0])
   ("org-indent-indentation-per-level" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   (":config" .
