@@ -1,3 +1,7 @@
 elpa
 auto-save-list
 projectile-bookmarks.eld
+var
+undo
+projectile-bookmarks.eld
+.*
