@@ -146,6 +146,8 @@
   "f" 'avy-goto-char-timer
   "F" 'avy-goto-line
 
+  "t" 'avy-goto-char-in-line
+
   "g b" 'helm-bookmarks
   "g c" 'crux-find-user-init-file
   "g f" 'helm-imenu
@@ -216,8 +218,8 @@
 (insert-leader-key :keymaps 'normal
   "l" 'lorem-ipsum-insert-paragraphs
   "s" 'helm-c-yas-complete
+  "d" 'crux-insert-date
 )
-
 ;; Mark Hydra
 (use-package multiple-cursors)
 (defhydra hydra-mark (:hint nil)
