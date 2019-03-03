@@ -1,5 +1,2 @@
-"515848c93f63761f55a49468dedffa4a32863efc"
-#s(undo-tree [nil ([nil ([nil ([nil (#1=[nil nil ((nil rear-nonsticky nil 4749 . 4750) (#("
-" 0 1 (fontified nil)) . -4787) (4747 . 4788) 4725) nil (23675 58193 590149 456000) 0 nil]) ((#("  \"c\" 'my/fancy-narrow
-  \"C\" 'my/narrow
-" 0 2 (fontified t) 2 3 (fontified t face font-lock-string-face) 3 4 (fontified t face font-lock-string-face) 4 5 (fontified t face font-lock-string-face) 5 23 (fontified t) 23 25 (fontified t) 25 26 (fontified t face font-lock-string-face) 26 27 (fontified t face font-lock-string-face) 27 28 (fontified t face font-lock-string-face) 28 40 (fontified t)) . 4797) (undo-tree-id0 . -23) (undo-tree-id1 . -3) 4800 (t 23675 58187 695877 266000)) nil (23675 58193 590197 288000) 0 nil]) ((4823 . 4824) (#("N" 0 1 (fontified t face font-lock-string-face)) . 4823)) nil (23675 58187 577513 975000) 0 nil]) ((4800 . 4801) (#("n" 0 1 (fontified t face font-lock-string-face)) . 4800) (t 23675 58134 319212 365000)) nil (23675 58187 577554 530000) 0 nil]) nil nil (23675 58187 577569 706000) 0 nil] #1# 155 4 nil)
+"9b8043d8fba2887d2f7ac3154db86832d1567bdf"
+#s(undo-tree #2=[nil ([nil nil ((apply yas--snippet-revive 1 6 #1=#s(yas--snippet nil nil nil 1 nil nil nil nil)) (apply yas--take-care-of-redo #1#) (1 . 6)) ((#("Test!" 0 5 (fontified t)) . 1) (undo-tree-id0 . -5)) (23675 63640 717701 663000) 0 nil]) nil nil (23675 63640 718114 371000) 0 nil] #2# 45 1 nil)

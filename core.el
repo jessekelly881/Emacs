@@ -215,6 +215,7 @@
 ;; Insert
 (insert-leader-key :keymaps 'normal
   "l" 'lorem-ipsum-insert-paragraphs
+  "s" 'helm-c-yas-complete
 )
 
 ;; Mark Hydra
