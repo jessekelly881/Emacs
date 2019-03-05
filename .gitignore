@@ -2,7 +2,7 @@ elpa
 auto-save-list
 projectile-bookmarks.eld
 var
-undo
+undo/*
 projectile-bookmarks.eld
 .*
 ac-comphist.dat
