@@ -128,11 +128,11 @@
 (load (expand-file-name "el.el" user-emacs-directory))
 (load (expand-file-name "py.el" user-emacs-directory))
 (load (expand-file-name "web.el" user-emacs-directory))
+(load (expand-file-name "utils.el" user-emacs-directory))
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
 (general-create-definer config-leader-key :prefix "SPC c")
-(general-create-definer window-leader-key :prefix "SPC w")
 (general-create-definer file-leader-key :prefix "SPC f")
 (general-create-definer view-leader-key :prefix "SPC v")
 (general-create-definer set-leader-key :prefix "SPC s")
@@ -242,17 +242,14 @@
 
 
 ;; Info
+(leader-key  :keymaps 'normal
+  "w" 'window-hydra/body
+)
+
 (info-leader-key  :keymaps 'normal
   "w" 'count-words
   "l" 'count-lines-page
 )
-
-(window-leader-key  :keymaps 'normal
-  "o" 'other-window
-  "s" 'crux-create-scratch-buffer
-  "1" 'delete-other-windows
-)
-
 ;; View
 (defun my/clean-view (interactive) ()
   (progn
