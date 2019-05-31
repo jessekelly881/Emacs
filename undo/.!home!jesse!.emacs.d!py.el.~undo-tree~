@@ -1,4 +1,0 @@
-"da39a3ee5e6b4b0d3255bfef95601890afd80709"
-#s(undo-tree [nil (#1=[nil nil ((#("(use-package elpy :config
-  (elpy-enable))
-" 0 1 (fontified t) 1 12 (fontified t face font-lock-keyword-face) 12 13 (fontified t) 13 17 (fontified t face font-lock-constant-face) 17 18 (fontified t) 18 25 (fontified t face font-lock-builtin-face) 25 43 (fontified t)) . 1) (undo-tree-id0 . -26) (undo-tree-id1 . -14) (undo-tree-id2 . -26) (undo-tree-id3 . -26) 15 (t 23670 44876 541959 376000)) nil (23670 45140 601443 879000) 0 nil]) nil nil (23670 45140 601454 434000) 0 nil] #1# 99 1 nil)

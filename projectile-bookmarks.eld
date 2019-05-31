@@ -1,1 +1,0 @@
-("~/Dropbox/.emacs.d/" "~/Dropbox/.config/" "~/Dropbox/docs/" "~/Dropbox/dev/projects/websites/The Real Under/" "~/Dropbox/dev/projects/websites/Homepage/" "~/dev/clones/config/" "~/Dropbox/.config/zsh/oh-my-zsh/" "~/.emacs.d/" "~/docs/" "~/.config/")

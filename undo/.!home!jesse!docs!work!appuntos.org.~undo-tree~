@@ -1,2 +1,0 @@
-"814869fd47932076bdcfacf7294558199ed3cf95"
-#s(undo-tree #1=[nil ([nil nil ((101 . 108) (100 . 102) (#("(" 0 1 (fontified nil face org-level-2)) . -100) (100 . 101) (t 23670 18570 247894 188000)) ((#("(" 0 1 (fontified nil face org-level-2)) . 100) (100 . 101) (#("()" 0 2 (fontified nil face org-level-2)) . 100) (undo-tree-id0 . 1) (#("Snippet" 0 7 (fontified t face org-level-2)) . 101) (t 23670 18781 394553 920000)) (23670 18781 328220 314000) 0 nil]) nil nil (23670 18785 902145 114000) 0 nil] #1# 99 1 nil)

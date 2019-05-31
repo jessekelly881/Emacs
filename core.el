@@ -1,16 +1,22 @@
 (defconst emacs-start-time (current-time))
 (set-face-attribute 'default nil :height 80) ;;Set font size for UI
 
-
 ;;Core Packages. Used Throughout Config.
-(use-package helm :config (setq helm-follow-mode-persistent t))
+(use-package helm
+  :config (setq helm-follow-mode-persistent t))
+
+
 (use-package helm-swoop)
-(use-package helm-themes)
+(use-package dumb-jump)
+;; Disable pre-input
 (use-package helm-mode-manager)
+(use-package docker)
 (use-package yasnippet :config (yas-global-mode 1))
 (use-package helm-c-yasnippet)
 (use-package ag)
 (use-package helm-ag)
+(use-package golden-ratio
+  :config (golden-ratio-mode 1))
 (use-package expand-region :config
   (setq er/try-expand-list
     (append er/try-expand-list '(mark-paragraph mark-page))))
@@ -20,7 +26,7 @@
 (use-package chronos)
 (use-package helm-chronos :init
   (setq helm-chronos-standard-timers
-    '( ""
+    '( "25/Work For 25 Min"
        "")))
 
 (use-package evil :config
@@ -43,9 +49,12 @@
 (use-package linum-relative)
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
 (use-package magit)
+(use-package web-mode)
+
 
 ;;Misc. Non-Core Packages.
 (use-package crux)
+(use-package origami)
 (use-package olivetti) ;;Centered text
 (use-package lorem-ipsum)
 (use-package markdown-mode)
@@ -84,7 +93,7 @@
 (use-package sublime-themes)
 (use-package monochrome-theme)
 
-(load-theme 'monochrome t)
+(load-theme 'brin t)
 
 
 (defun on-frame-open (&optional frame)
@@ -95,6 +104,11 @@
     ))
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
+
+(setq helm-swoop-pre-input-function
+      (lambda () ""))
+
+(use-package helm-themes)
 
 (use-package highlight)
 ;;Mode Line
@@ -117,7 +131,10 @@
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
+(general-create-definer config-leader-key :prefix "SPC c")
+(general-create-definer window-leader-key :prefix "SPC w")
 (general-create-definer file-leader-key :prefix "SPC f")
+(general-create-definer view-leader-key :prefix "SPC v")
 (general-create-definer set-leader-key :prefix "SPC s")
 (general-create-definer buffer-leader-key :prefix "SPC b")
 (general-create-definer project-leader-key :prefix "SPC p")
@@ -130,9 +147,18 @@
 (defun my/quit ()
   (interactive)
   (cond
+   ((bound-and-true-p loccur-mode) (loccur-current))
    ((buffer-narrowed-p) (widen))
    (fancy-buffer-narrowed-p (progn (fancy-widen) (setq fancy-buffer-narrowed-p nil)))
+   ((not (one-window-p)) (kill-buffer-and-window))
    (t (delete-frame)))) ;; If narrowed widen, else delete frame
+
+(setq helm-boring-buffer-regexp-list
+      (quote
+       (  "\\Minibuf.+\\*"
+               "\\` "
+               "\\*.+\\*"
+                  )))
 
 
 (general-def 'normal
@@ -149,17 +175,21 @@
   "t" 'avy-goto-char-in-line
 
   "g b" 'helm-bookmarks
-  "g c" 'crux-find-user-init-file
   "g f" 'helm-imenu
+  "g d" 'dumb-jump-go-other-window
 
   "?" 'helm-ag
 
   "m" 'er/expand-region
   "M" 'my/mark-region
 
-  "TAB" 'next-buffer
+  "TAB" 'helm-buffers-list
   "<backtab>" 'previous-buffer
+
+  "P" 'helm-show-kill-ring
 )
+
+
 
 (defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
 (defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
@@ -172,18 +202,21 @@
   )
 
 (use-package fold-this)
+(use-package loccur)
+
 
 
 (general-def 'visual
   "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
-  "c" 'my/fancy-narrow
-  "C" 'my/narrow
+  "n" 'my/fancy-narrow
+  "N" 'my/narrow
   "r" 'replace-string
   "m" 'my/highlight-region
   "f" 'fold-this
+  "u" 'undo
+  "a" 'loccur-current
   )
-
 
 
 ;;Org: Hide Leading Stars
@@ -214,11 +247,45 @@
   "l" 'count-lines-page
 )
 
+(window-leader-key  :keymaps 'normal
+  "o" 'other-window
+  "s" 'crux-create-scratch-buffer
+  "1" 'delete-other-windows
+)
+
+;; View
+(defun my/clean-view (interactive) ()
+  (progn
+    (setq header-line-format " ")
+    (olivetti-mode)
+    (olivetti-hide-mode-line)
+  ))
+
+(view-leader-key  :keymaps 'normal
+  "t" 'toggle-truncate-lines
+  "o" 'olivetti-mode
+  "m" 'olivetti-toggle-hide-mode-line
+  "l" 'linum-relative-mode
+  "L" 'global-linum-mode
+  "g" 'golden-ratio-mode
+  "f" 'fold-this-unfold-all
+  "c" 'my/clean-view
+  "T" 'helm-themes
+
+  "h t" 'sgml-tags-invisible
+)
+
+(defun open-config-core () (interactive) (find-file-other-window "/home/jesse/.emacs.d/core.el"))
+(config-leader-key  :keymaps 'normal
+  "c" 'open-config-core
+)
+
 ;; Insert
 (insert-leader-key :keymaps 'normal
   "l" 'lorem-ipsum-insert-paragraphs
   "s" 'helm-c-yas-complete
   "d" 'crux-insert-date
+  "t c" 'sgml-close-tag
 )
 ;; Mark Hydra
 (use-package multiple-cursors)
@@ -237,3 +304,44 @@
 ;;Python
 (use-package elpy)
 (elpy-enable)
+
+;; Pretty Symbols
+(global-prettify-symbols-mode 1)
+
+(add-hook
+ 'python-mode-hook
+ (lambda ()
+   (mapc (lambda (pair) (push pair prettify-symbols-alist))
+         '(;; Syntax
+           ("def" .      #x0192)
+           ("not" .      #x0021)
+           ("in" .       #x2208)
+           ("not in" .   #x2209)
+           ("return" .   #x219E)
+           ("yield" .    #x27fb)
+           ("class" .    #x039E)
+           ("for" .      #x2200)
+           ("import" .   #x03A9)
+           ("from" .     #x00A7)
+           ("if" .       #x003F)
+           ("if not" .   #x203D)
+           ("elif" .     #x00BF)
+           ("else" .     #x00BB)
+           ("self" .     #x21BA)
+           ("break" .    #x21B5)
+           ("pass" .     #x21B7)
+           ("==" .       #x2261)
+           ;; Base Types
+           ("int" .      #x2124)
+           ("float" .    #x211d)
+           ("str" .      #x1d54a)
+           ("True" .     #x1E6A)
+           ("False" .    #x1E1E)
+           ;; Mypy
+           ("Dict" .     #x1d507)
+           ("List" .     #x2112)
+           ("Tuple" .    #x2a02)
+           ("Set" .      #x2126)
+           ("Iterable" . #x1d50a)
+           ("Any" .      #x2754)
+           ("Union" .    #x22c3)))))

@@ -10,6 +10,7 @@
 (global-auto-revert-mode 1)
 (global-prettify-symbols-mode 1)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
+(set-default 'truncate-lines t)
 
 (fset 'yes-or-no-p 'y-or-no-p)
 

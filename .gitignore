@@ -6,3 +6,6 @@ undo/*
 projectile-bookmarks.eld
 .*
 ac-comphist.dat
+.helm-chronos-recent-timers
+.mc-lists.el
+projectile-bookmarks.eld
