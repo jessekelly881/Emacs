@@ -17,3 +17,21 @@
   ("x" helm-M-x)
   ("q" nil)
   )
+
+
+(defhydra olivetti-hydra ()
+  "
+    Movement^
+    ---------
+    _h_ ←
+    _l_ →
+    ^^^^^^^
+    ^^^^^^^
+   _t_ toggle  _x_ M-x      _q_ quit
+    "
+  ("h" olivetti-expand)
+  ("l" olivetti-shrink)
+  ("t" olivetti-mode)
+  ("x" helm-M-x)
+  ("q" nil)
+  )

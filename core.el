@@ -261,6 +261,7 @@
 (view-leader-key  :keymaps 'normal
   "t" 'toggle-truncate-lines
   "o" 'olivetti-mode
+  "O" 'olivetti-hydra/body
   "m" 'olivetti-toggle-hide-mode-line
   "l" 'linum-relative-mode
   "L" 'global-linum-mode
