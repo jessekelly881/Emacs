@@ -1,45 +1,24 @@
 (defconst emacs-start-time (current-time))
 (set-face-attribute 'default nil :height 80) ;;Set font size for UI
 
-;;Core Packages. Used Throughout Config.
-(use-package helm
-  :config (setq helm-follow-mode-persistent t))
-
+(use-package helm :config (setq helm-follow-mode-persistent t))
 (use-package xclip :config (xclip-mode 1))
 (use-package helm-swoop)
 (use-package dumb-jump)
-;; Disable pre-input
 (use-package helm-mode-manager)
 (use-package docker)
 (use-package yasnippet :config (yas-global-mode 1))
 (use-package helm-c-yasnippet)
 (use-package ag)
 (use-package helm-ag)
-(use-package golden-ratio
-  :config (golden-ratio-mode 1))
-(use-package expand-region :config
-  (setq er/try-expand-list
-    (append er/try-expand-list '(mark-paragraph mark-page))))
-
+(use-package golden-ratio :config (golden-ratio-mode 1))
+(use-package expand-region :config (setq er/try-expand-list (append er/try-expand-list '(mark-paragraph mark-page))))
 (use-package general)
-
+(use-package ranger)
 (use-package chronos)
-(use-package helm-chronos :init
-  (setq helm-chronos-standard-timers
-    '( "25/Work For 25 Min"
-       "")))
-
-(use-package evil :config
-  (evil-mode 1))
-(setq evil-normal-state-cursor '("#FFFF4D" box) ;;Pale Yellow
-          evil-insert-state-cursor '("#B30000" hbar) ;;Dark Red
-          evil-visual-state-cursor '("grey" hbar)
-          evil-replace-state-cursor '("#FF4D4D" hbar)) ;;Pinkish
-
+(use-package helm-chronos :init (setq helm-chronos-standard-timers '( "25/Work For 25 Min" "")))
 (use-package evil-exchange :config (evil-exchange-install))
 (use-package evil-surround :config (global-evil-surround-mode 1))
-
-
 (use-package avy)
 (use-package which-key :config (which-key-mode))
 (use-package hydra)
@@ -50,9 +29,6 @@
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.2))
 (use-package magit)
 (use-package web-mode)
-
-
-;;Misc. Non-Core Packages.
 (use-package crux)
 (use-package origami)
 (use-package olivetti) ;;Centered text
@@ -60,16 +36,26 @@
 (use-package markdown-mode)
 (use-package company)
 (use-package coffee-mode)
-(use-package auto-complete
-  :config (ac-config-default))
+(use-package auto-complete :config (ac-config-default))
+(use-package evil :config (evil-mode 1))
+(use-package blackboard-theme)
+(use-package clues-theme)
+(use-package sublime-themes)
+(use-package monochrome-theme)
+(use-package python-django)
+(use-package helm-themes)
+(use-package highlight)
+(use-package fold-this)
+(use-package loccur)
+(use-package tide)
+(use-package elpy)
+
+(setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
 (use-package nand2tetris ;;Nand2Tetris Course. HDL Code
   :config
   (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
-  (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
   )
 
-;; Typescript
-(use-package tide)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -84,14 +70,9 @@
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
 ;;Django
-(use-package python-django)
 
 
 ;;Theme
-(use-package blackboard-theme)
-(use-package clues-theme)
-(use-package sublime-themes)
-(use-package monochrome-theme)
 
 (load-theme 'brin t)
 
@@ -101,6 +82,7 @@
   (unless (display-graphic-p frame)
     (set-face-background 'default "unspecified-bg" frame)
     (set-face-background 'font-lock-comment-face "unspecified-bg" frame)
+    (set-face-foreground 'linum "unspecified-bg" frame)
     ))
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
@@ -108,9 +90,6 @@
 (setq helm-swoop-pre-input-function
       (lambda () ""))
 
-(use-package helm-themes)
-
-(use-package highlight)
 ;;Mode Line
 ;; (setq-default mode-line-format
 ;;   (list
@@ -121,6 +100,10 @@
 ;;    ))
 (setq-default mode-line-format nil)
 
+(setq evil-normal-state-cursor '("#FFFF4D" box) ;;Pale Yellow
+          evil-insert-state-cursor '("#B30000" hbar) ;;Dark Red
+          evil-visual-state-cursor '("grey" hbar)
+          evil-replace-state-cursor '("#FF4D4D" hbar)) ;;Pinkish
 
 ;;Highlight Curent Line
 (global-hl-line-mode +1)
@@ -154,12 +137,31 @@
    ((not (one-window-p)) (kill-buffer-and-window))
    (t (delete-frame)))) ;; If narrowed widen, else delete frame
 
+(defun my/complete ()
+  (interactive)
+  (cond
+   ((equal major-mode 'web-mode) (emmet-expand-line (line-beginning-position) (line-end-position)))
+   ))
+
 (setq helm-boring-buffer-regexp-list
       (quote
        (  "\\Minibuf.+\\*"
                "\\` "
                "\\*.+\\*"
                   )))
+
+(defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
+(defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
+
+(defun my/fancy-narrow ()
+  (interactive)
+  (fancy-narrow-to-region (point) (mark))
+  (evil-normal-state)
+  (setq fancy-buffer-narrowed-p t)
+  )
+
+
+
 
 
 (general-def 'normal
@@ -184,39 +186,36 @@
   "m" 'er/expand-region
   "M" 'my/mark-region
 
-  "TAB" 'helm-buffers-list
-  "<backtab>" 'previous-buffer
+  "g t" 'web-mode-tag-match
+
+  "<backtab>" 'projectile-previous-project-buffer
+  "TAB" 'projectile-next-project-buffer
 
   "P" 'helm-show-kill-ring
 )
 
-
-
-(defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
-(defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
-
-(defun my/fancy-narrow ()
-  (interactive)
-  (fancy-narrow-to-region (point) (mark))
-  (evil-normal-state)
-  (setq fancy-buffer-narrowed-p t)
-  )
-
-(use-package fold-this)
-(use-package loccur)
-
-
-
 (general-def 'visual
-  "#" 'comment-or-uncomment-region
   "<SPC><SPC>" 'helm-M-x
-  "n" 'my/fancy-narrow
-  "N" 'my/narrow
+  "TAB" 'indent-for-tab-command
+
+  "f" 'avy-goto-char-timer
+  "F" 'avy-goto-line
+
+  "#" 'comment-or-uncomment-region
   "r" 'replace-string
   "m" 'my/highlight-region
-  "f" 'fold-this
   "u" 'undo
-  "a" 'loccur-current
+
+  "p" 'mc/mark-previous-like-this
+  "n" 'mc/mark-next-like-this
+  "M a" 'mc/mark-all-like-this
+
+  "v a" 'loccur-current
+  "v n" 'my/fancy-narrow
+  "v N" 'my/narrow
+  "v f" 'fold-this
+
+  "g t" 'web-mode-tag-match
   )
 
 
@@ -284,7 +283,7 @@
   "l" 'lorem-ipsum-insert-paragraphs
   "s" 'helm-c-yas-complete
   "d" 'crux-insert-date
-  "t c" 'sgml-close-tag
+  "/" 'web-mode-element-close
 )
 ;; Mark Hydra
 (use-package multiple-cursors)
@@ -301,7 +300,6 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 
 ;;Python
-(use-package elpy)
 (elpy-enable)
 
 ;; Pretty Symbols
@@ -329,18 +327,50 @@
            ("self" .     #x21BA)
            ("break" .    #x21B5)
            ("pass" .     #x21B7)
+           ("None" .     #x2205)
+           ("del" .      #x2296)
+           ("super" .    #x25EE)
            ("==" .       #x2261)
            ;; Base Types
            ("int" .      #x2124)
            ("float" .    #x211d)
-           ("str" .      #x1d54a)
+           ("str" .      #x1E61)
            ("True" .     #x1E6A)
            ("False" .    #x1E1E)
            ;; Mypy
            ("Dict" .     #x1d507)
            ("List" .     #x2112)
            ("Tuple" .    #x2a02)
-           ("Set" .      #x2126)
            ("Iterable" . #x1d50a)
            ("Any" .      #x2754)
            ("Union" .    #x22c3)))))
+
+(add-hook 'sgml-mode-hook 'emmet-mode)
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+(add-hook 'text-mode-hook 'remove-dos-eol)
+(add-hook 'web-mode-hook 'remove-dos-eol)
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(setq web-mode-enable-auto-closing t)
+
+(general-define-key
+ :keymaps 'web-mode-map
+ "TAB" 'emmet-expand-line
+ )
+
+(defun my/web-mode-settings ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-enable-current-column-highlight t)
+)
+(add-hook 'web-mode-hook  'my/web-mode-settings)
+
+(setq next-line-add-newlines t)
+(setq prettify-symbols-unprettify-at-point 'right-edge)
+
+;; (setq-default 'truncate-lines t)

@@ -12,7 +12,7 @@
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
 (set-default 'truncate-lines t)
 
-(fset 'yes-or-no-p 'y-or-no-p)
+;; (fset 'yes-or-no-p 'y-or-no-p)
 
 (setq-default
  indent-tabs-mode nil
