@@ -1,9 +1,9 @@
 (defhydra window-hydra ()
   "
-    Movement^   ^Split^         ^Switch^       ^^^Resize^         ^Window Purpose^
+    Movement^   ^Split^       ^Buffer^
     ------------------------------------------------------------------------------------------------------
-    _h_ ←
-    _j_ ↓
+    _h_ ←       _L_ ←             _o_ open
+    _j_ ↓       _J_ ↓
     _k_ ↑
     _l_ →
     ^^^^^^^
@@ -14,6 +14,9 @@
   ("j" windmove-down)
   ("k" windmove-up)
   ("l" windmove-right)
+  ("L" split-window-right)
+  ("J" split-window-below)
+  ("o" ranger :exit t)
   ("x" helm-M-x)
   ("q" nil)
   )
