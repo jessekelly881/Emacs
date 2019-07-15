@@ -112,13 +112,14 @@
 
 (use-package highlight)
 ;;Mode Line
-(setq-default mode-line-format
-  (list
-   " "
-   "%m. "
-   "%b. "
-   "line %l. "
-   ))
+;; (setq-default mode-line-format
+;;   (list
+;;    " "
+;;    "%m. "
+;;    "%b. "
+;;    "line %l. "
+;;    ))
+(setq-default mode-line-format nil)
 
 
 ;;Highlight Curent Line
