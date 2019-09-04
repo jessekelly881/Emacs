@@ -66,8 +66,7 @@
   (company-mode +1))
 
 
-(add-hook 'before-save-hook 'tide-format-before-save)
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;; (add-hook 'before-save-hook 'tide-format-before-save)
 
 ;;Django
 
@@ -125,6 +124,7 @@
 (general-create-definer settings-leader-key :prefix "SPC s")
 (general-create-definer insert-leader-key :prefix "SPC i")
 (general-create-definer info-leader-key :prefix "SPC I")
+(general-create-definer text-leader-key :prefix "SPC t")
 
 ;;Core Bindings
 (setq fancy-buffer-narrowed-p nil)
@@ -285,6 +285,12 @@
   "d" 'crux-insert-date
   "/" 'web-mode-element-close
 )
+
+(text-leader-key :keymaps 'normal
+  "t l" 'transpose-lines
+  "t w" 'transpose-words
+)
+
 ;; Mark Hydra
 (use-package multiple-cursors)
 (defhydra hydra-mark (:hint nil)
@@ -374,3 +380,5 @@
 (setq prettify-symbols-unprettify-at-point 'right-edge)
 
 ;; (setq-default 'truncate-lines t)
+
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
