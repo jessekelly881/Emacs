@@ -1,5 +1,5 @@
 # My Emacs Configuration
-> I love emacs. Lets share the love!
+> I love emacs. Lets share the love! If you are new to emacs check out the [Emacs Website](https://www.gnu.org/software/emacs/).
 
 ![made-with-emacs](https://img.shields.io/badge/Made%20with-Emacs%20Lisp-8b0000.svg)
 
