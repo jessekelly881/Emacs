@@ -43,3 +43,5 @@ It is always enlightening to see other developers emacs config so here are a few
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 ```
+
+<img src="./pics/transparent.png" alt="Transparent" width="350">
