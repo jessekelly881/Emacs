@@ -45,3 +45,42 @@ It is always enlightening to see other developers emacs config so here are a few
 ```
 
 <img src="./pics/transparent.jpg" alt="Transparent" width="500">
+
+### Remove Stars in Org Mode
+
+I love org mode! But.. the excessive *s are distracting. So, lets get rid of them!
+
+```lisp
+(defun org-mode-remove-stars ()
+  (font-lock-add-keywords
+   nil
+   '(("^\\*+ "
+      (0
+       (prog1 nil
+         (put-text-property (match-beginning 0) (match-end 0)
+                            'invisible t)))))))
+
+(add-hook 'org-mode-hook #'org-mode-remove-stars)
+```
+
+### Auto indent html and show tag pairs
+
+
+```lisp
+(defun my/web-mode-settings ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-enable-current-column-highlight t)
+)
+(add-hook 'web-mode-hook  'my/web-mode-settings)
+```
+
+### Automatically add new lines to bottom of page. But remove them before save.
+
+This is very very convenient(especially in evil mode which I use). It allows you to keep scrolling past the end of the buffer where you can insert text. But also, removes extra lines before save.
+
+
+```lisp
+(setq next-line-add-newlines t)
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
+```

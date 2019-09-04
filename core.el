@@ -220,7 +220,7 @@
 
 
 ;;Org: Hide Leading Stars
-(defun chunyang-org-mode-remove-stars ()
+(defun org-mode-remove-stars ()
   (font-lock-add-keywords
    nil
    '(("^\\*+ "
@@ -229,7 +229,7 @@
          (put-text-property (match-beginning 0) (match-end 0)
                             'invisible t)))))))
 
-(add-hook 'org-mode-hook #'chunyang-org-mode-remove-stars)
+(add-hook 'org-mode-hook #'org-mode-remove-stars)
 
 ;;Org Normalize Headers Size
 (custom-set-faces
