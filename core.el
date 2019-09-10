@@ -55,9 +55,11 @@
   :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
 
 ;;External Config Code
-(load (expand-file-name "el.el" user-emacs-directory))
 (load (expand-file-name "web.el" user-emacs-directory))
 (load (expand-file-name "utils.el" user-emacs-directory))
+
+;; Mu4e Email
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 
 ;; (defun setup-tide-mode ()
 ;;   (interactive)
@@ -299,8 +301,6 @@
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
 
-;; Mu4e Email
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
 
 ;;Python
 (elpy-enable)
