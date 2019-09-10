@@ -50,13 +50,13 @@
 (use-package tide)
 (use-package elpy)
 (use-package gist)
+(use-package pug-mode)
 (use-package nand2tetris
   :init (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
   :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
 
 ;;External Config Code
-(load (expand-file-name "web.el" user-emacs-directory))
-(load (expand-file-name "utils.el" user-emacs-directory))
+(load (expand-file-name "config/utils.el" user-emacs-directory))
 
 ;; Mu4e Email
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")

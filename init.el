@@ -5,8 +5,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(load (expand-file-name "normalize.el"  user-emacs-directory))
-(load (expand-file-name "core.el" user-emacs-directory))
+(load (expand-file-name "config/normalize.el"  user-emacs-directory))
+(load (expand-file-name "config/core.el" user-emacs-directory))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
