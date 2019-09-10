@@ -9,6 +9,11 @@
 (load (expand-file-name "config/aesthetics/org.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/py.el" user-emacs-directory))
 
+;; Unlimited Undo Tree
+(global-undo-tree-mode)
+(setq undo-tree-auto-save-history t)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
@@ -25,31 +30,7 @@
 
 ;;Core Bindings
 (setq fancy-buffer-narrowed-p nil)
-(defun my/quit ()
-  (interactive)
-  (cond
-   ((bound-and-true-p loccur-mode) (loccur-current))
-   ((buffer-narrowed-p) (widen))
-   (fancy-buffer-narrowed-p (progn (fancy-widen) (setq fancy-buffer-narrowed-p nil)))
-   ((not (one-window-p)) (kill-buffer-and-window))
-   (t (delete-frame)))) ;; If narrowed widen, else delete frame
 
-(defun my/complete ()
-  (interactive)
-  (cond
-   ((equal major-mode 'web-mode) (emmet-expand-line (line-beginning-position) (line-end-position)))
-   ))
-
-
-(defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
-(defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
-
-(defun my/fancy-narrow ()
-  (interactive)
-  (fancy-narrow-to-region (point) (mark))
-  (evil-normal-state)
-  (setq fancy-buffer-narrowed-p t)
-  )
 
 
 
@@ -121,13 +102,6 @@
   "w" 'count-words
   "l" 'count-lines-page
 )
-;; View
-(defun my/clean-view (interactive) ()
-  (progn
-    (setq header-line-format " ")
-    (olivetti-mode)
-    (olivetti-hide-mode-line)
-  ))
 
 (view-leader-key  :keymaps 'normal
   "t" 'toggle-truncate-lines
@@ -144,9 +118,8 @@
   "h t" 'sgml-tags-invisible
 )
 
-(defun open-config-core () (interactive) (find-file-other-window "/home/jesse/.emacs.d/core.el"))
 (config-leader-key  :keymaps 'normal
-  "c" 'open-config-core
+  "c" 'my/open-config-core
 )
 
 ;; Insert
@@ -165,14 +138,6 @@
   "t p" 'transpose-paragraphs
 )
 
-;; Mark Hydra
-(defhydra hydra-mark (:hint nil)
-)
-
-;; Unlimited Undo Tree
-(global-undo-tree-mode)
-(setq undo-tree-auto-save-history t)
-(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
 
 
