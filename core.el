@@ -49,27 +49,27 @@
 (use-package loccur)
 (use-package tide)
 (use-package elpy)
+(use-package gist)
+(use-package nand2tetris
+  :init (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
+  :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
 
-(setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
-(use-package nand2tetris ;;Nand2Tetris Course. HDL Code
-  :config
-  (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode))
-  )
+;;External Config Code
+(load (expand-file-name "el.el" user-emacs-directory))
+(load (expand-file-name "web.el" user-emacs-directory))
+(load (expand-file-name "utils.el" user-emacs-directory))
 
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
+;; (defun setup-tide-mode ()
+;;   (interactive)
+;;   (tide-setup)
+;;   (flycheck-mode +1)
+;;   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;   (eldoc-mode +1)
+;;   (tide-hl-identifier-mode +1)
+;;   (company-mode +1))
 
 
 ;; (add-hook 'before-save-hook 'tide-format-before-save)
-
-;;Django
-
 
 ;;Theme
 
@@ -89,15 +89,14 @@
 (setq helm-swoop-pre-input-function
       (lambda () ""))
 
-;;Mode Line
-;; (setq-default mode-line-format
-;;   (list
-;;    " "
-;;    "%m. "
-;;    "%b. "
-;;    "line %l. "
-;;    ))
-(setq-default mode-line-format nil)
+(setq-default mode-line-format
+  (list
+   " "
+   "%m. "
+   "%b. "
+   "line %l. "
+   ))
+;; (setq-default mode-line-format nil)
 
 (setq evil-normal-state-cursor '("#FFFF4D" box) ;;Pale Yellow
           evil-insert-state-cursor '("#B30000" hbar) ;;Dark Red
@@ -107,11 +106,6 @@
 ;;Highlight Curent Line
 (global-hl-line-mode +1)
 
-;;Mode Specific Configs.
-(load (expand-file-name "el.el" user-emacs-directory))
-(load (expand-file-name "py.el" user-emacs-directory))
-(load (expand-file-name "web.el" user-emacs-directory))
-(load (expand-file-name "utils.el" user-emacs-directory))
 
 ;;Leader Keys
 (general-create-definer leader-key :prefix "SPC")
@@ -289,6 +283,9 @@
 (text-leader-key :keymaps 'normal
   "t l" 'transpose-lines
   "t w" 'transpose-words
+  "t c" 'transpose-chars
+  "t s" 'transpose-sentences
+  "t p" 'transpose-paragraphs
 )
 
 ;; Mark Hydra
@@ -382,3 +379,4 @@
 ;; (setq-default 'truncate-lines t)
 
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
