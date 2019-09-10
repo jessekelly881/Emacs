@@ -2,10 +2,12 @@
 
 (load (expand-file-name "config/packages.el" user-emacs-directory))
 (load (expand-file-name "config/utils.el" user-emacs-directory))
+(load (expand-file-name "config/hydras.el" user-emacs-directory))
 (load (expand-file-name "config/keys.el" user-emacs-directory))
 
 (load (expand-file-name "config/aesthetics/global.el" user-emacs-directory))
-
+(load (expand-file-name "config/aesthetics/org.el" user-emacs-directory))
+(load (expand-file-name "config/aesthetics/py.el" user-emacs-directory))
 
 
 ;;Leader Keys
@@ -38,12 +40,6 @@
    ((equal major-mode 'web-mode) (emmet-expand-line (line-beginning-position) (line-end-position)))
    ))
 
-(setq helm-boring-buffer-regexp-list
-      (quote
-       (  "\\Minibuf.+\\*"
-               "\\` "
-               "\\*.+\\*"
-                  )))
 
 (defun my/narrow () (interactive) (narrow-to-region (point) (mark)) (evil-normal-state))
 (defun my/highlight-region () (interactive) (hlt-highlight-region) (evil-normal-state))
@@ -114,26 +110,6 @@
   )
 
 
-;;Org: Hide Leading Stars
-(defun org-mode-remove-stars ()
-  (font-lock-add-keywords
-   nil
-   '(("^\\*+ "
-      (0
-       (prog1 nil
-         (put-text-property (match-beginning 0) (match-end 0)
-                            'invisible t)))))))
-
-(add-hook 'org-mode-hook #'org-mode-remove-stars)
-
-;;Org Normalize Headers Size
-(custom-set-faces
-  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
-  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
-  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
-  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
-  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
-)
 
 
 ;; Info
@@ -190,7 +166,6 @@
 )
 
 ;; Mark Hydra
-(use-package multiple-cursors)
 (defhydra hydra-mark (:hint nil)
 )
 
@@ -205,44 +180,6 @@
 (elpy-enable)
 
 
-(add-hook 'python-mode-hook
- (lambda ()
-   (mapc (lambda (pair) (push pair prettify-symbols-alist))
-         '(;; Syntax
-           ("def" .      #x0192)
-           ("not" .      #x0021)
-           ("in" .       #x2208)
-           ("not in" .   #x2209)
-           ("return" .   #x219E)
-           ("yield" .    #x27fb)
-           ("class" .    #x039E)
-           ("for" .      #x2200)
-           ("import" .   #x03A9)
-           ("from" .     #x00A7)
-           ("if" .       #x003F)
-           ("if not" .   #x203D)
-           ("elif" .     #x00BF)
-           ("else" .     #x00BB)
-           ("self" .     #x21BA)
-           ("break" .    #x21B5)
-           ("pass" .     #x21B7)
-           ("None" .     #x2205)
-           ("del" .      #x2296)
-           ("super" .    #x25EE)
-           ("==" .       #x2261)
-           ;; Base Types
-           ("int" .      #x2124)
-           ("float" .    #x211d)
-           ("str" .      #x1E61)
-           ("True" .     #x1E6A)
-           ("False" .    #x1E1E)
-           ;; Mypy
-           ("Dict" .     #x1d507)
-           ("List" .     #x2112)
-           ("Tuple" .    #x2a02)
-           ("Iterable" . #x1d50a)
-           ("Any" .      #x2754)
-           ("Union" .    #x22c3)))))
 
 (add-hook 'sgml-mode-hook 'emmet-mode)
 
@@ -262,7 +199,6 @@
 (add-hook 'web-mode-hook  'my/web-mode-settings)
 
 (setq next-line-add-newlines t)
-(setq prettify-symbols-unprettify-at-point 'right-edge)
 
 ;; (setq-default 'truncate-lines t)
 

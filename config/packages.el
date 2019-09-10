@@ -53,3 +53,4 @@
 (use-package nand2tetris
   :init (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
   :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
+(use-package multiple-cursors)
