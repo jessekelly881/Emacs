@@ -1,27 +1,3 @@
-;;Leader Keys
-(general-create-definer leader-key :prefix "SPC")
-(general-create-definer config-leader-key :prefix "SPC c")
-(general-create-definer file-leader-key :prefix "SPC f")
-(general-create-definer view-leader-key :prefix "SPC v")
-(general-create-definer buffer-leader-key :prefix "SPC b")
-(general-create-definer project-leader-key :prefix "SPC p")
-(general-create-definer settings-leader-key :prefix "SPC s")
-(general-create-definer insert-leader-key :prefix "SPC i")
-(general-create-definer info-leader-key :prefix "SPC I")
-(general-create-definer text-leader-key :prefix "SPC t")
-
-(which-key-add-key-based-replacements
-  "SPC c" "Config"
-  "SPC f" "File"
-  "SPC v" "View"
-  "SPC s" "Settings"
-  "SPC b" "Buffer"
-  "SPC p" "Project"
-  "SPC i" "Insert"
-  "SPC I" "Info"
-  "SPC t" "Text"
-)
-
 ;; Normal Mode
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
@@ -69,7 +45,50 @@
   "v f" '(fold-this :which-key "Fold")
 
   "g t" '(web-mode-tag-match :which-key "Jump to tag pair")
+
+  "s g" '(gist-region :which-key "Gist")
   )
+
+;; Leader Keys
+(general-create-definer leader-key :prefix "SPC")
+(general-create-definer config-leader-key :prefix "SPC c")
+(general-create-definer file-leader-key :prefix "SPC f")
+(general-create-definer view-leader-key :prefix "SPC v")
+(general-create-definer buffer-leader-key :prefix "SPC b")
+(general-create-definer project-leader-key :prefix "SPC p")
+(general-create-definer settings-leader-key :prefix "SPC s")
+(general-create-definer insert-leader-key :prefix "SPC i")
+(general-create-definer info-leader-key :prefix "SPC I")
+(general-create-definer text-leader-key :prefix "SPC t")
+(general-create-definer resource-leader-key :prefix "SPC r")
+
+(which-key-add-key-based-replacements
+  "SPC c" "Config"
+  "SPC f" "File"
+  "SPC v" "View"
+  "SPC s" "Set"
+  "SPC b" "Buffer"
+  "SPC p" "Project"
+  "SPC i" "Insert"
+  "SPC I" "Info"
+  "SPC t" "Text"
+  "SPC r" "Resources"
+)
+
+;; Resources
+(resource-leader-key  :keymaps 'normal
+  "g" '(gist-list :which-key "Gists")
+)
+
+;; Set
+(settings-leader-key  :keymaps 'normal
+   "m m" '(markdown-mode :which-key "Markdown mode")
+   "m o" '(org-mode :which-key "Org mode")
+   "m w" '(web-mode :which-key "Web mode")
+   "m p" '(python-mode :which-key "Python mode")
+)
+
+(which-key-add-key-based-replacements "SPC s m" "Mode")
 
 ;; Info
 (info-leader-key  :keymaps 'normal
@@ -95,7 +114,7 @@
 
 ;; Config
 (config-leader-key  :keymaps 'normal
-  "c" '(my/open-config-core :which-key "Open Core Config")
+  "c" '(my/open-config-core :which-key "Core")
 )
 
 ;; Insert
@@ -108,12 +127,14 @@
 
 ;; Text
 (text-leader-key :keymaps 'normal
-  "t l" 'transpose-lines
-  "t w" 'transpose-words
-  "t c" 'transpose-chars
-  "t s" 'transpose-sentences
-  "t p" 'transpose-paragraphs
+  "t l" '(transpose-lines :which-key "Lines")
+  "t w" '(transpose-words :which-key "Words")
+  "t c" '(transpose-chars :which-key "Characters")
+  "t s" '(transpose-sentences :which-key "Sentences")
+  "t p" '(transpose-paragraphs :which-key "Paragraphs")
 )
+
+(which-key-add-key-based-replacements "SPC t t" "Transpose")
 
 ;; Web mode
 (general-define-key
