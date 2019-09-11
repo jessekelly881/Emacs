@@ -47,7 +47,7 @@
 (use-package fold-this)
 (use-package loccur)
 (use-package tide)
-(use-package elpy)
+(use-package elpy :config (elpy-enable))
 (use-package gist)
 (use-package pug-mode)
 (use-package nand2tetris

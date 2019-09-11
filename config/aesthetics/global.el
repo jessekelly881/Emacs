@@ -47,3 +47,9 @@
                "\\` "
                "\\*.+\\*"
                   )))
+
+;; Auto add new lines
+(setq next-line-add-newlines t)
+
+
+(setq fancy-buffer-narrowed-p nil)
