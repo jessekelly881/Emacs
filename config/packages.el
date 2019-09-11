@@ -1,5 +1,4 @@
 ;; Package Install And Base Config
-
 (use-package helm :config (setq helm-follow-mode-persistent t))
 (use-package xclip :config (xclip-mode 1))
 (use-package helm-swoop)
