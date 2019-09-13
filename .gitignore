@@ -9,3 +9,6 @@ ac-comphist.dat
 .helm-chronos-recent-timers
 .mc-lists.el
 projectile-bookmarks.eld
+.pipempvsocket
+network-security.data
+bookmarks
