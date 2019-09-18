@@ -53,3 +53,7 @@
 
 
 (setq fancy-buffer-narrowed-p nil)
+
+;; Remove border(frenge)
+(if (boundp 'fringe-mode)
+  (fringe-mode -1))

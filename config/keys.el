@@ -115,6 +115,10 @@
 ;; Config
 (config-leader-key  :keymaps 'normal
   "c" '(my/open-config-core :which-key "Core")
+  "k" '(my/open-config-keys :which-key "Keys")
+  "p" '(my/open-config-packages :which-key "Packages")
+  "u" '(my/open-config-utils :which-key "Utils")
+  "m" '(my/open-config-modehooks :which-key "Mode Hooks")
 )
 
 ;; Insert

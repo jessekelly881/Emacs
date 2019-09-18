@@ -16,7 +16,12 @@
   (setq fancy-buffer-narrowed-p t)
   )
 
+;; Config Files
 (defun my/open-config-core () (interactive) (find-file-other-window "/home/jesse/.emacs.d/config/core.el"))
+(defun my/open-config-packages () (interactive) (find-file-other-window "/home/jesse/.emacs.d/config/packages.el"))
+(defun my/open-config-keys () (interactive) (find-file-other-window "/home/jesse/.emacs.d/config/keys.el"))
+(defun my/open-config-utils () (interactive) (find-file-other-window "/home/jesse/.emacs.d/config/utils.el"))
+(defun my/open-config-modehooks () (interactive) (find-file-other-window "/home/jesse/.emacs.d/config/modehooks.el"))
 
 ;; Clean View
 (defun my/clean-view (interactive) ()
