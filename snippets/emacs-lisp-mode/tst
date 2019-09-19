@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tst
+# key: tst
+# --
+"<SPC><SPC>" '(helm-M-x :which-key "M-x")

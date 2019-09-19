@@ -49,6 +49,7 @@
   "g t" '(web-mode-tag-match :which-key "Jump to tag pair")
 
   "s g" '(gist-region :which-key "Gist")
+  "s s" '(yas-new-snippet :which-key "Snippet(yas)")
   )
 
 ;; Leader Keys
