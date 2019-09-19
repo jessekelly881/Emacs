@@ -13,3 +13,4 @@ projectile-bookmarks.eld
 network-security.data
 bookmarks
 \.pipempvsocket
+config/flycheck_packages.el
