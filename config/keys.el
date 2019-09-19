@@ -27,6 +27,8 @@
   "<SPC><SPC>" '(helm-M-x :which-key "M-x")
   "TAB" 'indent-for-tab-command
 
+  "b" '(beacon-blink :which-key "Blink cursor")
+
   "f" 'avy-goto-char-timer
   "F" 'avy-goto-line
 

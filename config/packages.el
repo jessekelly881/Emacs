@@ -2,6 +2,7 @@
 (use-package helm :config (setq helm-follow-mode-persistent t))
 (use-package xclip :config (xclip-mode 1))
 (use-package helm-swoop)
+(use-package beacon :init (beacon-mode 1) :config (setq beacon-color "red"))
 (use-package dumb-jump)
 (use-package helm-mode-manager)
 (use-package docker)
