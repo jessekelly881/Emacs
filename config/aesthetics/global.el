@@ -1,7 +1,8 @@
 (load-theme 'brin t)
 
 ;;Set font size for UI
-(set-face-attribute 'default nil :height 80)
+(set-face-attribute 'default nil :family "Iosevka" :height 80)
+(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 80)
 
 ;; Transparent Background
 (defun on-frame-open (&optional frame)

@@ -16,5 +16,5 @@
 (setq undo-tree-auto-save-history t)
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
-(set-face-attribute 'default nil :family "Iosevka" :height 80)
-(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 80)
+;; Global Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
