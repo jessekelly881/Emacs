@@ -53,3 +53,6 @@
 
 (add-hook 'text-mode-hook 'remove-dos-eol)
 (add-hook 'web-mode-hook 'remove-dos-eol)
+
+(provide 'normalize)
+;;; normalize.el ends here

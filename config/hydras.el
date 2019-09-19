@@ -38,3 +38,6 @@
   ("x" helm-M-x)
   ("q" nil)
   )
+
+(provide 'hydras)
+;;; hydras.el ends here

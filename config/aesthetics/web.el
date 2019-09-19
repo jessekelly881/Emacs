@@ -6,3 +6,6 @@
 )
 
 (add-hook 'web-mode-hook  'my/web-mode-settings)
+
+(provide 'web)
+;;; web.el ends here

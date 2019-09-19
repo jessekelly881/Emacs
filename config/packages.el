@@ -22,7 +22,7 @@
 (use-package hydra)
 (use-package evil :config (evil-mode 1))
 (use-package general)
-(use-package projectile :config (projectile-global-mode))
+(use-package projectile :config (projectile-mode))
 (use-package linum-relative)
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.5))
 (use-package magit)
@@ -53,3 +53,7 @@
   :init (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
   :config (add-to-list 'auto-mode-alist '("\\.hdl\\'" . nand2tetris-mode)))
 (use-package multiple-cursors)
+
+
+(provide 'packages)
+;;; packages.el ends here
