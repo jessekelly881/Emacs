@@ -33,5 +33,9 @@
 ;; Decrace gc threshold back to normal
 (setq gc-cons-threshold (* 2 1000 1000))
 
+;; Automatically make scripts executable
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
+
 (provide 'core)
 ;;; core.el ends here

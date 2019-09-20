@@ -52,6 +52,7 @@
 (use-package olivetti)
 (use-package linum-relative)
 (use-package highlight)
+(use-package insert-shebang)
 
 ;; Modes
 (use-package nand2tetris
