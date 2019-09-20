@@ -4,6 +4,7 @@
 (use-package crux)
 (use-package hydra)
 (use-package general)
+(use-package posframe)
 
 ;; General
 (use-package xclip :config (xclip-mode 1) :defer 1)

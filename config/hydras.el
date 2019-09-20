@@ -21,6 +21,33 @@
   ("q" nil)
   )
 
+(defun scroll-up-in-place (n)
+      (interactive "p")
+      (forward-line (- n))
+      (scroll-down n))
+
+(defun scroll-down-in-place (n)
+      (interactive "p")
+      (forward-line n)
+      (scroll-up n))
+
+(defhydra buffer-hydra (:pre (beacon-mode 0) :post (beacon-mode 1))
+
+  "
+    Movement^
+    ------------------------------------------------------------------------------------------------------
+    _j_ ↓
+    _k_ ↑
+    ^^^^^^^
+    ^^^^^^^
+    _x_ M-x      _q_ quit
+    "
+
+  ("j" scroll-down-in-place)
+  ("k" scroll-up-in-place)
+  ("x" helm-M-x)
+  ("q" nil)
+  )
 
 (defhydra olivetti-hydra ()
   "
@@ -38,6 +65,7 @@
   ("x" helm-M-x)
   ("q" nil)
   )
+
 
 (provide 'hydras)
 ;;; hydras.el ends here
