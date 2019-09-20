@@ -118,7 +118,7 @@
   "m" 'olivetti-toggle-hide-mode-line
   "l" 'linum-relative-mode
   "L" 'global-linum-mode
-  "g" 'golden-ratio-mode
+  "g" 'git-gutter
   "f" 'fold-this-unfold-all
   "c" 'my/clean-view
   "T" 'helm-themes
