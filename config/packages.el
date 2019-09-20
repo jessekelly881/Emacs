@@ -72,7 +72,12 @@
 (use-package evil-surround :config (global-evil-surround-mode 1) :requires (evil))
 
 ;; Helm
-(use-package helm :config (setq helm-follow-mode-persistent t))
+(use-package helm
+  :config (setq helm-follow-mode-persistent t)
+  :general
+  ("C-h a" 'helm-apropos)
+  )
+
 (use-package helm-swoop :requires (helm))
 (use-package helm-mode-manager :requires (helm) :disabled)
 (use-package helm-chronos :init (setq helm-chronos-standard-timers '( "25/Work For 25 Min" "")) :requires (helm chronos))
