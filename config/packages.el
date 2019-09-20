@@ -35,6 +35,10 @@
 
 (use-package saveplace :hook (after-init . save-place-mode))
 
+(use-package recentf
+  :hook (after-init . recentf-mode)
+  :init (setq-default recent-save-file "~/.emacs.d/recentf"))
+
 ;; Themes
 (use-package sublime-themes)
 (use-package blackboard-theme :defer t)

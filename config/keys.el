@@ -18,7 +18,7 @@
   "m" 'er/expand-region
   "M" 'my/mark-region
   "<backtab>" 'projectile-previous-project-buffer
-  "TAB" 'projectile-next-project-buffer
+  "TAB" 'helm-mini
   "C-p" 'helm-show-kill-ring
 )
 
