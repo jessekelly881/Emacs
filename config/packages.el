@@ -26,13 +26,14 @@
 (use-package multiple-cursors)
 (use-package smartparens
   :hook (after-init . smartparens-global-mode)
-
   :config
   (require 'smartparens-config)
   (sp-pair "=" "=" :actions '(wrap))
   (sp-pair "+" "+" :actions '(wrap))
   (sp-pair "<" ">" :actions '(wrap))
   (sp-pair "$" "$" :actions '(wrap)))
+
+(use-package saveplace :hook (after-init . save-place-mode))
 
 ;; Themes
 (use-package sublime-themes)
