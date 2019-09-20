@@ -14,3 +14,5 @@ network-security.data
 bookmarks
 \.pipempvsocket
 config/flycheck_packages.el
+places
+recentf
