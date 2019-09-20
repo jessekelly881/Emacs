@@ -3,9 +3,9 @@
 ;; Utility
 (use-package crux)
 (use-package hydra)
+(use-package general)
 
 ;; General
-(use-package general)
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
 (use-package docker)
@@ -24,6 +24,15 @@
 (use-package loccur)
 (use-package gist)
 (use-package multiple-cursors)
+(use-package smartparens
+  :hook (after-init . smartparens-global-mode)
+
+  :config
+  (require 'smartparens-config)
+  (sp-pair "=" "=" :actions '(wrap))
+  (sp-pair "+" "+" :actions '(wrap))
+  (sp-pair "<" ">" :actions '(wrap))
+  (sp-pair "$" "$" :actions '(wrap)))
 
 ;; Themes
 (use-package sublime-themes)
