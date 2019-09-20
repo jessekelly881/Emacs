@@ -18,12 +18,10 @@
 (use-package avy)
 (use-package projectile :config (projectile-mode))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.5))
-(use-package magit)
 (use-package lorem-ipsum)
 (use-package company)
 (use-package auto-complete :config (ac-config-default))
 (use-package loccur)
-(use-package gist)
 (use-package multiple-cursors)
 (use-package smartparens
   :hook (after-init . smartparens-global-mode)
@@ -82,10 +80,7 @@
 (use-package helm-themes :requires (helm))
 (use-package helm-ag :requires (helm ag))
 
-
-(provide 'packages)
-;;; packages.el ends here
-
+;; Git
 (use-package git-gutter
     :custom
     (git-gutter:modified-sign "~ ")
@@ -93,3 +88,9 @@
     (git-gutter:deleted-sign  "- ")
     :config
     (global-git-gutter-mode +1))
+
+(use-package gist)
+(use-package magit)
+
+(provide 'packages)
+;;; packages.el ends here
