@@ -23,14 +23,10 @@
 
    (propertize "%I" 'face 'font-lock-constant-face) ;; size
 
-   " ("
-    (propertize "%l" 'face 'font-lock-type-face)
-   ")"
-   "["
+   " (" (propertize "%l" 'face 'font-lock-type-face) ")"
 
-   '(:eval (propertize "%m" 'face 'font-lock-string-face
-                       'help-echo buffer-file-coding-system))
-   "] "
+   "[" '(:eval (propertize "%m" 'face 'font-lock-string-face
+                       'help-echo buffer-file-coding-system)) "] "
    ))
 
 ;;Highlight Curent Line
