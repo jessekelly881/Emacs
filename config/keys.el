@@ -84,6 +84,17 @@
   "SPC r" "Resources"
 )
 
+;; Window
+(window-leader-key  :keymaps 'normal
+  "h" '(windmove-left :which-key "Left")
+  "j" '(windmove-down :which-key "Down")
+  "k" '(windmove-up :which-key "Up")
+  "h" '(windmove-right :which-key "Right")
+  "L" '(split-window-right :which-key "Split right")
+  "J" '(split-window-below :which-key "Right")
+  "o" '(ranger :which-key "Right")
+)
+
 ;; Buffer
 (buffer-leader-key  :keymaps 'normal
   "s" '(save-buffer :which-key "Save")
