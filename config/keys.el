@@ -89,7 +89,7 @@
   "h" '(windmove-left :which-key "Left")
   "j" '(windmove-down :which-key "Down")
   "k" '(windmove-up :which-key "Up")
-  "h" '(windmove-right :which-key "Right")
+  "l" '(windmove-right :which-key "Right")
   "L" '(split-window-right :which-key "Split right")
   "J" '(split-window-below :which-key "Right")
   "o" '(ranger :which-key "Right")
