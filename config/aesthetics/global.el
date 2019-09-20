@@ -63,3 +63,11 @@
 ;; Remove border(frenge)
 (if (boundp 'fringe-mode)
   (fringe-mode -1))
+
+;; Hide mode line after some time
+(defun my/hide-mode-line-with-delay (&optional frame)
+  "Hide modeline after 10s"
+  (hide-mode-line-mode nil)
+  (run-at-time "10 sec" nil #'hide-mode-line-mode +1))
+
+(add-hook 'after-make-frame-functions 'my/hide-mode-line-with-delay)
