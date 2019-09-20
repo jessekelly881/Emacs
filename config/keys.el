@@ -2,7 +2,11 @@
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
   "<escape>" 'save-buffer
+
   "<SPC><SPC>" 'helm-M-x
+  "<SPC> B" '(buffer-hydra/body :which-key "Buffer hydra")
+  "<SPC> W" '(window-hydra/body :which-key "Window hydra")
+
   "/" 'helm-swoop
   "q" 'my/quit
   "Q" 'kill-emacs
@@ -58,6 +62,7 @@
 (general-create-definer file-leader-key :prefix "SPC f")
 (general-create-definer view-leader-key :prefix "SPC v")
 (general-create-definer buffer-leader-key :prefix "SPC b")
+(general-create-definer window-leader-key :prefix "SPC w")
 (general-create-definer project-leader-key :prefix "SPC p")
 (general-create-definer settings-leader-key :prefix "SPC s")
 (general-create-definer insert-leader-key :prefix "SPC i")
@@ -71,11 +76,17 @@
   "SPC v" "View"
   "SPC s" "Set"
   "SPC b" "Buffer"
+  "SPC w" "Window"
   "SPC p" "Project"
   "SPC i" "Insert"
   "SPC I" "Info"
   "SPC t" "Text"
   "SPC r" "Resources"
+)
+
+;; Buffer
+(buffer-leader-key  :keymaps 'normal
+  "s" '(save-buffer :which-key "Save")
 )
 
 ;; Resources
@@ -145,7 +156,7 @@
 
 ;; Web mode
 (general-define-key
- :keymaps 'web-mode-map
+ :keymaps 'emmet-mode-map
  "TAB" 'emmet-expand-line
 )
 
