@@ -4,4 +4,4 @@
 (set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 80)
 
 (provide 'gui)
-;;; gui ends here
+;;; gui.el ends here
