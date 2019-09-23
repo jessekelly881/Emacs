@@ -1,6 +1,9 @@
 ;; Increace gc threshold - decreaces startup by 2-3s
 (setq gc-cons-threshold (* 100 1000 1000))
 
+;; Personal info
+(load (expand-file-name "config/personal.el" user-emacs-directory))
+
 ;; Core packages
 (load (expand-file-name "config/packages.el" user-emacs-directory))
 (load (expand-file-name "config/utils.el" user-emacs-directory))
