@@ -17,3 +17,4 @@ config/flycheck_packages.el
 places
 recentf
 config/personal.el
+config/flycheck_core.el
