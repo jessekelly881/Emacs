@@ -16,3 +16,4 @@ bookmarks
 config/flycheck_packages.el
 places
 recentf
+config/personal.el
