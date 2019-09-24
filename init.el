@@ -59,6 +59,7 @@
  '(linum ((t (:background "color-236" :foreground "color-232"))))
  '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
  '(markdown-comment-face ((t nil)))
+ '(minibuffer-prompt ((t (:foreground "green"))))
  '(mode-line ((t (:inherit variable-pitch :background "color-233" :foreground "brightwhite" :box nil :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "color-233" :foreground "color-244"))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
