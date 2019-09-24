@@ -38,6 +38,7 @@
   :hook (after-init . recentf-mode)
   :init (setq-default recent-save-file "~/.emacs.d/recentf"))
 (use-package hide-mode-line-mode)
+(use-package rainbow-delimiters :hook (prog-mode . rainbow-delimiters-mode))
 
 ;; Themes
 (use-package sublime-themes)
