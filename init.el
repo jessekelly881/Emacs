@@ -47,6 +47,7 @@
  '(helm-grep-match ((t (:foreground "brightwhite" :weight bold))))
  '(helm-header ((t (:inherit header-line :background "color-16" :foreground "brightwhite"))))
  '(helm-match ((t (:foreground "brightwhite" :weight bold))))
+ '(helm-minibuffer-prompt ((t (:foreground "green"))))
  '(helm-selection ((t (:background "color-233" :foreground "brightwhite" :underline t))))
  '(helm-separator ((t (:background "color-233" :foreground "white"))))
  '(helm-source-header ((t (:background "color-233" :foreground "white" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
