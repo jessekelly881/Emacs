@@ -71,3 +71,6 @@
   (run-at-time "10 sec" nil #'hide-mode-line-mode +1))
 
 (add-hook 'after-make-frame-functions 'my/hide-mode-line-with-delay)
+
+;; Rainbow mode hook
+(add-hook 'web-mode-hook #'rainbow-mode)
