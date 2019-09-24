@@ -124,6 +124,7 @@
 ;; View
 (view-leader-key  :keymaps 'normal
   "t" '(toggle-truncate-lines :which-key "Toggle truncate lines")
+  "r" '(fci-mode :which-key "Ruler")
   "o" 'olivetti-mode
   "O" 'olivetti-hydra/body
   "m" 'olivetti-toggle-hide-mode-line
