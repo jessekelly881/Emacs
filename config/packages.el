@@ -7,6 +7,7 @@
 (use-package posframe)
 
 ;; General
+(use-package org)
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
 (use-package docker)

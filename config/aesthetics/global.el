@@ -74,3 +74,6 @@
 
 ;; Rainbow mode hook
 (add-hook 'web-mode-hook #'rainbow-mode)
+
+(provide 'global)
+;;; global.el ends here
