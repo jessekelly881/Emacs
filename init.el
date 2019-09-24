@@ -42,6 +42,7 @@
  '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "brightgreen" :slant italic))))
  '(fringe ((t nil)))
  '(header-line ((t (:inherit mode-line :background "unspecified-bg" :foreground "#EEEEEE" :box nil))))
+ '(helm-M-x-key ((t (:foreground "green" :underline t))))
  '(helm-candidate-number ((t (:background "color-16" :foreground "white"))))
  '(helm-grep-match ((t (:foreground "brightwhite" :weight bold))))
  '(helm-header ((t (:inherit header-line :background "color-16" :foreground "brightwhite"))))
