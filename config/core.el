@@ -1,6 +1,9 @@
 ;; Increace gc threshold - decreaces startup by 2-3s
 (setq gc-cons-threshold (* 100 1000 1000))
 
+;; Load normalize.el
+(load (expand-file-name "config/normalize.el"  user-emacs-directory))
+
 ;; Personal info
 (load (expand-file-name "config/personal.el" user-emacs-directory))
 
