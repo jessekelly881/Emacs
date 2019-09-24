@@ -71,6 +71,7 @@
  '(popup-face ((t (:inherit default :background "brightwhite" :foreground "green"))))
  '(popup-menu-selection-face ((t (:inherit default :background "green" :foreground "brightwhite"))))
  '(popup-tip-face ((t (:background "undefinded-bg" :foreground "green" :weight extra-bold))))
+ '(rainbow-delimiters-base-face ((t (:inherit nil :weight bold))))
  '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face :foreground "color-235"))))
  '(rainbow-delimiters-depth-2-face ((t (:inherit rainbow-delimiters-base-face :foreground "brightcyan"))))
  '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "brightwhite"))))
