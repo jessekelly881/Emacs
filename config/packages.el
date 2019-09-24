@@ -78,13 +78,12 @@
 (use-package helm
   :config (setq helm-follow-mode-persistent t)
   :general
-  ("C-h a" 'helm-apropos)
-  )
+  ("C-h a" 'helm-apropos))
 
 (use-package helm-swoop :requires (helm))
 (use-package helm-mode-manager :requires (helm) :disabled)
 (use-package helm-chronos :init (setq helm-chronos-standard-timers '( "25/Work For 25 Min" "")) :requires (helm chronos))
-(use-package helm-c-yasnippet :requires (helm yasnippet))
+(use-package helm-c-yasnippet)
 (use-package helm-themes :requires (helm))
 (use-package helm-ag :requires (helm ag))
 
