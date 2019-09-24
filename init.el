@@ -38,6 +38,7 @@
  '(avy-lead-face-1 ((t (:foreground "color-52" :underline t :weight bold))))
  '(avy-lead-face-2 ((t (:foreground "color-52" :underline t :weight bold))))
  '(cursor ((t (:background "color-18" :weight bold))))
+ '(flycheck-warning ((t (:foreground "green" :underline t :weight bold))))
  '(font-lock-comment-delimiter-face ((t (:inherit default :foreground "brightwhite"))))
  '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "brightgreen" :slant italic))))
  '(fringe ((t nil)))
