@@ -36,6 +36,9 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("MELPA Stable" . "https://stable.melpa.org/packages/"))
+
+
 
 (package-initialize)
 (unless (package-installed-p 'use-package)
