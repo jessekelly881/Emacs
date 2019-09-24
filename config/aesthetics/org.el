@@ -19,5 +19,7 @@
   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
 )
 
+(setq org-html-validation-link nil)
+
 (provide 'org)
 ;;; org ends here
