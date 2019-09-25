@@ -23,6 +23,7 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
+;; Base settings
 (setq
  inhibit-startup-message t
  initial-scratch-message ""

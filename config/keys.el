@@ -59,6 +59,7 @@
 ;; Leader Keys
 (general-create-definer leader-key :prefix "SPC")
 (general-create-definer config-leader-key :prefix "SPC c")
+(general-create-definer git-leader-key :prefix "SPC g")
 (general-create-definer file-leader-key :prefix "SPC f")
 (general-create-definer view-leader-key :prefix "SPC v")
 (general-create-definer buffer-leader-key :prefix "SPC b")
@@ -72,6 +73,7 @@
 
 (which-key-add-key-based-replacements
   "SPC c" "Config"
+  "SPC g" "Git"
   "SPC f" "File"
   "SPC v" "View"
   "SPC s" "Set"
@@ -99,6 +101,14 @@
 (buffer-leader-key  :keymaps 'normal
   "s" '(save-buffer :which-key "Save")
 )
+
+;; Git
+(git-leader-key  :keymaps 'normal
+  "s" '(magit-status :which-key "Status")
+  "r h" '(magit-reset-hard :which-key "Hard")
+)
+
+(which-key-add-key-based-replacements "SPC g r" "Reset")
 
 ;; Resources
 (resource-leader-key  :keymaps 'normal
