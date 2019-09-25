@@ -106,7 +106,7 @@
 (git-leader-key  :keymaps 'normal
   "S" '(magit-status :which-key "Status")
 
-  "s" '(magit-stage :which-key "Stage")
+  "s" '(magit-stage-modified :which-key "Stage")
   "c" '(magit-commit :which-key "Commit")
   "p" '(magit-push :which-key "Push")
 
