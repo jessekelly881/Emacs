@@ -104,7 +104,10 @@
 
 ;; Git
 (git-leader-key  :keymaps 'normal
-  "s" '(magit-status :which-key "Status")
+  "S" '(magit-status :which-key "Status")
+
+  "s" '(magit-stage :which-key "Stage")
+  "c" '(magit-commit :which-key "Commit")
   "p" '(magit-push :which-key "Push")
 
   "r h" '(magit-reset-hard :which-key "Hard")
