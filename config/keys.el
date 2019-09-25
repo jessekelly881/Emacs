@@ -105,6 +105,8 @@
 ;; Git
 (git-leader-key  :keymaps 'normal
   "s" '(magit-status :which-key "Status")
+  "p" '(magit-push :which-key "Push")
+
   "r h" '(magit-reset-hard :which-key "Hard")
 )
 
