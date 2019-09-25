@@ -112,9 +112,13 @@
   "p" '(magit-push :which-key "Push")
 
   "r h" '(magit-reset-hard :which-key "Hard")
+
+  "b c" '(magit-branch-create :which-key "Create")
+  "b d" '(magit-branch-delete :which-key "Delete")
 )
 
 (which-key-add-key-based-replacements "SPC g r" "Reset")
+(which-key-add-key-based-replacements "SPC g b" "Branch")
 
 ;; Resources
 (resource-leader-key  :keymaps 'normal
