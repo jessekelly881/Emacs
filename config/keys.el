@@ -107,6 +107,7 @@
   "S" '(magit-status :which-key "Status")
 
   "s" '(magit-stage-modified :which-key "Stage")
+  "u" '(magit-unstage-all :which-key "Unstage")
   "c" '(magit-commit :which-key "Commit")
   "p" '(magit-push :which-key "Push")
 
