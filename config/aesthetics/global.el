@@ -1,4 +1,4 @@
-(load-theme 'brin t)
+(load-theme 'nord t)
 
 ;;Set font size for UI
 (set-face-attribute 'default nil :family "Iosevka" :height 80)
