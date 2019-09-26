@@ -148,7 +148,7 @@
   "r" '(ruler-mode :which-key "Ruler")
   "o" 'olivetti-mode
   "O" 'olivetti-hydra/body
-  "m" 'olivetti-toggle-hide-mode-line
+  "m" '(hide-mode-line-mode :which-key "Toggle modeline")
   "l" 'linum-relative-mode
   "L" 'global-linum-mode
   "g" 'git-gutter
