@@ -8,6 +8,9 @@
            ("return" .   #x219E)
            ("this" .     #x21BA)
 
+           ("true" .     #x1E6A)
+           ("false" .    #x1E1E)
+
            ("import" .   #x03A9)
            ("from" .     #x00A7)
 
