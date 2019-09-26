@@ -36,10 +36,15 @@
 ;;Setup Package Repositories
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("MELPA Stable" . "https://stable.melpa.org/packages/"))
 
-
+(setq package-archives
+      '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA"        . "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("MELPA Stable" . 10)
+        ("MELPA"     . 5)
+        ("GNU ELPA"        . 0)))
 
 (package-initialize)
 (unless (package-installed-p 'use-package)
