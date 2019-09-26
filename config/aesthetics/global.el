@@ -25,7 +25,7 @@
                        'help-echo buffer-file-coding-system)) "] "
 
   '(:eval (propertize (vc-mode vc-mode) 'face 'font-lock-keyword-face))
-  )
+  ))
 
 ;;Highlight Curent Line
 (global-hl-line-mode +1)
