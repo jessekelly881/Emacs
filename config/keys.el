@@ -153,7 +153,7 @@
   "O" 'olivetti-hydra/body
   "m" '(hide-mode-line-mode :which-key "Toggle modeline")
   "l" 'linum-relative-mode
-  "L" 'global-linum-mode
+  "L" 'display-line-numbers-mode
   "g" 'git-gutter
   "f" 'fold-this-unfold-all
   "c" 'my/clean-view
