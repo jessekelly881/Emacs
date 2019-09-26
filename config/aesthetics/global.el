@@ -1,9 +1,5 @@
 (load-theme 'nord t)
 
-;;Set font size for UI
-(set-face-attribute 'default nil :family "Iosevka" :height 80)
-(set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 80)
-
 ;; Transparent Background
 (defun on-frame-open (&optional frame)
   "If the FRAME created in terminal don't load background color."
