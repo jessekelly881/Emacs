@@ -113,8 +113,11 @@
 
   "r h" '(magit-reset-hard :which-key "Hard")
 
-  "b c" '(magit-branch-create :which-key "Create")
+  "b b" '(magit-branch-checkout :which-key "Checkout")
+  "b n" '(magit-branch-create :which-key "New")
+  "b c" '(magit-branch-and-checkout :which-key "Create and checkout")
   "b d" '(magit-branch-delete :which-key "Delete")
+  "b r" '(magit-branch-rename :which-key "Rename")
 )
 
 (which-key-add-key-based-replacements "SPC g r" "Reset")
