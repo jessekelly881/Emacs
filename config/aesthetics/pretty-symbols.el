@@ -1,8 +1,27 @@
-;; Pretty Symbols
+;; Web
+(add-hook 'web-mode-hook
+ (lambda ()
+   (mapc (lambda (pair) (push pair prettify-symbols-alist))
+         '(
+           ("function" . #x0192)
+           ("class" .    #x039E)
+           ("return" .   #x219E)
+           ("this" .     #x21BA)
+
+           ("import" .   #x03A9)
+           ("from" .     #x00A7)
+
+           ("for" .      #x2200)
+           ("else if" .  #x00BF)
+           ("else" .     #x00BB)
+           ("if" .       #x003F)
+           ))))
+
+;; Python
 (add-hook 'python-mode-hook
  (lambda ()
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
-         '(;; Syntax
+         '(
            ("def" .      #x0192)
            ("not" .      #x0021)
            ("in" .       #x2208)
@@ -38,5 +57,5 @@
            ("Any" .      #x2754)
            ("Union" .    #x22c3)))))
 
-(provide 'py)
-;;; py.el ends here
+(provide 'pretty-symbols)
+;;; pretty-symbols.el ends here

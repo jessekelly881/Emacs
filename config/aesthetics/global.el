@@ -42,7 +42,6 @@
 
 ;; Pretty Symbols
 (global-prettify-symbols-mode 1)
-(setq prettify-symbols-unprettify-at-point 'right-edge)
 
 ;; Remove some garbage from helm buffer list
 (setq helm-boring-buffer-regexp-list
