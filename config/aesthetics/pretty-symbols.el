@@ -5,7 +5,7 @@
          '(
            ("function" . #x0192)
            ("class" .    #x039E)
-           ("impliments" . #x22B4)
+           ("implements" . #x22B4)
            ("export" .   #x21F1)
            ("return" .   #x219E)
            ("this" .     #x21BA)
