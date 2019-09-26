@@ -24,7 +24,7 @@
    "[" '(:eval (propertize "%m" 'face 'font-lock-string-face
                        'help-echo buffer-file-coding-system)) "] "
 
-  '(:eval (propertize (vc-mode vc-mode) 'face 'font-lock-keyword-face))
+  '(vc-mode vc-mode)
   ))
 
 ;;Highlight Curent Line
