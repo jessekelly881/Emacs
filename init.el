@@ -86,5 +86,6 @@
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face))))
  '(region ((t (:background "#1D1F21" :weight bold))))
  '(ruler-mode-default ((t (:inherit default :background "undefinded-bg" :foreground "blue"))))
- '(show-paren-match ((t (:background "unspecified-bg" :foreground "color-52" :weight bold)))))
+ '(show-paren-match ((t (:background "unspecified-bg" :foreground "color-52" :weight bold))))
+ '(web-mode-current-column-highlight-face ((t (:background "blue")))))
 (put 'narrow-to-region 'disabled nil)
