@@ -66,7 +66,7 @@
 (defun my/hide-mode-line-with-delay (&optional frame)
   "Hide modeline after 10s"
   (hide-mode-line-mode nil)
-  (run-at-time "10 sec" nil #'hide-mode-line-mode +1))
+  (run-at-time "20 sec" nil #'hide-mode-line-mode +1))
 
 (add-hook 'after-make-frame-functions 'my/hide-mode-line-with-delay)
 
