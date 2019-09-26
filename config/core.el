@@ -43,5 +43,8 @@
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
+;; Keep buffers in sync with disk
+(global-auto-revert-mode t)
+
 (provide 'core)
 ;;; core.el ends here
