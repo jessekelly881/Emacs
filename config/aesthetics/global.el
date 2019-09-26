@@ -50,6 +50,7 @@
        (  "\\Minibuf.+\\*"
                "\\` "
                "\\*.+\\*"
+               "\\*magit-process:" "\\*magit-diff:" "\\magit:"
                   )))
 
 ;; Auto add new lines
