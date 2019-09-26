@@ -123,6 +123,7 @@
 ;; Resources
 (resource-leader-key  :keymaps 'normal
   "g" '(gist-list :which-key "Gists")
+  "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
 )
 
 ;; Set
