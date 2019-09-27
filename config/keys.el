@@ -93,7 +93,7 @@
 )
 
 ;; Window
-(window-leader-key  :keymaps 'normal
+(window-leader-key :states '(normal visual)
   "h" '(windmove-left :which-key "Left")
   "j" '(windmove-down :which-key "Down")
   "k" '(windmove-up :which-key "Up")
@@ -104,12 +104,12 @@
 )
 
 ;; Buffer
-(buffer-leader-key  :keymaps 'normal
+(buffer-leader-key  :states '(normal visual)
   "s" '(save-buffer :which-key "Save")
 )
 
 ;; Git
-(git-leader-key  :keymaps 'normal
+(git-leader-key :states '(normal visual)
   "S" '(magit-status :which-key "Status")
 
   "s" '(magit-stage-modified :which-key "Stage")
@@ -130,19 +130,19 @@
 (which-key-add-key-based-replacements "SPC g b" "Branch")
 
 ;; Project
-(project-leader-key  :keymaps 'normal
+(project-leader-key :states '(normal visual)
   "s" '(helm-projectile-switch-project :which-key "Switch")
   "/" '(helm-projectile-ag :which-key "Switch")
   )
 
 ;; Resources
-(resource-leader-key  :keymaps 'normal
+(resource-leader-key :states '(normal visual)
   "g" '(gist-list :which-key "Gists")
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
 )
 
 ;; Set
-(settings-leader-key  :keymaps 'normal
+(settings-leader-key :states '(normal visual)
    "m m" '(markdown-mode :which-key "Markdown mode")
    "m o" '(org-mode :which-key "Org mode")
    "m w" '(web-mode :which-key "Web mode")
@@ -152,13 +152,13 @@
 (which-key-add-key-based-replacements "SPC s m" "Mode")
 
 ;; Info
-(info-leader-key  :keymaps 'normal
+(info-leader-key :states '(normal visual)
   "w" '(count-words :which-key "Word count")
   "l" '(count-lines-page :which-key "Lines count")
 )
 
 ;; View
-(view-leader-key  :keymaps 'normal
+(view-leader-key :states '(normal visual)
   "t" '(toggle-truncate-lines :which-key "Toggle truncate lines")
   "r" '(ruler-mode :which-key "Ruler")
   "o" 'olivetti-mode
@@ -175,7 +175,7 @@
 )
 
 ;; Config
-(config-leader-key  :keymaps 'normal
+(config-leader-key :states '(normal visual)
   "c" '(my/open-config-core :which-key "Core")
   "k" '(my/open-config-keys :which-key "Keys")
   "p" '(my/open-config-packages :which-key "Packages")
@@ -192,7 +192,7 @@
 )
 
 ;; Text
-(text-leader-key :keymaps 'normal
+(text-leader-key :states '(normal visual)
   "t l" '(transpose-lines :which-key "Lines")
   "t w" '(transpose-words :which-key "Words")
   "t c" '(transpose-chars :which-key "Characters")
