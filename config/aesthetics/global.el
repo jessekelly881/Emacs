@@ -20,12 +20,6 @@
 ;;Highlight Curent Line
 (global-hl-line-mode +1)
 
-;; Cursor(UI Mode)
-(setq evil-normal-state-cursor '("#FFFF4D" box)
-          evil-insert-state-cursor '("#B30000" hbar)
-          evil-visual-state-cursor '("grey" hbar)
-          evil-replace-state-cursor '("#FF4D4D" hbar))
-
 ;; Helm Swoop
 (setq helm-swoop-pre-input-function
       (lambda () ""))
