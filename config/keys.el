@@ -205,8 +205,14 @@
 ;; Web mode
 (general-define-key
  :keymaps 'emmet-mode-map
- "TAB" 'emmet-expand-line
-)
+ "TAB" 'emmet-expand-line)
+
+;; elpy
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'elpy-mode-map
+  "g d" '(elpy-goto-definition-other-window :which-key "goto definition(elpy)")
+ )
 
 (provide 'keys)
 ;;; keys.el ends here
