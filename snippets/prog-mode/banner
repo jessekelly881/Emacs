@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: banner
+# key: banner
+# --
+
+`(let ((start (point))))`
+`(file-name-nondirectory buffer-file-name)`
+-
+`(insert my/copyright-string)`
+-
+Author: `(insert user-full-name)` <`(insert user-email-address)`>
+`(comment-region start (point)))`
