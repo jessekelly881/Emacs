@@ -1,6 +1,9 @@
 ;; Increace gc threshold - decreaces startup by 2-3s
 (setq gc-cons-threshold (* 100 1000 1000))
 
+;; Copyright string
+(setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
+
 ;; Load normalize.el
 (load (expand-file-name "config/normalize.el"  user-emacs-directory))
 
