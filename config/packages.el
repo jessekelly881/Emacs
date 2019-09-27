@@ -66,7 +66,7 @@
 (use-package python-django :mode ("\\.py\\'" . python-mode))
 (use-package markdown-mode :mode ("\\.md\\'" . markdown-mode))
 (use-package tide :mode ("\\.ts\\'" . web-mode))
-(use-package elpy :config (elpy-enable) :mode ("\\.py\\'" . python-mode))
+(use-package elpy :defer t :init (advice-add 'python-mode :before 'elpy-enable))
 (use-package web-mode)
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 
