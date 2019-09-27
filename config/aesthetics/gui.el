@@ -6,6 +6,7 @@
           evil-visual-state-cursor '("grey" hbar)
           evil-replace-state-cursor '("#FF4D4D" hbar))
 
+;; Font
 (set-face-attribute 'default nil :family "Iosevka" :height 80)
 (set-face-attribute 'fixed-pitch nil :family "Iosevka" :height 80)
 
