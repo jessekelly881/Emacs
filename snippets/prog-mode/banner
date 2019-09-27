@@ -9,5 +9,5 @@ File: `(insert (file-name-nondirectory buffer-file-name))`
 -
 `(insert my/copyright-string)`
 -
-Author: `(insert user-full-name)` <`(insert user-email-address)`>
+Author: `(insert user-full-name)` <`(insert user-mail-address)`>
 `(comment-region start (point)))`
