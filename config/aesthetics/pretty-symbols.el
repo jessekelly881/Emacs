@@ -1,3 +1,12 @@
+;; Org
+(add-hook 'org-mode-hook
+ (lambda ()
+   (mapc (lambda (pair) (push pair prettify-symbols-alist))
+         '(
+           ("#+BEGIN_SRC" . #x0192)
+           ("#+END_SRC" . #x0192)
+           ))))
+
 ;; Web
 (add-hook 'web-mode-hook
  (lambda ()
