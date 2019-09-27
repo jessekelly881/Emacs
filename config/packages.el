@@ -20,8 +20,8 @@
 (use-package projectile :config (projectile-mode))
 (use-package which-key :config (which-key-mode) (setq which-key-idle-delay 0.5))
 (use-package lorem-ipsum)
-(use-package company :hook (after-init . global-company-mode))
 (use-package auto-complete :config (ac-config-default))
+(use-package jedi :config (add-hook 'python-mode-hook 'jedi:setup) (setq jedi:complete-on-dot t))
 (use-package loccur)
 (use-package multiple-cursors)
 (use-package smartparens
