@@ -4,7 +4,8 @@
 # --
 
 `(let ((start (point))))`
-`(file-name-nondirectory buffer-file-name)`
+Project: `(insert (projectile-project-name))`
+File: `(insert (file-name-nondirectory buffer-file-name))`
 -
 `(insert my/copyright-string)`
 -
