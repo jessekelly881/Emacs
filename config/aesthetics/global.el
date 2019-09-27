@@ -1,4 +1,9 @@
+;; Theme
 (load-theme 'nord t)
+
+;; Load other libraries
+(load (expand-file-name "config/aesthetics/pretty-symbols.el" user-emacs-directory))
+(load (expand-file-name "config/aesthetics/modeline.el" user-emacs-directory))
 
 ;; Transparent Background
 (defun on-frame-open (&optional frame)
@@ -11,21 +16,6 @@
 
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
-;; Mode Line
-(setq-default mode-line-format
-  (list
-   '(:eval (propertize "%b " 'face 'font-lock-keyword-face
-                      'help-echo (buffer-file-name)))
-
-   (propertize "%I" 'face 'font-lock-constant-face) ;; size
-
-   " (" (propertize "%l" 'face 'font-lock-type-face) ")"
-
-   "[" '(:eval (propertize "%m" 'face 'font-lock-string-face
-                       'help-echo buffer-file-coding-system)) "] "
-
-  '(vc-mode vc-mode)
-  ))
 
 ;;Highlight Curent Line
 (global-hl-line-mode +1)

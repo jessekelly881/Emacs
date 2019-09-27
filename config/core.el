@@ -18,7 +18,6 @@
 (load (expand-file-name "config/aesthetics/global.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/gui.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/org.el" user-emacs-directory))
-(load (expand-file-name "config/aesthetics/pretty-symbols.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/web.el" user-emacs-directory))
 
 ;; Unlimited Undo Tree
