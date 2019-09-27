@@ -30,6 +30,7 @@
 
 ;; Global Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(setq flycheck-check-syntax-automatically '(save mode-enable))
 
 ;; Display startup time
 (message "Emacs ready in %s with %d garbage collections."
