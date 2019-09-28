@@ -116,6 +116,7 @@
   "u" '(magit-unstage-all :which-key "Unstage")
   "c" '(magit-commit :which-key "Commit")
   "p" '(magit-push :which-key "Push")
+  "d" '(magit-diff :which-key "Diff")
 
   "r h" '(magit-reset-hard :which-key "Hard")
 
