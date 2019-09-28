@@ -106,6 +106,7 @@
 ;; Buffer
 (buffer-leader-key  :states '(normal visual)
   "s" '(save-buffer :which-key "Save")
+  "d" '(save-buffer :which-key "Diff with file")
 )
 
 ;; Git
