@@ -45,6 +45,8 @@
   "n" '(mc/mark-next-word-like-this :which-key "Mark next")
   "a f" '(mc/mark-all-words-like-this-in-defun :which-key "Mark all in function")
   "a b" '(mc/mark-all-words-like-this :which-key "Mark all in buffer")
+  "RET" '(mc/skip-to-next-like-this :which-key "Skip next")
+  "DEL" '(mc/skip-to-previous-like-this :which-key "Skip next")
 
   "v a" '(loccur-current :which-key "Show all occurances")
   "v n" '(my/fancy-narrow :which-key "Narrow in current buffer")
