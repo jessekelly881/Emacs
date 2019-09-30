@@ -1,9 +1,17 @@
+;;General
+(general-def :states '(normal visual)
+  "<SPC><SPC>" '(helm-M-x :which-key "M-x")
+
+  "f" 'avy-goto-char-timer
+  "F" 'avy-goto-line
+  "t" 'avy-goto-char-in-line
+  )
+
 ;; Normal Mode
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
   "<escape>" 'save-buffer
 
-  "<SPC><SPC>" 'helm-M-x
   "<SPC> B" '(buffer-hydra/body :which-key "Buffer hydra")
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
 
@@ -11,9 +19,6 @@
   "q" 'my/quit
   "Q" 'kill-emacs
   "U" 'undo-tree-visualize
-  "f" 'avy-goto-char-timer
-  "F" 'avy-goto-line
-  "t" 'avy-goto-char-in-line
   "g b" '(helm-bookmarks :which-key "Goto bookmark")
   "g f" 'helm-imenu
   "g d" '(dumb-jump-go-other-window :which-key "Goto definition")
@@ -28,11 +33,8 @@
 
 ;; Visual Mode
 (general-def 'visual
-  "<SPC><SPC>" '(helm-M-x :which-key "M-x")
   "TAB" 'indent-for-tab-command
 
-  "f" 'avy-goto-char-timer
-  "F" 'avy-goto-line
 
   "#" 'comment-or-uncomment-region
   "r" 'replace-string
