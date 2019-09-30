@@ -41,8 +41,8 @@
   "m" 'my/highlight-region
   "u" 'undo
 
-  "p" '(mc/mark-previous-like-this :which-key "MC - Mark previous")
-  "n" '(mc/mark-next-like-this :which-key "MC - Mark next")
+  "p" '(mc/mark-previous-word-like-this :which-key "MC - Mark previous")
+  "n" '(mc/mark-next-word-like-this :which-key "MC - Mark next")
   "a" '(mc/mark-all-like-this :which-key "MC - Mark all")
 
   "v a" '(loccur-current :which-key "Show all occurances")

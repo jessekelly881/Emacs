@@ -57,7 +57,7 @@
  '(helm-source-header ((t (:background "color-233" :foreground "white" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
  '(helm-swoop-target-line-face ((t (:background "unspecified-bg" :foreground "color-52"))))
  '(helm-swoop-target-word-face ((t (:background "unspecified-bg" :foreground "color-52" :underline t :weight bold))))
- '(highlight ((t (:background "   unspecified-bg" :foreground "color-52"))))
+ '(highlight ((t (:background "   unspecified-bg" :foreground "color-52" :weight ultra-bold))))
  '(highlight-indentation-face ((t (:background "color-234"))))
  '(highlight-thing ((t (:inherit (quote highlight)))))
  '(hl-line ((t (:background "undefinded-bg" :underline t))))

@@ -23,5 +23,7 @@
 (add-hook 'git-commit-mode-hook 'evil-normal-state)
 (setq git-commit-major-mode 'org-mode)
 
+(add-hook 'prog-mode-hook 'highlight-thing-mode)
+
 (provide 'modehooks)
 ;;; modehooks.el ends here
