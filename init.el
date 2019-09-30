@@ -19,6 +19,7 @@
  '(custom-safe-themes
    (quote
     ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+ '(evil-collection-setup-minibuffer t)
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
  '(git-gutter:modified-sign "~ ")
@@ -60,6 +61,7 @@
  '(hl-line ((t (:background "color-233" :underline "color-234" :weight semi-bold))))
  '(linum ((t (:background "color-236" :foreground "color-232"))))
  '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
+ '(magit-blame-highlight ((t (:background "undefinded-bg" :foreground "yellow"))))
  '(magit-diff-added ((t (:background "undefinded-bg" :foreground "color-22"))))
  '(magit-diff-added-highlight ((t (:background "undefinded-bg" :foreground "color-22" :weight bold))))
  '(magit-diff-context-highlight ((t (:background "undefinded-bg" :foreground "red"))))
