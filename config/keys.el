@@ -31,8 +31,6 @@
   "<SPC><SPC>" '(helm-M-x :which-key "M-x")
   "TAB" 'indent-for-tab-command
 
-  "b" '(beacon-blink :which-key "Blink cursor")
-
   "f" 'avy-goto-char-timer
   "F" 'avy-goto-line
 
@@ -166,6 +164,7 @@
 
 ;; View
 (view-leader-key :states '(normal visual)
+  "b" '(beacon-blink :which-key "Beacon")
   "t" '(toggle-truncate-lines :which-key "Toggle truncate lines")
   "r" '(ruler-mode :which-key "Ruler")
   "o" 'olivetti-mode
