@@ -92,5 +92,7 @@
  '(ruler-mode-default ((t (:inherit default :background "undefinded-bg" :foreground "blue"))))
  '(show-paren-match ((t (:background "unspecified-bg" :foreground "color-52" :weight bold))))
  '(web-mode-current-column-highlight-face ((t (:background "blue"))))
- '(writegood-duplicates-face ((t (:background "undefinded-bg" :strike-through t :weight bold)))))
+ '(writegood-duplicates-face ((t (:background "undefinded-bg" :underline t :weight bold))))
+ '(writegood-passive-voice-face ((t (:background "undefinded-bg" :weight bold))))
+ '(writegood-weasels-face ((t (:background "undefinded-bg" :weight bold)))))
 (put 'narrow-to-region 'disabled nil)
