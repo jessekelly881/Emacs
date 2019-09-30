@@ -148,6 +148,7 @@
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
   "p i" '(package-install :which-key "Install")
   "p r" '(package-refresh-contents :which-key "Refresh")
+  "p t" '(try :which-key "Try")
 )
 
 (which-key-add-key-based-replacements "SPC r p" "Packages")
