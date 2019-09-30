@@ -219,6 +219,10 @@
  :states '(normal visual)
  :keymaps 'elpy-mode-map
   "g d" '(elpy-goto-definition-other-window :which-key "goto definition(elpy)")
+  "C-j" '(elpy-nav-forward-block :which-key "forward")
+  "C-k" '(elpy-nav-backward-block :which-key "backwards")
+  "C-l" '(elpy-nav-forward-indent :which-key "right")
+  "C-h" '(elpy-nav-backward-indent :which-key "left")
  )
 
 (provide 'keys)
