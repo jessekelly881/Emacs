@@ -61,6 +61,7 @@
  '(highlight-indentation-face ((t (:background "color-234"))))
  '(highlight-thing ((t (:inherit (quote highlight)))))
  '(hl-line ((t (:background "undefinded-bg" :underline t))))
+ '(isearch ((t (:background "undefinded-bg" :foreground "color-52" :weight bold))))
  '(linum ((t (:background "unspecified-bg" :foreground "blue"))))
  '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
  '(magit-blame-highlight ((t (:background "undefinded-bg" :foreground "yellow"))))
