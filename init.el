@@ -60,7 +60,7 @@
  '(highlight ((t (:background "   unspecified-bg" :foreground "color-52"))))
  '(highlight-indentation-face ((t (:background "color-234"))))
  '(hl-line ((t (:background "color-233" :underline "color-234" :weight semi-bold))))
- '(linum ((t (:background "color-236" :foreground "color-232"))))
+ '(linum ((t (:background "unspecified-bg" :foreground "blue"))))
  '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
  '(magit-blame-highlight ((t (:background "undefinded-bg" :foreground "yellow"))))
  '(magit-diff-added ((t (:background "undefinded-bg" :foreground "color-22"))))

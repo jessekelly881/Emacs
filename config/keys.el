@@ -146,7 +146,11 @@
 (resource-leader-key :states '(normal visual)
   "g" '(gist-list :which-key "Gists")
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
+  "p i" '(package-install :which-key "Install")
+  "p r" '(package-refresh-contents :which-key "Refresh")
 )
+
+(which-key-add-key-based-replacements "SPC r p" "Packages")
 
 ;; Set
 (settings-leader-key :states '(normal visual)
