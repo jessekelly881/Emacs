@@ -41,9 +41,9 @@
   "m" 'my/highlight-region
   "u" 'undo
 
-  "M p" '(mc/mark-previous-like-this :which-key "MC - Mark previous")
-  "M n" '(mc/mark-next-like-this :which-key "MC - Mark next")
-  "M a" '(mc/mark-all-like-this :which-key "MC - Mark all")
+  "p" '(mc/mark-previous-like-this :which-key "MC - Mark previous")
+  "n" '(mc/mark-next-like-this :which-key "MC - Mark next")
+  "a" '(mc/mark-all-like-this :which-key "MC - Mark all")
 
   "v a" '(loccur-current :which-key "Show all occurances")
   "v n" '(my/fancy-narrow :which-key "Narrow in current buffer")
