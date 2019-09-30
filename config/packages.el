@@ -8,6 +8,7 @@
 
 ;; General
 (use-package try)
+(use-package writegood-mode :hook (markdown-mode . writegood-mode))
 (use-package org)
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
