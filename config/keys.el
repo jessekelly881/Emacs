@@ -115,7 +115,6 @@
 
   "s" '(magit-stage-modified :which-key "Stage")
   "u" '(magit-unstage-all :which-key "Unstage")
-  "c" '(magit-commit :which-key "Commit")
   "p" '(magit-push-current :which-key "Push(current)")
   "P" '(magit-push-other :which-key "Push(other)")
   "d" '(magit-diff :which-key "Diff")
@@ -127,10 +126,15 @@
   "b c" '(magit-branch-and-checkout :which-key "Create and checkout")
   "b d" '(magit-branch-delete :which-key "Delete")
   "b r" '(magit-branch-rename :which-key "Rename")
+
+  "c c" '(magit-commit-create :which-key "Commit")
+  "c a" '(magit-commit-amend :which-key "Amend")
+  "c w" '(magit-commit-reword :which-key "Reword")
 )
 
 (which-key-add-key-based-replacements "SPC g r" "Reset")
 (which-key-add-key-based-replacements "SPC g b" "Branch")
+(which-key-add-key-based-replacements "SPC g c" "Commit")
 
 ;; Project
 (project-leader-key :states '(normal visual)
