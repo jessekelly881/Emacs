@@ -33,7 +33,7 @@
        (  "\\Minibuf.+\\*"
                "\\` "
                "\\*.+\\*"
-               "\\magit-process:" "\\magit-diff:" "\\magit:"
+               "\\magit-process:" "\\magit-diff:" "\\magit:" "\\magit-revision:"
                   )))
 
 ;; Auto add new lines
