@@ -72,6 +72,9 @@
 
 ;; Evil
 (use-package evil :config (evil-mode 1))
+(use-package evil-collection
+  :custom (evil-collection-setup-minibuffer t)
+  :init (evil-collection-init))
 (use-package evil-exchange :config (evil-exchange-install) :requires (evil))
 (use-package evil-surround :config (global-evil-surround-mode 1) :requires (evil))
 
