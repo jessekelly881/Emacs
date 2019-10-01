@@ -109,6 +109,7 @@
 ;; Buffer
 (buffer-leader-key  :states '(normal visual)
   "s" '(save-buffer :which-key "Save")
+  "c" '(recenter-top-bottom :which-key "reCenter")
   "d" '(diff-buffer-with-file :which-key "Diff with file")
 )
 
