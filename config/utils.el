@@ -37,6 +37,7 @@
   (cond
    ((bound-and-true-p loccur-mode) (loccur-current))
    ((buffer-narrowed-p) (widen))
+   ((org-buffer-narrowed-p) (widen))
    (fancy-buffer-narrowed-p (progn (fancy-widen) (setq fancy-buffer-narrowed-p nil)))
    ((not (one-window-p)) (kill-buffer-and-window))
    (t (delete-frame)))) ;; If narrowed widen, else delete frame
