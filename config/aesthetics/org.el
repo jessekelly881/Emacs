@@ -29,10 +29,10 @@
       '(
 
         ("s" "Simple" entry (file in-file)
-         "* %^{Title}\n- Saved: %T")
+         "* %^{Title}\n- Saved: %T\n%?")
 
         ("f" "File ref" entry (file in-file)
-         "* %^{Title}\n- Saved: %T\n- File: %a")
+         "* %^{Title}\n- Saved: %T\n- File: %a\n%?")
         ))
 
 (provide 'org)
