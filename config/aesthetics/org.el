@@ -35,5 +35,15 @@
          "* %^{Title}\n- Saved: %T\n- File: %a\n%?")
         ))
 
+(setq org-refile-targets
+      '(("~/docs/brain/in.org" :maxlevel . 1)
+        ("~/docs/brain/next.org" :maxlevel . 1)
+        ("~/docs/brain/projects.org" :maxlevel . 1)
+        ("~/docs/brain/someday.org" :maxlevel . 1)
+        ("~/docs/brain/reference.org" :maxlevel . 1)
+        ("~/docs/brain/waiting.org" :maxlevel . 1)))
+(setq org-refile-use-outline-path 'file)
+
+
 (provide 'org)
 ;;; org ends here
