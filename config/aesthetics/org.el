@@ -23,5 +23,17 @@
 
 (setq org-startup-indented t)
 
+;; Capture - Simple
+(setq in-file "~/docs/brain/in.org")
+(setq org-capture-templates
+      '(
+
+        ("s" "Simple" entry (file in-file)
+         "* %?\n- Saved: %T")
+
+        ("f" "File ref" entry (file in-file)
+         "* %?\n- Saved: %T\n- File: %a")
+        ))
+
 (provide 'org)
 ;;; org ends here
