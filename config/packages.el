@@ -7,6 +7,14 @@
 (use-package posframe)
 
 ;; General
+(use-package mu4e
+  :custom
+  (mu4e-maildir "~/.mail")
+  (mu4e-refile-folder "/gmail/Archive")
+  (mu4e-sent-folder "/gmail/Sent Mail")
+  (mu4e-drafts-folder "/gmail/Drafts")
+  )
+(use-package org-mu4e :custom (org-mu4e-link-query-in-headers-mode nil))
 (use-package try)
 (use-package highlight-thing :hook (prog-mode-hook . highlight-thing-mode))
 (use-package writegood-mode :hook (markdown-mode . writegood-mode))
