@@ -21,5 +21,7 @@
 
 (setq org-html-validation-link nil)
 
+(setq org-startup-indented t)
+
 (provide 'org)
 ;;; org ends here
