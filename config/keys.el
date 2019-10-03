@@ -235,5 +235,12 @@
   "C-h" '(elpy-nav-backward-indent :which-key "left")
  )
 
+;; org
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'org-mode-map
+  "SPC v n" '(org-narrow-to-element :which-key "Narrow")
+  )
+
 (provide 'keys)
 ;;; keys.el ends here
