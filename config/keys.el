@@ -143,7 +143,7 @@
 ;; Project
 (project-leader-key :states '(normal visual)
   "s" '(helm-projectile-switch-project :which-key "Switch")
-  "/" '(helm-projectile-ag :which-key "Switch")
+  "/" '(helm-projectile-ag :which-key "Search")
   )
 
 ;; Resources
