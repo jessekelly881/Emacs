@@ -20,8 +20,7 @@
 )
 
 (setq org-html-validation-link nil)
-
-(setq org-startup-indented t)
+(setq org-startup-indented nil)
 
 ;; Capture - Simple
 (setq in-file "~/docs/brain/in.org")
@@ -33,12 +32,20 @@
 
         ("f" "File ref" entry (file in-file)
          "* %^{Title}\n- Saved: %T\n- File: %a\n%?")
+
+        ("m" "Mail" entry (file in-file)
+         "* %^{Title}
+\t- Saved: %T
+\t- File: %a
+\t- From: %:from
+\t%?")
+
         ))
 
 (setq org-refile-targets
       '(("~/docs/brain/in.org" :maxlevel . 1)
         ("~/docs/brain/next.org" :maxlevel . 1)
-        ("~/docs/brain/projects.org" :maxlevel . 1)
+        ("~/docs/brain/projects.org" :maxlevel . 2)
         ("~/docs/brain/someday.org" :maxlevel . 1)
         ("~/docs/brain/reference.org" :maxlevel . 1)
         ("~/docs/brain/waiting.org" :maxlevel . 1)))

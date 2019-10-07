@@ -15,6 +15,7 @@
   (mu4e-drafts-folder "/gmail/Drafts")
   )
 (use-package org-mu4e :custom (org-mu4e-link-query-in-headers-mode nil))
+(use-package skeletor)
 (use-package try)
 (use-package highlight-thing :hook (prog-mode-hook . highlight-thing-mode))
 (use-package writegood-mode :hook (markdown-mode . writegood-mode))
