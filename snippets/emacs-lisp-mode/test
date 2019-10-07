@@ -1,0 +1,1 @@
+Difficulty: ${2:$$(yas-choose-value '("easy" "hard"))}

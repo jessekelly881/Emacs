@@ -15,7 +15,17 @@
   (mu4e-drafts-folder "/gmail/Drafts")
   )
 (use-package org-mu4e :custom (org-mu4e-link-query-in-headers-mode nil))
-(use-package skeletor)
+
+(use-package skeletor
+  :custom (skeletor-project-directory "/home/jesse/dev/projects/active")
+  :config
+  (skeletor-define-template "~/.emacs.d/project-templates/latex"
+    :title "Latex"
+    :after-creation
+    (lambda (dir)
+      (skeletor-async-shell-command "make && make preview && make dev"))
+  ))
+
 (use-package try)
 (use-package highlight-thing :hook (prog-mode-hook . highlight-thing-mode))
 (use-package writegood-mode :hook (markdown-mode . writegood-mode))
