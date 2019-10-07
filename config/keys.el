@@ -142,6 +142,7 @@
 
 ;; Project
 (project-leader-key :states '(normal visual)
+  "c" '(skeletor-create-project-at :which-key "Create")
   "s" '(helm-projectile-switch-project :which-key "Switch")
   "/" '(helm-projectile-ag :which-key "Search")
   )
