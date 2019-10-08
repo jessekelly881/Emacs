@@ -6,6 +6,8 @@
 (use-package general)
 (use-package posframe)
 
+;; Allows you to find frequently used commands.
+;; keyfreq-show shows command frequency
 (use-package keyfreq
   :config (keyfreq-mode 1) (keyfreq-autosave-mode 1)
   :custom
