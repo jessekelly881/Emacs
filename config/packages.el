@@ -6,6 +6,22 @@
 (use-package general)
 (use-package posframe)
 
+(use-package keyfreq
+  :config (keyfreq-mode 1) (keyfreq-autosave-mode 1)
+  :custom
+  (keyfreq-excluded-commands
+   '(evil-backward-char
+     evil-forward-char
+     evil-previous-line
+     evil-next-line
+     save-buffer
+     helm-M-x
+     evil-insert
+     evil-change
+     keyboard-quit
+     ))
+  )
+
 ;; General
 (use-package mu4e
   :custom
