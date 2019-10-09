@@ -222,7 +222,7 @@
 
   "c c" '(capitalize-region :which-key "Capitalize")
   "c u" '(upcase-region :which-key "Upcase")
-  "c d" '(downcase-region :which-key "Upcase")
+  "c d" '(downcase-region :which-key "Downcase")
 )
 
 (which-key-add-key-based-replacements "SPC t t" "Transpose")
@@ -238,10 +238,10 @@
  :states '(normal visual)
  :keymaps 'python-mode-map
   "g d" '(elpy-goto-definition-other-window :which-key "goto definition(elpy)")
-  "C-j" '(elpy-nav-forward-block :which-key "forward")
-  "C-k" '(elpy-nav-backward-block :which-key "backwards")
-  "C-l" '(elpy-nav-forward-indent :which-key "right")
-  "C-h" '(elpy-nav-backward-indent :which-key "left")
+  "c-j" '(elpy-nav-forward-block :which-key "forward")
+  "c-k" '(elpy-nav-backward-block :which-key "backwards")
+  "c-l" '(elpy-nav-forward-indent :which-key "right")
+  "c-h" '(elpy-nav-backward-indent :which-key "left")
  )
 
 ;; org
