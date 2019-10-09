@@ -4,6 +4,10 @@
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
 
+;; Defaults
+(setq browse-url-browser-function 'w3m-browse-url)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+
 ;; Load normalize.el
 (load (expand-file-name "config/normalize.el"  user-emacs-directory))
 

@@ -24,6 +24,11 @@
      ))
   )
 
+(use-package smart-hungry-delete
+  :defer nil ;; dont defer so we can add our functions to hooks
+  :config (smart-hungry-delete-add-default-hooks)
+  )
+
 ;; General
 (use-package mu4e
   :custom

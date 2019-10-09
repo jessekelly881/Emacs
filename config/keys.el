@@ -7,6 +7,10 @@
   "t" 'avy-goto-char-in-line
   )
 
+(general-def :states '(normal insert)
+  "DEL" '(smart-hungry-delete-backward-char :which-key "Smart delete back")
+  )
+
 ;; Normal Mode
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
