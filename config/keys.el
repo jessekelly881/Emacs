@@ -219,9 +219,14 @@
   "t c" '(transpose-chars :which-key "Characters")
   "t s" '(transpose-sentences :which-key "Sentences")
   "t p" '(transpose-paragraphs :which-key "Paragraphs")
+
+  "c c" '(capitalize-region :which-key "Capitalize")
+  "c u" '(upcase-region :which-key "Upcase")
+  "c d" '(downcase-region :which-key "Upcase")
 )
 
 (which-key-add-key-based-replacements "SPC t t" "Transpose")
+(which-key-add-key-based-replacements "SPC t c" "Case")
 
 ;; Web mode
 (general-define-key
@@ -231,7 +236,7 @@
 ;; elpy
 (general-define-key
  :states '(normal visual)
- :keymaps 'elpy-mode-map
+ :keymaps 'python-mode-map
   "g d" '(elpy-goto-definition-other-window :which-key "goto definition(elpy)")
   "C-j" '(elpy-nav-forward-block :which-key "forward")
   "C-k" '(elpy-nav-backward-block :which-key "backwards")
