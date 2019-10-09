@@ -42,7 +42,7 @@
   "u" 'undo
 
   "p" '(mc/mark-previous-word-like-this :which-key "Mark previous")
-  "n" '(evil-mc-make-and-goto-next-match :which-key "Mark next")
+  "n" '(mc/mark-next-word-like-this :which-key "Mark next")
   "a f" '(mc/mark-all-words-like-this-in-defun :which-key "Mark all in function")
   "a b" '(mc/mark-all-words-like-this :which-key "Mark all in buffer")
   "RET" '(mc/skip-to-next-like-this :which-key "Skip next")
