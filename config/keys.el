@@ -35,7 +35,6 @@
 (general-def 'visual
   "TAB" 'indent-for-tab-command
 
-
   "#" 'comment-or-uncomment-region
   "r" 'replace-string
   "m" 'my/highlight-region
