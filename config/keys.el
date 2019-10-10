@@ -147,6 +147,7 @@
 (project-leader-key :states '(normal visual)
   "c" '(skeletor-create-project-at :which-key "Create")
   "s" '(helm-projectile-switch-project :which-key "Switch")
+  "o" '(helm-projectile-find-file :which-key "Open file")
   "/" '(helm-projectile-ag :which-key "Search")
   )
 
