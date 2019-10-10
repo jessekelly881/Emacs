@@ -154,6 +154,7 @@
 ;; Resources
 (resource-leader-key :states '(normal visual)
   "g" '(gist-list :which-key "Gists")
+  "f" '(elfeed :which-key "Feed")
   "m" '(mu4e :which-key "Mail")
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
   "p i" '(package-install :which-key "Install")
