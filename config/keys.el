@@ -119,11 +119,12 @@
 ;; Git
 (git-leader-key :states '(normal visual)
   "S" '(magit-status :which-key "Status")
+  "P" '(magit-push-other :which-key "Push(other)")
+  "R" '(magit-rebase-interactive :which-key "Rebase")
 
   "s" '(magit-stage-modified :which-key "Stage")
   "u" '(magit-unstage-all :which-key "Unstage")
   "p" '(magit-push-current :which-key "Push(current)")
-  "P" '(magit-push-other :which-key "Push(other)")
   "d" '(magit-diff :which-key "Diff")
 
   "r h" '(magit-reset-hard :which-key "Hard")
