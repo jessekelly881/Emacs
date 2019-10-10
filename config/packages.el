@@ -21,6 +21,13 @@
      evil-insert
      evil-change
      keyboard-quit
+     self-insert-command
+     magit-next-line
+     undo-tree-undo
+     evil-delete
+     helm-previous-line
+     evil-repeat
+     evil-insert-line
      ))
   )
 
