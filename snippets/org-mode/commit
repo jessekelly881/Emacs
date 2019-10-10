@@ -3,4 +3,6 @@
 # key: commit
 # --
 
-${1:$$(yas-choose-value '("fix" "feat" "chore" "style" "docs" "refactor" "change"))}${2:(${3:scope})}: $0
+${1:$$(yas-choose-value '("fix" "feat" "chore" "style" "docs" "refactor" "change"))}${2:(${3:scope})}: ${4:$$(my/capitalize-first-char yas-text)}
+
+$0

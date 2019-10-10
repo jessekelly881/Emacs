@@ -42,5 +42,14 @@
    ((not (one-window-p)) (kill-buffer-and-window))
    (t (delete-frame)))) ;; If narrowed widen, else delete frame
 
+;; Capitalize only the first character of the input STRING.
+(defun my/capitalize-first-char (&optional string)
+  "Capitalize only the first character of the input STRING."
+  (interactive)
+  (when (and string (> (length string) 0))
+    (let ((first-char (substring string nil 1))
+          (rest-str   (substring string 1)))
+      (concat (capitalize first-char) rest-str))))
+
 (provide 'util)
 ;;; utils.el ends here
