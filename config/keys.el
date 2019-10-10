@@ -149,6 +149,7 @@
   "s" '(helm-projectile-switch-project :which-key "Switch")
   "o" '(helm-projectile-find-file :which-key "Open file")
   "/" '(helm-projectile-ag :which-key "Search")
+  "$" '(projectile-run-shell :which-key "Shell")
   )
 
 ;; Resources
