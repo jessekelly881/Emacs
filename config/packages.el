@@ -161,5 +161,14 @@
   (magit-stage-all-confirm nil)
   (magit-unstage-all-confirm nil))
 
+;; Misc
+(use-package elfeed
+  :config
+  (setq elfeed-feeds
+        '(("http://nullprogram.com/feed/" blog emacs)
+          "http://www.50ply.com/atom.xml"  ; no autotagging
+          ("http://nedroid.com/feed/" webcomic)))
+  )
+
 (provide 'packages)
 ;;; packages.el ends here
