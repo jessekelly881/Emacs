@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: commit-code
-# key: commit-code
+# key: commit
 # --
 
-${1:$$(yas-choose-value '("fix" "feature" "chore" "style" "docs" "refactor"))}($2): $0
+${1:$$(yas-choose-value '("fix" "feature" "chore" "style" "docs" "refactor" "change"))}${2:("$3")}: $0
