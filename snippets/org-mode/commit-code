@@ -3,4 +3,4 @@
 # key: commit-code
 # --
 
-${1:$$(yas-choose-value '("fix" "feature" "chore" "style" "docs" "refactor"))}($2): $3
+${1:$$(yas-choose-value '("fix" "feature" "chore" "style" "docs" "refactor"))}($2): $0

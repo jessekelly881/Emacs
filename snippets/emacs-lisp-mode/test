@@ -1,1 +1,6 @@
-Difficulty: ${2:$$(yas-choose-value '("easy" "hard"))}
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+
+<div${1: id="${2:some_id}"}>$0</div>
