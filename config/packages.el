@@ -154,7 +154,10 @@
     (global-git-gutter-mode +1))
 
 (use-package gist)
-(use-package magit)
+(use-package magit
+  :custom
+  (magit-stage-all-confirm nil)
+  (magit-unstage-all-confirm nil))
 
 (provide 'packages)
 ;;; packages.el ends here
