@@ -134,9 +134,7 @@
   "b d" '(magit-branch-delete :which-key "Delete")
   "b r" '(magit-branch-rename :which-key "Rename")
 
-  "c c" '(magit-commit-create :which-key "Commit")
-  "c a" '(magit-commit-amend :which-key "Amend")
-  "c w" '(magit-commit-reword :which-key "Reword")
+  "c" '(magit-commit-create :which-key "Commit")
 )
 
 (which-key-add-key-based-replacements "SPC g r" "Reset")
