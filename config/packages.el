@@ -142,6 +142,7 @@
 (use-package helm-c-yasnippet)
 (use-package helm-themes :requires (helm))
 (use-package helm-ag :requires (helm ag))
+(use-package helm-projectile :requires (helm projectile) :config (helm-projectile-on))
 
 ;; Git
 (use-package git-gutter
