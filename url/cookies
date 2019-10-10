@@ -1,0 +1,16 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ 'nil)
+(setq url-cookie-secure-storage
+ '((".wikipedia.org"
+  [url-cookie "WMF-Last-Access-Global" "10-Oct-2019" "Mon, 11 Nov 2019 12:00:00 GMT" "/" ".wikipedia.org" t])
+ ("en.wikipedia.org"
+  [url-cookie "WMF-Last-Access" "10-Oct-2019" "Mon, 11 Nov 2019 12:00:00 GMT" "/" "en.wikipedia.org" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
