@@ -189,13 +189,17 @@
   "m" '(hide-mode-line-mode :which-key "Toggle modeline")
   "l" 'linum-relative-mode
   "L" 'display-line-numbers-mode
-  "g" 'git-gutter
   "f" 'fold-this-unfold-all
   "c" 'my/clean-view
   "T" 'helm-themes
 
+  "g g" '(git-gutter :which-key "Gutter")
+  "g t" '(git-timemachine :which-key "Timemachine")
+
   "h t" 'sgml-tags-invisible
 )
+
+(which-key-add-key-based-replacements "SPC v g" "Git")
 
 ;; Config
 (config-leader-key :states '(normal visual)

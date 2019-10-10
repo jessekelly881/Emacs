@@ -153,6 +153,8 @@
     :config
     (global-git-gutter-mode +1))
 
+(use-package git-timemachine) ;; Interactive view of all git tracked revisions for a buffer. Very cool
+
 (use-package gist)
 (use-package magit
   :custom
