@@ -218,6 +218,7 @@
   "s" '(helm-c-yas-complete :which-key "Snippet")
   "d" '(crux-insert-date :which-key "Date")
   "/" '(web-mode-element-close :which-key "Closing tag")
+  "$" '(put-shell-command :which-key "Shell command")
 )
 
 ;; Text

@@ -56,5 +56,10 @@
   (interactive)
   (shell-command-on-region (point-min) (point-max) (read-shell-command "Shell command on buffer: ") nil))
 
+;; Insert shell command output
+(defun put-shell-command ()
+  (interactive)
+  (insert (shell-command-to-string (read-shell-command "Shell command on buffer: "))))
+
 (provide 'util)
 ;;; utils.el ends here
