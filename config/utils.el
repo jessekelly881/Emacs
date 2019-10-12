@@ -51,5 +51,10 @@
           (rest-str   (substring string 1)))
       (concat (capitalize first-char) rest-str))))
 
+;; Run shell command on buffer(and open new buffer with output)
+(defun shell-command-on-buffer ()
+  (interactive)
+  (shell-command-on-region (point-min) (point-max) (read-shell-command "Shell command on buffer: ") nil))
+
 (provide 'util)
 ;;; utils.el ends here

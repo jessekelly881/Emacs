@@ -18,6 +18,7 @@
 
   "<SPC> B" '(buffer-hydra/body :which-key "Buffer hydra")
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
+  "<SPC> $" '(shell-command-on-buffer :which-key "Shell command")
 
   "/" 'helm-swoop
   "q" 'my/quit
