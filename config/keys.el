@@ -195,8 +195,8 @@
   "c" 'my/clean-view
   "T" 'helm-themes
 
-  "g g" '(git-gutter :which-key "Gutter")
-  "g t" '(git-timemachine :which-key "Timemachine")
+  "g" '(git-gutter :which-key "Gutter")
+  "G" '(git-timemachine :which-key "Timemachine")
 
   "h t" 'sgml-tags-invisible
 )
