@@ -95,6 +95,9 @@
   :init (setq-default recent-save-file "~/.emacs.d/recentf"))
 (use-package hide-mode-line-mode)
 (use-package rainbow-delimiters :hook (prog-mode . rainbow-delimiters-mode))
+(use-package highlight-indent-guides
+  :hook (prog-mode . highlight-indent-guides-mode)
+  :custom (highlight-indent-guides-method 'column))
 
 ;; Themes
 (use-package sublime-themes)
