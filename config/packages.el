@@ -97,7 +97,9 @@
 (use-package rainbow-delimiters :hook (prog-mode . rainbow-delimiters-mode))
 (use-package highlight-indent-guides
   :hook (prog-mode . highlight-indent-guides-mode)
-  :custom (highlight-indent-guides-method 'column))
+  :custom
+  (highlight-indent-guides-method 'column)
+  (highlight-indentation-blank-lines t))
 
 ;; Themes
 (use-package sublime-themes)
