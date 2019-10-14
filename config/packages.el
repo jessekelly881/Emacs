@@ -176,7 +176,9 @@
 (use-package lsp-mode
   :config
   (require 'lsp-clients)
-  (add-hook 'prog-mode-hook 'lsp))
+  (add-hook 'python-mode-hook 'lsp)
+  (add-hook 'shell-mode-hook 'lsp)
+  (add-hook 'web-mode-hook 'lsp))
 
 (provide 'packages)
 ;;; packages.el ends here

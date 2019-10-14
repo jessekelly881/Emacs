@@ -253,6 +253,13 @@
   "c-h" '(elpy-nav-backward-indent :which-key "left")
  )
 
+;; lsp
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'lsp-mode-map
+  "g d" '(lsp-find-definition :which-key "Goto def")
+  )
+
 ;; org
 (general-define-key
  :states '(normal visual)
