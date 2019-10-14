@@ -26,6 +26,7 @@
            ("from" .     #x00A7)
 
            ("for" .      #x2200)
+           ("in" .       #x2208)
            ("else if" .  #x00BF)
            ("else" .     #x00BB)
            ("if" .       #x003F)
