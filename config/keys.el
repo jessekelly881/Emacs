@@ -242,17 +242,6 @@
  :keymaps 'emmet-mode-map
  "TAB" 'emmet-expand-line)
 
-;; elpy
-(general-define-key
- :states '(normal visual)
- :keymaps 'python-mode-map
-  "g d" '(elpy-goto-definition-other-window :which-key "goto definition(elpy)")
-  "c-j" '(elpy-nav-forward-block :which-key "forward")
-  "c-k" '(elpy-nav-backward-block :which-key "backwards")
-  "c-l" '(elpy-nav-forward-indent :which-key "right")
-  "c-h" '(elpy-nav-backward-indent :which-key "left")
- )
-
 ;; lsp
 (general-define-key
  :states '(normal visual)
