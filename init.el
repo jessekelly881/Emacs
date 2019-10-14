@@ -36,7 +36,7 @@
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
    (quote
-    (elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection jedi evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
+    (lsp-ui lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection jedi evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
  '(safe-local-variable-values (quote ((eval message "A test"))))
  '(selective-display-ellipses t)
  '(send-mail-function (quote mailclient-send-it))
@@ -78,6 +78,7 @@
  '(isearch ((t (:background "undefinded-bg" :foreground "color-52" :weight bold))))
  '(linum ((t (:background "unspecified-bg" :foreground "blue"))))
  '(linum-relative-current-face ((t (:background "unspecified-bg" :foreground "brightwhite" :weight bold))))
+ '(lsp-face-highlight-write ((t (:inherit highlight))))
  '(magit-blame-highlight ((t (:background "undefinded-bg" :foreground "yellow"))))
  '(magit-diff-added ((t (:background "undefinded-bg" :foreground "color-22"))))
  '(magit-diff-added-highlight ((t (:background "undefinded-bg" :foreground "color-22" :weight bold))))

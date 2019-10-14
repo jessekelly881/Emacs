@@ -1,5 +1,8 @@
 ;; Package Install And Base Config
 
+;; Submodules
+(load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
+
 ;; Utility
 (use-package crux)
 (use-package hydra)
@@ -118,7 +121,6 @@
 (use-package python-django :mode ("\\.py\\'" . python-mode))
 (use-package markdown-mode :mode ("\\.md\\'" . markdown-mode))
 (use-package tide :mode ("\\.ts\\'" . web-mode))
-(use-package elpy :defer t :init (advice-add 'python-mode :before 'elpy-enable))
 (use-package web-mode)
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 
@@ -169,6 +171,12 @@
           "http://www.50ply.com/atom.xml"  ; no autotagging
           ("http://nedroid.com/feed/" webcomic)))
   )
+
+;; lsp
+(use-package lsp-mode
+  :config
+  (require 'lsp-clients)
+  (add-hook 'prog-mode-hook 'lsp))
 
 (provide 'packages)
 ;;; packages.el ends here
