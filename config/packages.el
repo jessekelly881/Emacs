@@ -99,7 +99,11 @@
   :hook (prog-mode . highlight-indent-guides-mode)
   :custom
   (highlight-indent-guides-method 'column)
-  (highlight-indentation-blank-lines t))
+  (highlight-indentation-blank-lines t)
+  :config
+  (set-face-background 'highlight-indent-guides-odd-face "color-233")
+  (set-face-background 'highlight-indent-guides-even-face "color-233")
+  (set-face-foreground 'highlight-indent-guides-character-face "color-233"))
 
 ;; Themes
 (use-package sublime-themes)
