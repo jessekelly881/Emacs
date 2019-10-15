@@ -188,5 +188,8 @@
   (add-hook 'shell-mode-hook 'lsp)
   (add-hook 'web-mode-hook 'lsp))
 
+;; Company
+(use-package company :hook (after-init . global-company-mode))
+
 (provide 'packages)
 ;;; packages.el ends here
