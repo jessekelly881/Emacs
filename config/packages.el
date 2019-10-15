@@ -190,6 +190,7 @@
 
 ;; Company
 (use-package company :hook (after-init . global-company-mode))
+(use-package company-lsp :config (push 'company-lsp company-backends))
 
 (provide 'packages)
 ;;; packages.el ends here
