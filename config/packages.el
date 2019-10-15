@@ -189,7 +189,15 @@
   (add-hook 'web-mode-hook 'lsp))
 
 ;; Company
-(use-package company :hook (after-init . global-company-mode))
+(use-package company
+  :hook (after-init . global-company-mode)
+  :config
+  (add-to-list 'company-backends 'company-yasnippet)
+  (add-to-list 'company-backends 'company-files)
+  :custom
+  (company-idle-delay 0)
+  )
+
 (use-package company-lsp :config (push 'company-lsp company-backends))
 
 (provide 'packages)
