@@ -30,6 +30,7 @@
            ("else if" .  #x00BF)
            ("else" .     #x00BB)
            ("if" .       #x003F)
+           ("div" .      #x2023)
            ))))
 
 ;; Python
