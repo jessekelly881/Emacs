@@ -62,7 +62,11 @@
 (use-package try)
 (use-package highlight-thing :hook (prog-mode-hook . highlight-thing-mode))
 (use-package writegood-mode :hook (markdown-mode . writegood-mode))
-(use-package org)
+(use-package org
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages '((python . t))))
+
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
 (use-package docker)
