@@ -20,7 +20,7 @@
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
   "<SPC> $" '(shell-command-on-buffer :which-key "Shell command")
 
-  "/" '(helm-multi-swoop-projectile :which-key "Search"
+  "/" '(helm-multi-swoop-projectile :which-key "Search")
   "q" 'my/quit
   "Q" 'kill-emacs
   "U" 'undo-tree-visualize
