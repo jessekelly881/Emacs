@@ -1,6 +1,10 @@
 ;; Increace gc threshold - decreaces startup by 2-3s
 (setq gc-cons-threshold (* 100 1000 1000))
 
+;; Start server if not started
+(load "server")
+(unless (server-running-p) (server-start))
+
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
 
