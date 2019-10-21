@@ -3,6 +3,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (package-initialize)
 
 (load (expand-file-name "config/core.el" user-emacs-directory))
@@ -16,19 +17,18 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(company-idle-delay 0)
  '(custom-safe-themes
-   (quote
-    ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+   '("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default))
  '(evil-collection-setup-minibuffer t)
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
  '(git-gutter:modified-sign "~ ")
  '(highlight-indent-guides-auto-enabled nil)
- '(highlight-indent-guides-method (quote column))
+ '(highlight-indent-guides-method 'column)
  '(highlight-indentation-blank-lines t t)
  '(keyfreq-excluded-commands
-   (quote
-    (evil-backward-char evil-forward-char evil-previous-line evil-next-line save-buffer helm-M-x evil-insert evil-change keyboard-quit)) t)
+   '(evil-backward-char evil-forward-char evil-previous-line evil-next-line save-buffer helm-M-x evil-insert evil-change keyboard-quit) t)
  '(magit-stage-all-confirm nil t)
  '(magit-unstage-all-confirm nil t)
  '(mu4e-drafts-folder "/gmail/Drafts")
@@ -38,11 +38,10 @@
  '(org-ellipsis "  .")
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
-   (quote
-    (company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
- '(safe-local-variable-values (quote ((eval message "A test"))))
+   '(lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
+ '(safe-local-variable-values '((eval message "A test")))
  '(selective-display-ellipses t)
- '(send-mail-function (quote mailclient-send-it))
+ '(send-mail-function 'mailclient-send-it)
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(truncate-lines t))
 (custom-set-faces
@@ -61,10 +60,17 @@
  '(company-tooltip ((t (:background "white" :foreground "blue" :weight bold))))
  '(company-tooltip-common-selection ((t (:background "blue" :foreground "white" :underline t))))
  '(company-tooltip-selection ((t (:background "blue" :foreground "white" :weight bold))))
- '(cursor ((t (:background "color-18" :weight bold))))
  '(flycheck-warning ((t (:foreground "green" :underline t :weight bold))))
- '(font-lock-comment-delimiter-face ((t (:inherit default :foreground "brightwhite"))))
- '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "brightgreen" :slant italic))))
+ '(flymake-error ((t (:underline t))))
+ '(flymake-note ((t nil)))
+ '(font-lock-builtin-face ((t (:foreground "magenta"))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "color-236"))))
+ '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "color-236"))))
+ '(font-lock-constant-face ((t (:foreground "white"))))
+ '(font-lock-function-name-face ((t (:foreground "blue"))))
+ '(font-lock-keyword-face ((t (:foreground "magenta"))))
+ '(font-lock-type-face ((t (:foreground "green"))))
+ '(font-lock-variable-name-face ((t (:foreground "white"))))
  '(fringe ((t nil)))
  '(git-gutter:added ((t (:background "undefinded-bg" :foreground "green"))))
  '(git-gutter:deleted ((t (:background "undefinded-bg" :foreground "red"))))
@@ -90,7 +96,7 @@
  '(highlight-indent-guides-top-even-face ((t (:background "color-234"))))
  '(highlight-indent-guides-top-odd-face ((t (:background "color-234"))))
  '(highlight-indentation-face ((t (:background "color-234"))))
- '(highlight-thing ((t (:inherit (quote highlight)))))
+ '(highlight-thing ((t (:inherit 'highlight))))
  '(hl-line ((t (:background "undefinded-bg" :underline t))))
  '(isearch ((t (:background "undefinded-bg" :foreground "color-52" :weight bold))))
  '(linum ((t (:foreground "cyan"))))
@@ -111,11 +117,15 @@
  '(minibuffer-prompt ((t (:foreground "green"))))
  '(mode-line ((t (:inherit variable-pitch :background "color-233" :foreground "brightwhite" :box nil :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "color-233" :foreground "color-244"))))
+ '(org-date ((t (:foreground "white"))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
  '(org-level-4 ((t (:inherit outline-4 :height 1.0))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+ '(org-meta-line ((t (:foreground "color-235"))))
+ '(org-special-keyword ((t (:foreground "blue"))))
+ '(org-table ((t (:foreground "blue"))))
  '(popup-face ((t (:inherit default :background "brightwhite" :foreground "green"))))
  '(popup-menu-selection-face ((t (:inherit default :background "green" :foreground "brightwhite"))))
  '(popup-tip-face ((t (:background "undefinded-bg" :foreground "green" :weight extra-bold))))

@@ -54,5 +54,8 @@
 ;; Keep buffers in sync with disk
 (global-auto-revert-mode t)
 
+;; org-export style code as classes
+(setq org-html-htmlize-output-type 'css)
+
 (provide 'core)
 ;;; core.el ends here
