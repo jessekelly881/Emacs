@@ -239,7 +239,8 @@
 
 ;; Web mode
 (general-define-key
- :keymaps 'emmet-mode-map
+ :states '(insert)
+ :keymaps 'web-mode-map
  "TAB" 'emmet-expand-line)
 
 ;; lsp
