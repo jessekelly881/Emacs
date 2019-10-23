@@ -1,4 +1,6 @@
 ;; Global
+(add-hook 'prog-mode-hook
+ (lambda ()
 (mapc (lambda (pair) (push pair prettify-symbols-alist))
       '(
         ("alpha"   . #x03B1)
@@ -25,7 +27,7 @@
         ("chi"     . #x03C7)
         ("psi"     . #x03C8)
         ("omega"   . #x03C9)
-        ))
+        ))))
 
 ;; Org
 (add-hook 'org-mode-hook
