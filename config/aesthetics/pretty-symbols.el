@@ -1,6 +1,6 @@
-;; Global
+;; Greek symbols
 (add-hook 'prog-mode-hook
- (lambda ()
+(lambda ()
 (mapc (lambda (pair) (push pair prettify-symbols-alist))
       '(
         ("alpha"   . #x03B1)
@@ -29,6 +29,35 @@
         ("omega"   . #x03C9)
         ))))
 
+;; Mathematical & Logical symbols
+(add-hook 'prog-mode-hook
+(lambda ()
+(mapc (lambda (pair) (push pair prettify-symbols-alist))
+      '(
+        ("sqrt"    . #x221A)
+        ("<="      . #x2264)
+        (">="      . #x2265)
+        ("&&"      . #x2227)
+        ("||"      . #x2228)
+        ("=="      . #x2261)
+        ("not"     . #x00AC)
+        ("!"       . #x00AC)
+
+        ("true"    . #x1E6A)
+        ("false"   . #x1E1E)
+        ("True"    . #x1E6A)
+        ("False"   . #x1E1E)
+
+        ("for"     . #x2200)
+        ("in"      . #x2208)
+        ("not in"  . #x2209)
+        ("if"      . #x003F)
+        ("if not"  . #x203D)
+        ("else"    . #x00BB)
+        ("else if" . #x00BF)
+        ("elif"    . #x00BF)
+        ))))
+
 ;; Org
 (add-hook 'org-mode-hook
  (lambda ()
@@ -50,17 +79,9 @@
            ("return" .   #x219E)
            ("this" .     #x21BA)
 
-           ("true" .     #x1E6A)
-           ("false" .    #x1E1E)
-
            ("import" .   #x03A9)
            ("from" .     #x00A7)
 
-           ("for" .      #x2200)
-           ("in" .       #x2208)
-           ("else if" .  #x00BF)
-           ("else" .     #x00BB)
-           ("if" .       #x003F)
            ("div" .      #x2023)
            ))))
 
@@ -70,32 +91,21 @@
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
          '(
            ("def" .      #x0192)
-           ("not" .      #x0021)
-           ("in" .       #x2208)
-           ("not in" .   #x2209)
            ("return" .   #x219E)
            ("yield" .    #x21E0)
            ("class" .    #x039E)
-           ("for" .      #x2200)
            ("import" .   #x03A9)
            ("from" .     #x00A7)
-           ("if" .       #x003F)
-           ("if not" .   #x203D)
-           ("elif" .     #x00BF)
-           ("else" .     #x00BB)
            ("self" .     #x21BA)
            ("break" .    #x21B5)
            ("pass" .     #x21B7)
            ("None" .     #x2205)
            ("del" .      #x2296)
            ("super" .    #x25EE)
-           ("==" .       #x2261)
            ;; Base Types
            ("int" .      #x2124)
            ("float" .    #x211d)
            ("str" .      #x1E61)
-           ("True" .     #x1E6A)
-           ("False" .    #x1E1E)
            ;; Mypy
            ("Dict" .     #x1d507)
            ("List" .     #x2112)
