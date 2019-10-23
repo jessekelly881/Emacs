@@ -25,7 +25,6 @@
         ("chi"     . #x03C7)
         ("psi"     . #x03C8)
         ("omega"   . #x03C9)
-        ("omega"   . #x03C9)
         ))
 
 ;; Org
