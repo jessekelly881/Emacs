@@ -52,5 +52,9 @@
 ;; org-export style code as classes
 (setq org-html-htmlize-output-type 'css)
 
+;; Supress warnings
+(require 'warnings)
+(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
+
 (provide 'core)
 ;;; core.el ends here
