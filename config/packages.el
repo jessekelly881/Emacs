@@ -203,6 +203,7 @@
   )
 
 (use-package company-lsp :config (push 'company-lsp company-backends))
+(use-package smart-tab :config (global-smart-tab-mode 1))
 
 (provide 'packages)
 ;;; packages.el ends here
