@@ -203,7 +203,15 @@
   )
 
 (use-package company-lsp :config (push 'company-lsp company-backends))
-(use-package smart-tab :config (global-smart-tab-mode 1))
+(use-package hippie-exp
+  :config
+  (setq-default
+   hippie-expand-try-functions-list
+   '(try-expand-dabbrev
+     try-complete-file-name-partially try-complete-file-name
+     try-expand-list try-expand-line try-complete-lisp-symbol-partially
+     yas-hippie-try-expand emmet-hippie-try-expand-line
+     )))
 
 (provide 'packages)
 ;;; packages.el ends here

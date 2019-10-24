@@ -61,5 +61,10 @@
   (interactive)
   (insert (shell-command-to-string (read-shell-command "Shell command on buffer: "))))
 
+(defun emmet-hippie-try-expand-line (args)
+  (interactive "P")
+  (when emmet-mode
+    (emmet-expand-line args)))
+
 (provide 'util)
 ;;; utils.el ends here

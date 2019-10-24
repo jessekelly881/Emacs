@@ -11,6 +11,10 @@
   "DEL" '(smart-hungry-delete-backward-char :which-key "Smart delete back")
   )
 
+(general-def :states '(insert)
+  "TAB" 'hippie-expand
+)
+
 ;; Normal Mode
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region
@@ -236,12 +240,6 @@
 
 (which-key-add-key-based-replacements "SPC t t" "Transpose")
 (which-key-add-key-based-replacements "SPC t c" "Case")
-
-;; Web mode
-(general-define-key
- :states '(insert)
- :keymaps 'web-mode-map
- "TAB" 'emmet-expand-line)
 
 ;; lsp
 (general-define-key
