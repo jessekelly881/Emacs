@@ -15,22 +15,34 @@
   :config (keyfreq-mode 1) (keyfreq-autosave-mode 1)
   :custom
   (keyfreq-excluded-commands
-   '(evil-backward-char
-     evil-forward-char
-     evil-previous-line
-     evil-next-line
-     save-buffer
-     helm-M-x
-     evil-insert
+   '(
+     evil-append
+     evil-backward-char
      evil-change
-     keyboard-quit
-     self-insert-command
-     magit-next-line
-     undo-tree-undo
      evil-delete
-     helm-previous-line
-     evil-repeat
+     evil-delete
+     evil-forward-char
+     evil-insert
      evil-insert-line
+     evil-next-line
+     evil-normal-state
+     evil-open-below
+     evil-previous-line
+     evil-repeat
+     helm-M-x
+     helm-next-line
+     helm-previous-line
+     keyboard-quit
+     magit-next-line
+     magit-previous-line
+     minibuffer-complete
+     my/quit
+     next-line
+     org-self-insert-command
+     save-buffer
+     self-insert-command
+     self-insert-command
+     undo-tree-undo
      ))
   )
 
