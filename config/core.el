@@ -1,6 +1,12 @@
 ;; Increace gc threshold - decreaces startup by 2-3s
 (setq gc-cons-threshold (* 100 1000 1000))
 
+;; Set personal info
+(setq
+ user-mail-address "kellyjesse881@gmail.com"
+ user-full-name "Jesse Kelly")
+
+
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
 
