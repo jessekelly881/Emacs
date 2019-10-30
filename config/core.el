@@ -6,6 +6,9 @@
  user-mail-address "kellyjesse881@gmail.com"
  user-full-name "Jesse Kelly")
 
+;; Aliases - useful for M-x
+(defalias 'om 'org-mode)
+(defalias 'elm 'emacs-lisp-mode)
 
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
@@ -16,9 +19,6 @@
 
 ;; Load normalize.el
 (load (expand-file-name "config/normalize.el"  user-emacs-directory))
-
-;; Personal info
-(load (expand-file-name "config/personal.el" user-emacs-directory))
 
 ;; Core packages
 (load (expand-file-name "config/packages.el" user-emacs-directory))

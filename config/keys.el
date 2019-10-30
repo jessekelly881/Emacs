@@ -8,7 +8,7 @@
   )
 
 (general-def :states '(normal insert)
-  "DEL" '(smart-hungry-delete-backward-char :which-key "Smart delete back")
+  "DEL" '(smart-backspace :which-key "Smart delete back")
   )
 
 (general-def :states '(insert)

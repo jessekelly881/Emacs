@@ -41,7 +41,6 @@
         ("||"      . #x2228)
         ("=="      . #x2261)
         ("not"     . #x00AC)
-        ("!"       . #x00AC)
         ("!="      . #x2260)
 
         ("true"    . #x1E6A)
@@ -64,14 +63,12 @@
  (lambda ()
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
          '(
-           ("#+BEGIN_SRC" . #x0192)
-           ("#+END_SRC"   . #x0192)
            ("[ ]"         . #x2610)
            ("[X]"         . #x2714)
            ))))
 
 ;; Web
-(add-hook 'web-mode-hook
+(add-hook 'typescript-mode-hook
  (lambda ()
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
          '(

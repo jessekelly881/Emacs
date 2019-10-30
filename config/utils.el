@@ -40,7 +40,7 @@
    ((org-buffer-narrowed-p) (widen))
    (fancy-buffer-narrowed-p (progn (fancy-widen) (setq fancy-buffer-narrowed-p nil)))
    ((not (one-window-p)) (kill-buffer-and-window))
-   (t (delete-frame)))) ;; If narrowed widen, else delete frame
+   (t (kill-current-buffer)))) ;; If narrowed widen, else delete frame
 
 ;; Capitalize only the first character of the input STRING.
 (defun my/capitalize-first-char (&optional string)

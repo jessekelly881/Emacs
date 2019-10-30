@@ -72,7 +72,7 @@
   ))
 
 (use-package try)
-(use-package highlight-thing :hook (prog-mode-hook . highlight-thing-mode))
+(use-package highlight-thing :hook (prog-mode . highlight-thing-mode))
 (use-package writegood-mode :hook (markdown-mode . writegood-mode))
 (use-package org
   :config
@@ -144,15 +144,17 @@
 (use-package pug-mode :mode ("\\.pug\\'" . pug-mode))
 (use-package python-django :mode ("\\.py\\'" . python-mode))
 (use-package markdown-mode :mode ("\\.md\\'" . markdown-mode))
-(use-package tide :mode ("\\.ts\\'" . web-mode))
+(use-package tide)
 (use-package web-mode)
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 
 ;; Evil
 (use-package evil :config (evil-mode 1))
 (use-package evil-collection
+  :requires (evil)
   :custom (evil-collection-setup-minibuffer t)
   :init (evil-collection-init))
+
 (use-package evil-exchange :config (evil-exchange-install) :requires (evil))
 (use-package evil-surround :config (global-evil-surround-mode 1) :requires (evil))
 
@@ -185,7 +187,11 @@
 (use-package magit
   :custom
   (magit-stage-all-confirm nil)
-  (magit-unstage-all-confirm nil))
+  (magit-unstage-all-confirm nil)
+  (git-commit-major-mode 'org-mode)
+  :hook
+  (git-commit-mode . evil-normal-state)
+  )
 
 ;; Misc
 (use-package elfeed
@@ -202,7 +208,8 @@
   (require 'lsp-clients)
   (add-hook 'python-mode-hook 'lsp)
   (add-hook 'shell-mode-hook 'lsp)
-  (add-hook 'web-mode-hook 'lsp))
+  (add-hook 'web-mode-hook 'lsp)
+  (add-hook 'typescript-mode-hook 'lsp))
 
 ;; Company
 (use-package company
@@ -215,6 +222,7 @@
   )
 
 (use-package company-lsp :config (push 'company-lsp company-backends))
+
 (use-package hippie-exp
   :config
   (setq-default
@@ -224,6 +232,17 @@
      try-expand-list try-expand-line try-complete-lisp-symbol-partially
      yas-hippie-try-expand emmet-hippie-try-expand-line
      )))
+
+(use-package smart-backspace)
+
+(use-package emmet-mode
+  :hook
+  (web-mode         . emmet-mode)
+  (scss-mode        . emmet-mode)
+  (css-mode         . emmet-mode)
+  (js2-mode         . emmet-mode)
+  (typescript-mode  . emmet-mode)
+ )
 
 (provide 'packages)
 ;;; packages.el ends here
