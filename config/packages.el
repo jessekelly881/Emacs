@@ -73,7 +73,13 @@
 
 (use-package try)
 (use-package highlight-thing :hook (prog-mode . highlight-thing-mode))
-(use-package writegood-mode :hook (markdown-mode . writegood-mode))
+
+(use-package writegood-mode
+  :hook
+  (markdown-mode . writegood-mode)
+  (org-mode . writegood-mode)
+  )
+
 (use-package org
   :config
   (org-babel-do-load-languages
