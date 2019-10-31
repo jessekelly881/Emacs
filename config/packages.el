@@ -3,6 +3,11 @@
 ;; Submodules
 (load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
 
+;; Start server on init.
+(use-package server
+  :ensure nil
+  :hook (after-init . server-start))
+
 ;; Utility
 (use-package crux)
 (use-package hydra)
