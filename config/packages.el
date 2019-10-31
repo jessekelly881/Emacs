@@ -88,6 +88,9 @@
   :config
   (org-babel-do-load-languages
    'org-babel-load-languages '((python . t))))
+(use-package org-sticky-header
+  :requires (org)
+  :hook (org-mode . org-sticky-header-mode))
 
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
