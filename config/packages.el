@@ -242,12 +242,14 @@
    '(try-expand-dabbrev
      try-complete-file-name-partially try-complete-file-name
      try-expand-list try-expand-line try-complete-lisp-symbol-partially
-     yas-hippie-try-expand emmet-hippie-try-expand-line
+     yas-hippie-try-expand
      )))
 
 (use-package smart-backspace)
 
 (use-package emmet-mode
+  :config
+  (add-to-list 'hippie-expand-try-functions-list  'emmet-hippie-try-expand-line)
   :hook
   (web-mode         . emmet-mode)
   (scss-mode        . emmet-mode)
