@@ -277,5 +277,18 @@
   (webpaste-paste-confirmation t)
   )
 
+(use-package aggressive-indent
+  :preface
+  (defun my/aggressive-indent-mode-off ()
+    (aggressive-indent-mode 0))
+  :hook
+  (
+   (prog-mode . aggressive-indent-mode)
+   )
+  :custom
+  (aggressive-indent-comments-too t)
+  :config
+  (add-to-list 'aggressive-indent-protected-commands 'comment-dwim))
+
 (provide 'packages)
 ;;; packages.el ends here
