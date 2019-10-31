@@ -258,5 +258,7 @@
 
 (use-package ace-window)
 
+(use-package nodejs-repl)
+
 (provide 'packages)
 ;;; packages.el ends here
