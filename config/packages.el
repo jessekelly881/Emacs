@@ -244,5 +244,7 @@
   (typescript-mode  . emmet-mode)
  )
 
+(use-package ace-window)
+
 (provide 'packages)
 ;;; packages.el ends here
