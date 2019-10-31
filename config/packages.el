@@ -162,7 +162,9 @@
 (use-package helm
   :config (setq helm-follow-mode-persistent t)
   :general
-  ("C-h a" 'helm-apropos))
+  ("C-h a"   'helm-apropos)
+  ("M-x"     'helm-M-x)
+  ("C-x C-f" 'helm-find-files))
 
 (use-package helm-swoop :requires (helm))
 (use-package helm-mode-manager :requires (helm) :disabled)
