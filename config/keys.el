@@ -66,6 +66,7 @@
   "g t" '(web-mode-tag-match :which-key "Jump to tag pair")
 
   "s g" '(gist-region :which-key "Gist")
+  "s w" '(webpaste-paste-region :which-key "Webpaste")
   "s s" '(yas-new-snippet :which-key "Snippet(yas)")
   )
 
@@ -163,6 +164,7 @@
 ;; Resources
 (resource-leader-key :states '(normal visual)
   "g" '(gist-list :which-key "Gists")
+  "w" '(webpaste-paste-buffer :which-key "Webpaste")
   "f" '(elfeed :which-key "Feed")
   "m" '(mu4e :which-key "Mail")
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
