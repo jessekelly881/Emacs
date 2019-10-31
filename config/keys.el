@@ -55,6 +55,8 @@
   "n" '(mc/mark-next-word-like-this :which-key "Mark next")
   "a f" '(mc/mark-all-words-like-this-in-defun :which-key "Mark all in function")
   "a b" '(mc/mark-all-words-like-this :which-key "Mark all in buffer")
+  "A" '(mc/edit-lines :which-key "Edit lines")
+
   "RET" '(mc/skip-to-next-like-this :which-key "Skip next")
   "DEL" '(mc/skip-to-previous-like-this :which-key "Skip next")
 
