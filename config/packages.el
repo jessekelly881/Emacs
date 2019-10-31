@@ -282,9 +282,7 @@
   (defun my/aggressive-indent-mode-off ()
     (aggressive-indent-mode 0))
   :hook
-  (
-   (prog-mode . aggressive-indent-mode)
-   )
+  (prog-mode . aggressive-indent-mode)
   :custom
   (aggressive-indent-comments-too t)
   :config
