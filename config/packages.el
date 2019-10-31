@@ -270,5 +270,12 @@
 
 (use-package nodejs-repl)
 
+;; This mode allows to paste whole buffers or parts of buffers to pastebin-like services.
+;; It supports more than one service and will failover if one service fails
+(use-package webpaste
+  :custom
+  (webpaste-paste-confirmation t)
+  )
+
 (provide 'packages)
 ;;; packages.el ends here
