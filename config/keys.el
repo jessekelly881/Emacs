@@ -105,6 +105,8 @@
 
 ;; Window
 (window-leader-key :states '(normal visual)
+  "g" '(ace-window :which-key "Go")
+
   "h" '(windmove-left :which-key "Left")
   "j" '(windmove-down :which-key "Down")
   "k" '(windmove-up :which-key "Up")
