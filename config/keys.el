@@ -38,7 +38,7 @@
   "m" 'er/expand-region
   "M" 'my/mark-region
   "<backtab>" 'projectile-previous-project-buffer
-  "TAB" 'helm-mini
+  "TAB" 'helm-for-files
   "C-p" 'helm-show-kill-ring
 )
 
