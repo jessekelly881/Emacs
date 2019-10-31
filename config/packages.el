@@ -59,7 +59,11 @@
   (mu4e-sent-folder "/gmail/Sent Mail")
   (mu4e-drafts-folder "/gmail/Drafts")
   )
-(use-package org-mu4e :custom (org-mu4e-link-query-in-headers-mode nil))
+
+(use-package org-mu4e
+  :requires (org mu4e)
+  :custom (org-mu4e-link-query-in-headers-mode nil)
+  )
 
 (use-package skeletor
   :custom (skeletor-project-directory "/home/jesse/dev/projects/active")
