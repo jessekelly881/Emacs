@@ -11,7 +11,9 @@
   "DEL" '(smart-backspace :which-key "Smart delete back")
   )
 
-(general-def :states '(insert)
+(general-def
+  :states '(insert)
+  :keymaps 'prog-mode-map
   "TAB" 'hippie-expand
 )
 
