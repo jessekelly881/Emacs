@@ -62,5 +62,8 @@
 (require 'warnings)
 (add-to-list 'warning-suppress-types '(yasnippet backquote-change))
 
+;; Garbage-collect on focus-out, Emacs should feel snappier.
+(add-hook 'focus-out-hook #'garbage-collect)
+
 (provide 'core)
 ;;; core.el ends here
