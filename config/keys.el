@@ -67,10 +67,9 @@
 
   "g t" '(web-mode-tag-match :which-key "Jump to tag pair")
 
-  "y y" '(evil-yank :which-key "Yank")
-  "y g" '(gist-region :which-key "Gist")
-  "y w" '(webpaste-paste-region :which-key "Webpaste")
-  "y s" '(yas-new-snippet :which-key "Snippet(yas)")
+  "Y g" '(gist-region :which-key "Gist")
+  "Y w" '(webpaste-paste-region :which-key "Webpaste")
+  "Y s" '(yas-new-snippet :which-key "Snippet(yas)")
   )
 
 ;; Leader Keys
