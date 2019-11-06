@@ -55,8 +55,13 @@
 ;; Keep buffers in sync with disk
 (global-auto-revert-mode t)
 
-;; org-export style code as classes
+;; org-export stuff
 (setq org-html-htmlize-output-type 'css)
+(setq org-export-with-broken-links t)
+(setq org-export-with-section-numbers nil)
+(setq org-html-include-timestamps nil)
+(setq org-export-with-sub-superscripts nil)
+(setq org-export-with-toc nil)
 
 ;; Supress warnings
 (require 'warnings)

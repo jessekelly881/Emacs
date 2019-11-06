@@ -72,6 +72,11 @@
   "Y s" '(yas-new-snippet :which-key "Snippet(yas)")
   )
 
+(general-def 'visual
+  :keymaps 'org-mode-map
+  "Y h" '(my/org-copy-region-as-html :which-key "As html")
+  )
+
 ;; Leader Keys
 (general-create-definer leader-key :prefix "SPC")
 (general-create-definer config-leader-key :prefix "SPC c")
