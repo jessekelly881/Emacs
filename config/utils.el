@@ -66,5 +66,13 @@
   (when emmet-mode
     (emmet-expand-line args)))
 
+(defun my/org-copy-region-as-html (beg end &optional level)
+  "Make it easier to copy code for Wordpress posts and other things."
+  (interactive "r\np")
+  (let ((org-export-html-preamble nil)
+        (org-html-toplevel-hlevel (or level 3)))
+    (kill-new
+     (org-export-string-as (buffer-substring beg end) 'html t))))
+
 (provide 'util)
 ;;; utils.el ends here
