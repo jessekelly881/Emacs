@@ -288,5 +288,9 @@
   :config
   (add-to-list 'aggressive-indent-protected-commands 'comment-dwim))
 
+(use-package python-black
+  :demand t
+  :after python)
+
 (provide 'packages)
 ;;; packages.el ends here
