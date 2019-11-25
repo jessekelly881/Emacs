@@ -74,5 +74,13 @@
     (kill-new
      (org-export-string-as (buffer-substring beg end) 'html t))))
 
+(defun my/run-repl ()
+  (interactive)
+  (cond
+   ((member major-mode '(web-mode))(nodejs-repl))
+   (t (shell))
+   ))
+
+
 (provide 'util)
 ;;; utils.el ends here

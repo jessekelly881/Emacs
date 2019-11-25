@@ -24,7 +24,7 @@
 
   "<SPC> B" '(buffer-hydra/body :which-key "Buffer hydra")
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
-  "<SPC> $" '(shell-command-on-buffer :which-key "Shell command")
+  "<SPC> $" '(my/run-repl :which-key "Shell command")
 
   "/" '(helm-multi-swoop-projectile :which-key "Search")
   "q" 'my/quit
@@ -40,7 +40,7 @@
   "<backtab>" 'projectile-previous-project-buffer
   "TAB" 'helm-for-files
   "C-p" 'helm-show-kill-ring
-)
+  )
 
 ;; Visual Mode
 (general-def 'visual
@@ -265,8 +265,8 @@
 (general-define-key
  :states '(normal visual)
  :keymaps 'org-mode-map
-  "SPC v n" '(org-narrow-to-element :which-key "Narrow")
-  )
+ "SPC v n" '(org-narrow-to-element :which-key "Narrow")
+ )
 
 (provide 'keys)
 ;;; keys.el ends here
