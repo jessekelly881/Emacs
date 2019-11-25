@@ -77,11 +77,22 @@
 (when (executable-find "ipython")
   (setq python-shell-interpreter "ipython"))
 
+(defun my/visit-ielm ()
+  "Create or visit a `ielm' buffer."
+  (interactive)
+  (if (not (get-buffer "*ielm*"))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (ielm))
+    (switch-to-buffer-other-window "*ielm*")))
+
 (defun my/run-repl ()
   (interactive)
   (cond
    ((member major-mode '(web-mode js-mode js2-mode))(nodejs-repl))
    ((member major-mode '(python-mode))(run-python))
+   ((member major-mode '(emacs-lisp-mode))(my/visit-ielm))
    (t (shell))
    ))
 
