@@ -90,7 +90,7 @@
 (defun my/run-repl ()
   (interactive)
   (cond
-   ((member major-mode '(web-mode js-mode js2-mode))(nodejs-repl))
+   ((member major-mode '(web-mode js-mode js2-mode typescript-mode))(nodejs-repl))
    ((member major-mode '(python-mode))(run-python))
    ((member major-mode '(emacs-lisp-mode))(my/visit-ielm))
    (t (shell))
