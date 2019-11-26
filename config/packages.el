@@ -100,7 +100,10 @@
 (use-package xclip :config (xclip-mode 1) :defer 1)
 (use-package dumb-jump)
 (use-package docker)
-(use-package yasnippet :config (yas-global-mode 1))
+(use-package yasnippet
+  :config
+  (yas-global-mode 1)
+  (push 'yas-hippie-try-expand hippie-expand-try-functions-list))
 (use-package ag)
 (use-package expand-region :config (setq er/try-expand-list (append er/try-expand-list '(mark-paragraph mark-page))))
 (use-package ranger :disabled)
@@ -247,13 +250,22 @@
   :config
   (setq-default
    hippie-expand-try-functions-list
-   '(try-expand-dabbrev
-     try-complete-file-name-partially try-complete-file-name
-     try-expand-list try-expand-line try-complete-lisp-symbol-partially
-     yas-hippie-try-expand
+   '(
+     try-expand-all-abbrevs
+     try-expand-dabbrev-visible
+     try-expand-dabbrev
+     try-expand-dabbrev-all-buffers
+     try-expand-dabbrev-from-kill
+     try-complete-file-name-partially
+     try-complete-file-name
+     try-expand-list
+     try-expand-line
+     try-complete-lisp-symbol-partially
+     try-complete-lisp-symbol
      )))
 
 (use-package smart-backspace)
+
 
 (use-package emmet-mode
   :config
@@ -264,7 +276,7 @@
   (css-mode         . emmet-mode)
   (js2-mode         . emmet-mode)
   (typescript-mode  . emmet-mode)
- )
+  )
 
 (use-package ace-window)
 
@@ -293,10 +305,11 @@
   :after python)
 
 (use-package yankpad
-  :defer 10
   :config
   (add-to-list 'company-backends #'company-yankpad)
   (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
+
+(use-package move-text)
 
 (provide 'packages)
 ;;; packages.el ends here

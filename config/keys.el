@@ -47,8 +47,11 @@
 (general-def 'visual
   "TAB" 'indent-for-tab-command
 
+  ;; Text
+  "r" '(replace-string :which-key "Replace")
+  "s" '(sort-lines :which-key "Sort")
+
   "#" 'comment-or-uncomment-region
-  "r" 'replace-string
   "m" 'my/highlight-region
   "u" 'undo
 
@@ -172,6 +175,10 @@
 
 ;; Resources
 (resource-leader-key :states '(normal visual)
+  ;; Abbrevs
+  "a c" '(define-global-abbrev :which-key "Create")
+  "a l" '(list-abbrevs :which-key "Create")
+
   ;; Yankpad
   "y e" '(yankpad-edit :which-key "Gists")
   "y c" '(yankpad-capture-snippet :which-key "Capture")
@@ -183,11 +190,14 @@
   "f" '(elfeed :which-key "Feed")
   "m" '(mu4e :which-key "Mail")
   "w" '(helm-wikipedia-suggest :which-key "Wikipedia")
+
+  ;; Packages
   "p i" '(package-install :which-key "Install")
   "p r" '(package-refresh-contents :which-key "Refresh")
   "p t" '(try :which-key "Try")
   )
 
+(which-key-add-key-based-replacements "SPC r a" "Abbrevs")
 (which-key-add-key-based-replacements "SPC r p" "Packages")
 (which-key-add-key-based-replacements "SPC r y" "Yankpad")
 
