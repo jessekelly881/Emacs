@@ -1,6 +1,7 @@
 ;; Shared keys
 (general-def :states '(normal visual)
   "<SPC><SPC>" '(helm-M-x :which-key "M-x")
+  "<SPC> TAB" '(helm-for-files :which-key "Switch to Buffer")
 
   "f" 'avy-goto-char-timer
   "F" 'avy-goto-line
@@ -24,7 +25,7 @@
 
   "<SPC> B" '(buffer-hydra/body :which-key "Buffer hydra")
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
-  "<SPC> $" '(my/run-repl :which-key "Shell command")
+  "<SPC> $" '(my/run-repl :which-key "REPL/Shell")
 
   "/" '(helm-multi-swoop-projectile :which-key "Search")
   "q" 'my/quit
@@ -37,8 +38,8 @@
   "?" 'helm-ag
   "m" 'er/expand-region
   "M" 'my/mark-region
-  "<backtab>" 'projectile-previous-project-buffer
-  "TAB" 'helm-for-files
+  "<backtab>" 'evil-jump-forward
+  "TAB" 'evil-jump-backward
   "C-p" 'helm-show-kill-ring
   )
 
@@ -67,6 +68,7 @@
 
   "g t" '(web-mode-tag-match :which-key "Jump to tag pair")
 
+  "Y y" '(yankpad-capture-snippet :which-key "Yankpad")
   "Y g" '(gist-region :which-key "Gist")
   "Y w" '(webpaste-paste-region :which-key "Webpaste")
   "Y s" '(yas-new-snippet :which-key "Snippet(yas)")
@@ -170,6 +172,12 @@
 
 ;; Resources
 (resource-leader-key :states '(normal visual)
+  ;; Yankpad
+  "y e" '(yankpad-edit :which-key "Gists")
+  "y c" '(yankpad-capture-snippet :which-key "Capture")
+  "y a" '(yankpad-append-category :which-key "Append category")
+  "y s" '(yankpad-set-category :which-key "Set category")
+
   "g" '(gist-list :which-key "Gists")
   "w" '(webpaste-paste-buffer :which-key "Webpaste")
   "f" '(elfeed :which-key "Feed")
@@ -178,17 +186,18 @@
   "p i" '(package-install :which-key "Install")
   "p r" '(package-refresh-contents :which-key "Refresh")
   "p t" '(try :which-key "Try")
-)
+  )
 
 (which-key-add-key-based-replacements "SPC r p" "Packages")
+(which-key-add-key-based-replacements "SPC r y" "Yankpad")
 
 ;; Set
 (settings-leader-key :states '(normal visual)
-   "m m" '(markdown-mode :which-key "Markdown mode")
-   "m o" '(org-mode :which-key "Org mode")
-   "m w" '(web-mode :which-key "Web mode")
-   "m p" '(python-mode :which-key "Python mode")
-)
+  "m m" '(markdown-mode :which-key "Markdown mode")
+  "m o" '(org-mode :which-key "Org mode")
+  "m w" '(web-mode :which-key "Web mode")
+  "m p" '(python-mode :which-key "Python mode")
+  )
 
 (which-key-add-key-based-replacements "SPC s m" "Mode")
 
@@ -231,12 +240,13 @@
 
 ;; Insert
 (insert-leader-key :keymaps 'normal
+  "y" '(yankpad-insert :which-key "Yankpad")
   "l" '(lorem-ipsum-insert-paragraphs :which-key "Lorem text")
   "s" '(helm-c-yas-complete :which-key "Snippet")
   "d" '(crux-insert-date :which-key "Date")
   "/" '(web-mode-element-close :which-key "Closing tag")
   "$" '(put-shell-command :which-key "Shell command")
-)
+  )
 
 ;; Text
 (text-leader-key :states '(normal visual)
@@ -258,8 +268,8 @@
 (general-define-key
  :states '(normal visual)
  :keymaps 'lsp-mode-map
-  "g d" '(lsp-find-definition :which-key "Goto def")
-  )
+ "g d" '(lsp-find-definition :which-key "Goto def")
+ )
 
 ;; org
 (general-define-key

@@ -1,0 +1,9 @@
+* Personal information                                                 :global:
+** email
+jesse@appuntos.com
+
+** name
+Jesse Kelly
+
+** degree
+B.A. Mathematics

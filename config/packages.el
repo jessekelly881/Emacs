@@ -292,5 +292,11 @@
   :demand t
   :after python)
 
+(use-package yankpad
+  :defer 10
+  :config
+  (add-to-list 'company-backends #'company-yankpad)
+  (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
+
 (provide 'packages)
 ;;; packages.el ends here

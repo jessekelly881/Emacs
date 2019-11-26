@@ -21,10 +21,12 @@
   ("q" nil)
   )
 
+
+
 (defun scroll-up-in-place (n)
-      (interactive "p")
-      (forward-line (- n))
-      (scroll-down n))
+  (interactive "p")
+  (forward-line (- n))
+  (scroll-down n))
 
 (defun scroll-down-in-place (n)
       (interactive "p")
