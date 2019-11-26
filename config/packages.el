@@ -309,7 +309,7 @@
   (add-to-list 'company-backends #'company-yankpad)
   (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
 
-(use-package move-text)
+(use-package drag-stuff)
 
 (provide 'packages)
 ;;; packages.el ends here

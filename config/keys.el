@@ -51,6 +51,9 @@
   "r" '(replace-string :which-key "Replace")
   "s" '(sort-lines :which-key "Sort")
 
+  "J" 'drag-stuff-down
+  "K" 'drag-stuff-up
+
   "#" 'comment-or-uncomment-region
   "m" 'my/highlight-region
   "u" 'undo
