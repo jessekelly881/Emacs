@@ -29,7 +29,7 @@
 
   "/" '(helm-multi-swoop-projectile :which-key "Search")
   "q" 'my/quit
-  "Q" 'kill-emacs
+  "Q" 'restart-emacs
   "U" 'undo-tree-visualize
   "g b" '(helm-bookmarks :which-key "Goto bookmark")
   "g f" 'helm-imenu

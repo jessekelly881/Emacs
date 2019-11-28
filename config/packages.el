@@ -310,6 +310,8 @@
   (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
 
 (use-package drag-stuff)
+(use-package restart-emacs)
+(use-package yaml-mode)
 
 (provide 'packages)
 ;;; packages.el ends here
