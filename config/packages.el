@@ -312,6 +312,10 @@
 (use-package drag-stuff)
 (use-package restart-emacs)
 (use-package yaml-mode)
+(use-package smart-semicolon
+  :hook
+  (prog-mode . smart-semicolon-mode)
+  )
 
 (provide 'packages)
 ;;; packages.el ends here
