@@ -153,7 +153,13 @@
 (use-package beacon :init (beacon-mode 1) :config (setq beacon-color "red"))
 (use-package origami)
 (use-package olivetti)
-(use-package linum-relative)
+(use-package linum-relative
+  :custom
+  (linum-format "%d")
+  (linum-relative-backend 'display-line-numbers-mode)
+  :hook
+  (prog-mode . linum-relative-on)
+  )
 (use-package highlight)
 (use-package insert-shebang)
 
