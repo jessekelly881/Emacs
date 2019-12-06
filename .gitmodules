@@ -1,3 +1,6 @@
 [submodule "submodules/spinner"]
 	path = submodules/spinner
 	url = https://github.com/Malabarba/spinner.el
+[submodule "submodules/focus"]
+	path = submodules/focus
+	url = https://github.com/larstvei/Focus
