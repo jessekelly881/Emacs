@@ -197,6 +197,7 @@
   ;; Packages
   "p i" '(package-install :which-key "Install")
   "p r" '(package-refresh-contents :which-key "Refresh")
+  "p d" '(package-delete :which-key "Delete")
   "p t" '(try :which-key "Try")
   )
 
