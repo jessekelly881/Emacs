@@ -13,48 +13,56 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(aggressive-indent-comments-too t)
+ '(aggressive-indent-comments-too t t)
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(company-idle-delay 0)
  '(custom-safe-themes
-   '("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default))
+   (quote
+    ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
  '(evil-collection-setup-minibuffer t)
  '(fringe-mode 10 nil (fringe))
- '(git-commit-major-mode 'org-mode)
+ '(git-commit-major-mode (quote org-mode) t)
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
  '(git-gutter:modified-sign "~ ")
- '(highlight-indent-guides-auto-enabled nil)
- '(highlight-indent-guides-method 'column)
+ '(highlight-indent-guides-auto-enabled nil t)
+ '(highlight-indent-guides-method (quote column) t)
  '(highlight-indentation-blank-lines t t)
  '(keyfreq-excluded-commands
-   '(evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo) t)
- '(linum-format " %6d ")
- '(magit-diff-arguments '("--ignore-all-space" "--no-ext-diff" "--stat"))
- '(magit-diff-section-arguments '("--ignore-all-space" "--no-ext-diff"))
+   (quote
+    (evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo)) t)
+ '(linum-format " %6d " t)
+ '(linum-relative-backend (quote display-line-numbers-mode) t)
+ '(magit-diff-arguments (quote ("--ignore-all-space" "--no-ext-diff" "--stat")))
+ '(magit-diff-section-arguments (quote ("--ignore-all-space" "--no-ext-diff")))
  '(magit-stage-all-confirm nil t)
  '(magit-unstage-all-confirm nil t)
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
- '(mu4e-drafts-folder "/gmail/Drafts")
- '(mu4e-maildir "~/.mail")
- '(mu4e-refile-folder "/gmail/Archive")
- '(mu4e-sent-folder "/gmail/Sent Mail")
+ '(mu4e-drafts-folder "/gmail/Drafts" t)
+ '(mu4e-maildir "~/.mail" t)
+ '(mu4e-refile-folder "/gmail/Archive" t)
+ '(mu4e-sent-folder "/gmail/Sent Mail" t)
  '(org-ellipsis "  .")
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
-   '(fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
+   (quote
+    (fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(safe-local-variable-values
-   '((eval add-hook 'after-save-hook 'org-html-export-to-html nil t)
+   (quote
+    ((eval add-hook
+           (quote after-save-hook)
+           (quote org-html-export-to-html)
+           nil t)
      (org-html-htmlize-output-type . css)
-     (eval message "A test")))
+     (eval message "A test"))))
  '(selective-display-ellipses t)
- '(send-mail-function 'mailclient-send-it)
+ '(send-mail-function (quote mailclient-send-it))
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(truncate-lines t)
  '(webpaste-paste-confirmation t))
@@ -112,7 +120,7 @@
  '(highlight-indent-guides-top-even-face ((t (:background "color-234"))))
  '(highlight-indent-guides-top-odd-face ((t (:background "color-234"))))
  '(highlight-indentation-face ((t (:background "color-234"))))
- '(highlight-thing ((t (:inherit 'highlight))))
+ '(highlight-thing ((t (:inherit (quote highlight)))))
  '(hl-line ((t (:background "undefinded-bg" :underline t))))
  '(isearch ((t (:background "undefinded-bg" :foreground "color-52" :weight bold))))
  '(linum ((t (:background "undefinded-bg" :foreground "green"))))

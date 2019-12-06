@@ -1,7 +1,7 @@
 ;; Package Install And Base Config
 
 ;; Submodules
-(load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
+;;(load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
 
 ;; Start server on init.
 (use-package server
@@ -312,7 +312,7 @@
 
 (use-package yankpad
   :config
-  (add-to-list 'company-backends #'company-yankpad)
+  ;; (add-to-list 'company-backends #'company-yankpad)
   (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
 
 (use-package drag-stuff)
@@ -322,6 +322,8 @@
   :hook
   (prog-mode . smart-semicolon-mode)
   )
+
+(use-package borg)
 
 (provide 'packages)
 ;;; packages.el ends here
