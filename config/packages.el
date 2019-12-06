@@ -1,7 +1,8 @@
 ;; Package Install And Base Config
 
 ;; Submodules
-;;(load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
+(load (expand-file-name "submodules/spinner/spinner.el"  user-emacs-directory))
+(load (expand-file-name "submodules/focus/focus.el"  user-emacs-directory))
 
 ;; Start server on init.
 (use-package server
@@ -322,8 +323,6 @@
   :hook
   (prog-mode . smart-semicolon-mode)
   )
-
-(use-package borg)
 
 (provide 'packages)
 ;;; packages.el ends here
