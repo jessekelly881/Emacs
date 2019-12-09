@@ -96,6 +96,15 @@
    (t (shell))
    ))
 
+(defun my/goto-random-line ()
+  "Go to a random line in this buffer."
+                                        ; good for electrobibliomancy.
+  (interactive)
+  (goto-line (1+ (random (my/buffer-line-count)))))
+
+(defun my/buffer-line-count ()
+  "Return the number of lines in this buffer."
+  (count-lines (point-min) (point-max)))
 
 (provide 'util)
 ;;; utils.el ends here
