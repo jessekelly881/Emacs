@@ -90,9 +90,16 @@
   )
 
 (use-package org
+  :custom
+  (org-confirm-babel-evaluate nil)
   :config
   (org-babel-do-load-languages
-   'org-babel-load-languages '((python . t))))
+   'org-babel-load-languages
+   '(
+     (python . t)
+     (shell . t)
+     )))
+
 (use-package org-sticky-header
   :requires (org)
   :hook (org-mode . org-sticky-header-mode))
@@ -324,6 +331,10 @@
   )
 
 (use-package focus)
+
+(use-package ledger-mode
+  :mode ("\\.ledger\\'")
+  :custom (ledger-clear-whole-transactions t))
 
 (provide 'packages)
 ;;; packages.el ends here

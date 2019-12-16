@@ -13,7 +13,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(aggressive-indent-comments-too t t)
+ '(aggressive-indent-comments-too t)
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
@@ -28,14 +28,14 @@
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
  '(git-gutter:modified-sign "~ ")
- '(highlight-indent-guides-auto-enabled nil t)
- '(highlight-indent-guides-method (quote column) t)
+ '(highlight-indent-guides-auto-enabled nil)
+ '(highlight-indent-guides-method (quote column))
  '(highlight-indentation-blank-lines t t)
  '(keyfreq-excluded-commands
    (quote
     (evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo)) t)
- '(linum-format " %6d " t)
- '(linum-relative-backend (quote display-line-numbers-mode) t)
+ '(linum-format " %6d ")
+ '(linum-relative-backend (quote display-line-numbers-mode))
  '(magit-diff-arguments (quote ("--ignore-all-space" "--no-ext-diff" "--stat")))
  '(magit-diff-section-arguments (quote ("--ignore-all-space" "--no-ext-diff")))
  '(magit-stage-all-confirm nil t)
@@ -46,11 +46,12 @@
  '(mu4e-maildir "~/.mail" t)
  '(mu4e-refile-folder "/gmail/Archive" t)
  '(mu4e-sent-folder "/gmail/Sent Mail" t)
+ '(org-confirm-babel-evaluate nil)
  '(org-ellipsis "  .")
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
    (quote
-    (fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
+    (ledger-mode htmlize fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(safe-local-variable-values
@@ -112,7 +113,7 @@
  '(helm-source-header ((t (:background "color-233" :foreground "white" :box (:line-width 1 :style released-button) :underline nil :weight bold))))
  '(helm-swoop-target-line-face ((t (:background "unspecified-bg" :foreground "color-52"))))
  '(helm-swoop-target-word-face ((t (:background "unspecified-bg" :foreground "color-52" :underline t :weight bold))))
- '(highlight ((t (:background "   unspecified-bg" :foreground "color-52" :weight ultra-bold))))
+ '(highlight ((t (:background "   unspecified-bg" :foreground "white" :weight ultra-bold))))
  '(highlight-indent-guides-even-face ((t (:background "color-234"))))
  '(highlight-indent-guides-odd-face ((t (:background "color-234"))))
  '(highlight-indent-guides-stack-even-face ((t (:background "color-234"))))
@@ -156,9 +157,10 @@
  '(popup-menu-selection-face ((t (:inherit default :background "green" :foreground "brightwhite"))))
  '(popup-tip-face ((t (:background "undefinded-bg" :foreground "green" :weight extra-bold))))
  '(rainbow-delimiters-base-face ((t (:inherit nil :weight bold))))
- '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face :foreground "color-235"))))
- '(rainbow-delimiters-depth-2-face ((t (:inherit rainbow-delimiters-base-face :foreground "brightcyan"))))
- '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "brightwhite"))))
+ '(rainbow-delimiters-depth-1-face ((t (:inherit rainbow-delimiters-base-face :foreground "cyan"))))
+ '(rainbow-delimiters-depth-2-face ((t (:inherit rainbow-delimiters-base-face :foreground "green"))))
+ '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "yellow"))))
+ '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "blue"))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face))))
  '(region ((t (:background "#1D1F21" :weight bold))))
  '(ruler-mode-default ((t (:inherit default :background "undefinded-bg" :foreground "blue"))))
