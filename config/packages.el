@@ -333,5 +333,7 @@
   :mode ("\\.ledger\\'")
   :custom (ledger-clear-whole-transactions t))
 
+(use-package nord-theme)
+
 (provide 'packages)
 ;;; packages.el ends here
