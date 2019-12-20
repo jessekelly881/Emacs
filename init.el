@@ -13,7 +13,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(aggressive-indent-comments-too t)
+ '(aggressive-indent-comments-too t t)
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
@@ -28,14 +28,25 @@
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
  '(git-gutter:modified-sign "~ ")
- '(highlight-indent-guides-auto-enabled nil)
- '(highlight-indent-guides-method (quote column))
+ '(highlight-indent-guides-auto-enabled nil t)
+ '(highlight-indent-guides-method (quote column) t)
  '(highlight-indentation-blank-lines t t)
  '(keyfreq-excluded-commands
    (quote
     (evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo)) t)
- '(linum-format " %6d ")
- '(linum-relative-backend (quote display-line-numbers-mode))
+ '(ledger-clear-whole-transactions t t)
+ '(ledger-reports
+   (quote
+    (("Balance" "ledger -f /home/jesse/docs/personal/accounting/transactions.ledger balance Assets Liabilities")
+     ("Worth" "ledger -f 2019.ledger money.ledger balance Assets Liabilities")
+     ("NetWorth" "ledger -f money.ledger balance Assets Liabilities")
+     ("tset" "ledger ")
+     ("bal" "%(binary) -f %(ledger-file) bal")
+     ("reg" "%(binary) -f %(ledger-file) reg")
+     ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
+     ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
+ '(linum-format " %6d " t)
+ '(linum-relative-backend (quote display-line-numbers-mode) t)
  '(magit-diff-arguments (quote ("--ignore-all-space" "--no-ext-diff" "--stat")))
  '(magit-diff-section-arguments (quote ("--ignore-all-space" "--no-ext-diff")))
  '(magit-stage-all-confirm nil t)
