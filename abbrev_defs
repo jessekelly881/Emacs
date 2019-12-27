@@ -1,5 +1,5 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'global-abbrev-table
+(define-abbrev-table 'text-mode-abbrev-table
   '(
     ("bc" "because" nil :count 0)
     ("because" "bc" nil :count 7)
@@ -16,4 +16,3 @@
     ("u" "you" nil :count 1)
     ("wo" "without" nil :count 0)
    ))
-
