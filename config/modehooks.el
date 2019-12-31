@@ -7,6 +7,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss$"  . scss-mode))
 
 (add-hook 'typescript-mode-hook  'tide-mode)
+(add-hook 'prog-mode-hook  'delete-carrage-returns)
 
 (setq web-mode-ac-sources-alist
   '(("html" . (ac-source-emmet-html-aliases ac-source-emmet-html-snippets))

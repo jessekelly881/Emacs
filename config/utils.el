@@ -106,5 +106,12 @@
   "Return the number of lines in this buffer."
   (count-lines (point-min) (point-max)))
 
+(defun delete-carrage-returns ()
+  (interactive)
+  (save-excursion
+    (goto-char 0)
+    (while (search-forward "\r" nil :noerror)
+      (replace-match ""))))
+
 (provide 'util)
 ;;; utils.el ends here
