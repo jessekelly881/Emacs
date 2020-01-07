@@ -228,6 +228,9 @@
 
 (use-package magit-todos
   :hook (after-init . magit-todos-mode))
+(use-package gitignore-mode)
+(use-package gitattributes-mode)
+(use-package gitconfig-mode)
 
 ;; Misc
 (use-package elfeed
