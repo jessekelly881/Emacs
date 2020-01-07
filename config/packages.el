@@ -226,6 +226,9 @@
   (git-commit-mode . evil-normal-state)
   )
 
+(use-package magit-todos
+  :hook (after-init . magit-todos-mode))
+
 ;; Misc
 (use-package elfeed
   :config

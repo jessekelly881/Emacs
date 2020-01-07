@@ -148,6 +148,7 @@
   "R" '(magit-rebase-interactive :which-key "Rebase")
 
   "s" '(magit-stage-modified :which-key "Stage")
+  "t" '(magit-todos-list :which-key "Todo")
   "u" '(magit-unstage-all :which-key "Unstage")
   "p" '(magit-push-current :which-key "Push(current)")
   "d" '(magit-diff :which-key "Diff")
