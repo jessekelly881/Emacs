@@ -239,12 +239,15 @@
 (use-package lsp-mode
   :config
   (require 'lsp-clients)
-  (add-hook 'python-mode-hook 'lsp)
-  (add-hook 'c-mode-hook 'lsp)
-  (add-hook 'c++-mode-hook 'lsp)
-  (add-hook 'shell-mode-hook 'lsp)
-  (add-hook 'web-mode-hook 'lsp)
-  (add-hook 'typescript-mode-hook 'lsp))
+  :hook
+  (latex-mode      . lsp)
+  (python-mode     . lsp)
+  (c-mode          . lsp)
+  (c++-mode        . lsp)
+  (shell-mode      . lsp)
+  (web-mode        . lsp)
+  (rust-mode       . lsp)
+  (typescript-mode . lsp))
 
 ;; Company
 (use-package company
@@ -325,6 +328,7 @@
   :custom (ledger-clear-whole-transactions t))
 
 (use-package nord-theme)
+(use-package rust-mode)
 
 (provide 'packages)
 ;;; packages.el ends here
