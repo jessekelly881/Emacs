@@ -240,6 +240,8 @@
   :config
   (require 'lsp-clients)
   (add-hook 'python-mode-hook 'lsp)
+  (add-hook 'c-mode-hook 'lsp)
+  (add-hook 'c++-mode-hook 'lsp)
   (add-hook 'shell-mode-hook 'lsp)
   (add-hook 'web-mode-hook 'lsp)
   (add-hook 'typescript-mode-hook 'lsp))
