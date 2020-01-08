@@ -94,7 +94,8 @@
    'org-babel-load-languages
    '(
      (python . t)
-     (shell . t)
+     (shell  . t)
+     (rust   . t)
      )))
 
 (use-package org-sticky-header
@@ -335,6 +336,7 @@
 
 (use-package nord-theme)
 (use-package rust-mode)
+(use-package ob-rust)
 
 (provide 'packages)
 ;;; packages.el ends here
