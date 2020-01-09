@@ -200,6 +200,7 @@
   "p r" '(package-refresh-contents :which-key "Refresh")
   "p d" '(package-delete :which-key "Delete")
   "p t" '(try :which-key "Try")
+  "p u" '(auto-package-update-now :which-key "Update")
   )
 
 (which-key-add-key-based-replacements "SPC r a" "Abbrevs")

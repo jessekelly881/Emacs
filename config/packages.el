@@ -324,5 +324,7 @@
 (use-package rust-mode)
 (use-package ob-rust)
 
+(use-package auto-package-update)
+
 (provide 'packages)
 ;;; packages.el ends here
