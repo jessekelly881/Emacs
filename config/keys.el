@@ -27,7 +27,7 @@
   "<SPC> W" '(window-hydra/body :which-key "Window hydra")
   "<SPC> $" '(my/run-repl :which-key "REPL/Shell")
 
-  "/" '(helm-multi-swoop-projectile :which-key "Search")
+  "/" '(helm-swoop :which-key "Search")
   "q" 'my/quit
   "Q" 'restart-emacs
   "U" 'undo-tree-visualize

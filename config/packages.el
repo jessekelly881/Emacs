@@ -53,20 +53,6 @@
   :config (smart-hungry-delete-add-default-hooks)
   )
 
-;; General
-(use-package mu4e
-  :custom
-  (mu4e-maildir "~/.mail")
-  (mu4e-refile-folder "/gmail/Archive")
-  (mu4e-sent-folder "/gmail/Sent Mail")
-  (mu4e-drafts-folder "/gmail/Drafts")
-  )
-
-(use-package org-mu4e
-  :requires (org mu4e)
-  :custom (org-mu4e-link-query-in-headers-mode nil)
-  )
-
 (use-package skeletor
   :custom (skeletor-project-directory "/home/jesse/dev/projects/active")
   :config
@@ -133,7 +119,7 @@
 (use-package recentf
   :hook (after-init . recentf-mode)
   :init (setq-default recent-save-file "~/.emacs.d/recentf"))
-(use-package hide-mode-line-mode)
+(use-package hide-mode-line)
 (use-package rainbow-delimiters :hook (prog-mode . rainbow-delimiters-mode))
 (use-package highlight-indent-guides
   :hook (prog-mode . highlight-indent-guides-mode)
