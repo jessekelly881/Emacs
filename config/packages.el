@@ -325,6 +325,7 @@
 (use-package ob-rust)
 
 (use-package auto-package-update)
+(use-package dart-mode)
 
 (provide 'packages)
 ;;; packages.el ends here
