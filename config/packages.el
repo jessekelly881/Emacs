@@ -242,6 +242,8 @@
   (rust-mode       . lsp)
   (typescript-mode . lsp))
 
+(use-package lsp-ui)
+
 ;; Company
 (use-package company
   :hook (after-init . global-company-mode)
