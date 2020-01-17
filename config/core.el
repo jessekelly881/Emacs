@@ -1,6 +1,3 @@
-;; Increace gc threshold - decreaces startup by 2-3s
-(setq gc-cons-threshold (* 100 1000 1000))
-
 ;; Set personal info
 (setq
  user-mail-address "kellyjesse881@gmail.com"
@@ -44,9 +41,6 @@
                  (float-time
                   (time-subtract after-init-time before-init-time)))
          gcs-done)
-
-;; Decrace gc threshold back to normal
-(setq gc-cons-threshold (* 2 1000 1000))
 
 ;; Automatically make scripts executable
 (add-hook 'after-save-hook

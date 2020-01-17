@@ -328,6 +328,7 @@
 
 (use-package auto-package-update)
 (use-package dart-mode)
+(use-package dockerfile-mode)
 
 (provide 'packages)
 ;;; packages.el ends here
