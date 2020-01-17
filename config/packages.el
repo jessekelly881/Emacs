@@ -68,6 +68,7 @@
 (use-package highlight-thing :hook (prog-mode . highlight-thing-mode))
 
 (use-package writegood-mode
+  :defer t
   :hook
   (markdown-mode . writegood-mode)
   (org-mode . writegood-mode)
@@ -232,6 +233,7 @@
 
 ;; lsp
 (use-package lsp-mode
+  :defer t
   :config
   (require 'lsp-clients)
   :hook
@@ -248,6 +250,7 @@
 
 ;; Company
 (use-package company
+  :defer t
   :hook (after-init . global-company-mode)
   :config
   (add-to-list 'company-backends 'company-yasnippet)
@@ -277,9 +280,8 @@
      )))
 
 (use-package smart-backspace)
-
-
 (use-package emmet-mode
+  :defer t
   :config
   (add-to-list 'hippie-expand-try-functions-list  'emmet-hippie-try-expand-line)
   :hook
@@ -300,10 +302,6 @@
   :custom
   (webpaste-paste-confirmation t)
   )
-
-(use-package python-black
-  :demand t
-  :after python)
 
 (use-package yankpad
   :config
