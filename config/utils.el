@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; A general complete after word function. A *tab* complete
 (defun my/complete ()
   (interactive)

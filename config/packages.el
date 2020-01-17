@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Package Install And Base Config
 
 ;; Start server on init.
@@ -85,6 +86,7 @@
      )))
 
 (use-package org-sticky-header
+  :defer t
   :requires (org)
   :hook (org-mode . org-sticky-header-mode))
 

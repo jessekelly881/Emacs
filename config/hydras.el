@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (defhydra window-hydra ()
   "
     Movement^   ^Split^       ^Buffer^

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Mode Line
 (setq-default mode-line-format
   (list

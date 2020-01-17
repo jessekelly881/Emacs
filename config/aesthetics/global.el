@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Theme
 (load-theme 'nord t)
 

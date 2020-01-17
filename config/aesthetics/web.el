@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (defun my/web-mode-settings ()
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 4)

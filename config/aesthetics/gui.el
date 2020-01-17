@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (message "Setting up GUI Config")
 
 ;; Cursor(UI Mode)

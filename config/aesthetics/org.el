@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;;Org: Hide Leading Stars
 (defun org-mode-remove-stars ()
   (font-lock-add-keywords

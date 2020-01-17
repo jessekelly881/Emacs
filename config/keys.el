@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Shared keys
 (general-def :states '(normal visual)
   "<SPC><SPC>" '(helm-M-x :which-key "M-x")

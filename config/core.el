@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Set personal info
 (setq
  user-mail-address "kellyjesse881@gmail.com"
@@ -26,9 +27,11 @@
 
 ;; Aesthetics packages
 (load (expand-file-name "config/aesthetics/global.el" user-emacs-directory))
-(load (expand-file-name "config/aesthetics/gui.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/org.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/web.el" user-emacs-directory))
+
+(if (display-graphic-p)
+    (load (expand-file-name "config/aesthetics/gui.el" user-emacs-directory)))
 
 ;; Unlimited Undo Tree
 (global-undo-tree-mode)

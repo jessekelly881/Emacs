@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;; Greek symbols
 (add-hook 'prog-mode-hook
 (lambda ()

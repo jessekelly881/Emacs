@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 ;;normalize.el - Make everything "normal".
 
 ;;Disable Mouse Interface
@@ -14,11 +15,6 @@
 (setq-default
  indent-tabs-mode nil
  tab-width 2)
-
-;;utf-8
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
 
 ;; Base settings
 (setq
