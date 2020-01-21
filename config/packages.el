@@ -165,7 +165,10 @@
 (use-package pug-mode :mode ("\\.pug\\'" . pug-mode))
 (use-package python-django :mode ("\\.py\\'" . python-mode))
 (use-package markdown-mode :mode ("\\.md\\'" . markdown-mode))
-(use-package tide)
+
+(use-package tide
+  :hook (typescript-mode  'tide-mode))
+
 (use-package web-mode)
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 
@@ -329,6 +332,10 @@
 (use-package auto-package-update)
 (use-package dart-mode)
 (use-package dockerfile-mode)
+
+(use-package js2-mode
+  :hook
+  (js-mode . js2-minor-mode))
 
 (provide 'packages)
 ;;; packages.el ends here
