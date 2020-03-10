@@ -65,7 +65,11 @@
   ))
 
 (use-package try)
-(use-package highlight-thing :hook (prog-mode . highlight-thing-mode))
+(use-package highlight-thing
+  :config (global-highlight-thing-mode)
+  :hook
+  (prog-mode . highlight-thing-mode)
+  )
 
 (use-package writegood-mode
   :defer t
@@ -292,6 +296,7 @@
   (scss-mode        . emmet-mode)
   (css-mode         . emmet-mode)
   (js2-mode         . emmet-mode)
+  (js-mode          . emmet-mode)
   (typescript-mode  . emmet-mode)
   )
 
@@ -335,7 +340,7 @@
 
 (use-package js2-mode
   :hook
-  (js-mode . js2-minor-mode))
+  (js-mode . js-jsx-mode))
 
 (provide 'packages)
 ;;; packages.el ends here
