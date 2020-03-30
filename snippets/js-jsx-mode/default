@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: React - Default Component
+# key: !
+# --
+export default function $1 (props){
+return (
+$0
+)
+}

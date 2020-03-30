@@ -30,7 +30,7 @@
 
   "/" '(helm-swoop :which-key "Search")
   "q" 'my/quit
-  "Q" 'restart-emacs
+  "Q" 'save-buffers-kill-terminal
   "U" 'undo-tree-visualize
   "g b" '(helm-bookmarks :which-key "Goto bookmark")
   "g f" 'helm-imenu

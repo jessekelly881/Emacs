@@ -67,5 +67,9 @@
 ;; Garbage-collect on focus-out, Emacs should feel snappier.
 (add-hook 'focus-out-hook #'garbage-collect)
 
+;; tab sizes
+(setq default-tab-width 4)
+(setq tab-width 4)
+
 (provide 'core)
 ;;; core.el ends here
