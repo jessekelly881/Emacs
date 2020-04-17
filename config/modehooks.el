@@ -5,6 +5,8 @@
 (add-to-list 'auto-mode-alist '("\\.ts$"  . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$"  . scss-mode))
 
+(add-to-list 'auto-mode-alist '("\\.jsx?$"  . js-jsx-mode))
+
 (add-hook 'prog-mode-hook  'delete-carrage-returns)
 
 (setq web-mode-ac-sources-alist

@@ -340,7 +340,7 @@
 
 (use-package js2-mode
   :hook
-  (js-mode . js-jsx-mode))
+  (js-mode . js2-minor-mode))
 
 (provide 'packages)
 ;;; packages.el ends here
