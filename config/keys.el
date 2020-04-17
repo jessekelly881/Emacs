@@ -173,7 +173,8 @@
 (project-leader-key :states '(normal visual)
   "c" '(skeletor-create-project-at :which-key "Create")
   "s" '(helm-projectile-switch-project :which-key "Switch")
-  "o" '(helm-projectile-find-file :which-key "Open file")
+  "o" '(helm-projectile-recentf :which-key "Open recent file")
+  "O" '(helm-projectile-find-file :which-key "Open file")
   "/" '(helm-projectile-ag :which-key "Search")
   "$" '(projectile-run-shell :which-key "Shell")
   )
@@ -183,6 +184,8 @@
   ;; Abbrevs
   "a c" '(define-global-abbrev :which-key "Create")
   "a l" '(list-abbrevs :which-key "Create")
+
+  "t" '(google-translate-at-point :which-key "Translate")
 
   ;; Yankpad
   "y e" '(yankpad-edit :which-key "Gists")
@@ -281,12 +284,12 @@
 (which-key-add-key-based-replacements "SPC t t" "Transpose")
 (which-key-add-key-based-replacements "SPC t c" "Case")
 
-;; lsp
-(general-define-key
- :states '(normal visual)
- :keymaps 'lsp-mode-map
- "g d" '(lsp-find-definition :which-key "Goto def")
- )
+;; ;; lsp
+;; (general-define-key
+;;  :states '(normal visual)
+;;  :keymaps 'lsp-mode-map
+;;  "g d" '(lsp-find-definition :which-key "Goto def")
+;;  )
 
 ;; org
 (general-define-key
