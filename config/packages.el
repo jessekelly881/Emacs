@@ -177,7 +177,12 @@
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 
 ;; Evil
-(use-package evil :config (evil-mode 1))
+(use-package evil
+  :init
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1))
+
 (use-package evil-collection
   :requires (evil)
   :custom (evil-collection-setup-minibuffer t)
@@ -240,9 +245,11 @@
 
 ;; lsp
 (use-package lsp-mode
+  :init
   :defer t
   :config
   (require 'lsp-clients)
+  (add-to-list 'lsp-language-id-configuration '(js-mode . "typescriptreact"))
   :hook
   (latex-mode      . lsp)
   (python-mode     . lsp)
@@ -251,7 +258,8 @@
   (shell-mode      . lsp)
   (web-mode        . lsp)
   (rust-mode       . lsp)
-  (typescript-mode . lsp))
+  (typescript-mode . lsp)
+  (js-mode         . lsp ))
 
 (use-package lsp-ui)
 
@@ -341,6 +349,15 @@
 (use-package js2-mode
   :hook
   (js-mode . js2-minor-mode))
+
+(use-package prettier-js
+  :hook (prog-mode . prettier-js-mode)
+  :config
+  (setq prettier-js-args '(
+                           "--trailing-comma" "all"
+                           "--bracket-spacing" "false"
+                           "--tab-width" "4"
+                           )))
 
 (provide 'packages)
 ;;; packages.el ends here
