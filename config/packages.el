@@ -355,7 +355,7 @@
   :config
   (setq prettier-js-args '(
                            "--trailing-comma" "all"
-                           "--bracket-spacing" "false"
+                           "--bracket-spacing" "true"
                            "--tab-width" "4"
                            )))
 
