@@ -20,3 +20,4 @@ config/personal.el
 config/flycheck_core.el
 nov-places
 transient/history.el
+recentf~
