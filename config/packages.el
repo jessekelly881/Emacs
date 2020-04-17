@@ -101,7 +101,8 @@
 (use-package yasnippet
   :config
   (yas-global-mode 1)
-  (push 'yas-hippie-try-expand hippie-expand-try-functions-list))
+  (add-to-list 'hippie-expand-try-functions-list  'yas-hippie-try-expand t))
+
 (use-package ag)
 (use-package expand-region :config (setq er/try-expand-list (append er/try-expand-list '(mark-paragraph mark-page))))
 (use-package ranger :disabled)
@@ -268,13 +269,13 @@
   :defer t
   :hook (after-init . global-company-mode)
   :config
-  (add-to-list 'company-backends 'company-yasnippet)
   (add-to-list 'company-backends 'company-files)
+  (add-to-list 'company-backends 'company-yasnippet t)
   :custom
   (company-idle-delay 0)
   )
 
-(use-package company-lsp :config (push 'company-lsp company-backends))
+(use-package company-lsp)
 
 (use-package hippie-exp
   :config
@@ -321,7 +322,6 @@
 
 (use-package yankpad
   :config
-  ;; (add-to-list 'company-backends #'company-yankpad)
   (add-to-list 'hippie-expand-try-functions-list #'yankpad-expand))
 
 (use-package drag-stuff)
@@ -351,13 +351,30 @@
   (js-mode . js2-minor-mode))
 
 (use-package prettier-js
-  :hook (prog-mode . prettier-js-mode)
+  :hook
+  (js-mode . prettier-js-mode)
+  (css-mode . prettier-js-mode)
+  (scss-mode . prettier-js-mode)
+  (yaml-mode . prettier-js-mode)
+  (typescript-mode . prettier-js-mode)
+  (markdown-mode . prettier-js-mode)
+  (web-mode . prettier-js-mode)
+  (html-mode . prettier-js-mode)
   :config
   (setq prettier-js-args '(
                            "--trailing-comma" "all"
-                           "--bracket-spacing" "true"
                            "--tab-width" "4"
+                           "--arrow-parens" "avoid"
+                           "--jsx-bracket-same-line" "true"
                            )))
+
+(use-package git-auto-commit-mode
+  :hook
+  (prog-mode . git-auto-commit-mode)
+  :custom
+  (gac-ask-for-summary-p t))
+
+(use-package google-translate)
 
 (provide 'packages)
 ;;; packages.el ends here
