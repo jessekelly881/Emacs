@@ -290,7 +290,7 @@
 (use-package emmet-mode
   :defer t
   :config
-  (add-to-list 'hippie-expand-try-functions-list  'emmet-hippie-try-expand-line)
+  (add-to-list 'hippie-expand-try-functions-list  'emmet-hippie-try-expand-line t)
   :hook
   (web-mode         . emmet-mode)
   (scss-mode        . emmet-mode)
