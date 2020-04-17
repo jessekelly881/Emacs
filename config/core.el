@@ -71,5 +71,7 @@
 (setq default-tab-width 4)
 (setq tab-width 4)
 
+(setq warning-minimum-level :emergency)
+
 (provide 'core)
 ;;; core.el ends here
