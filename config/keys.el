@@ -35,6 +35,7 @@
   "g b" '(helm-bookmarks :which-key "Goto bookmark")
   "g f" 'helm-imenu
   "g d" '(dumb-jump-go-other-window :which-key "Goto definition")
+  "g n e" '(flycheck-next-error : which-key "Next error")
   "g t" 'web-mode-tag-match
   "?" 'helm-ag
   "m" 'er/expand-region
