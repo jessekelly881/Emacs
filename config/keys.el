@@ -35,6 +35,7 @@
   "g b" '(helm-bookmarks :which-key "Goto bookmark")
   "g f" 'helm-imenu
   "g d" '(dumb-jump-go-other-window :which-key "Goto definition")
+  "g D" '(helm-dash-at-point :which-key "Goto docs")
   "g n e" '(flycheck-next-error : which-key "Next error")
   "g t" 'web-mode-tag-match
   "?" 'helm-ag
@@ -299,6 +300,7 @@
  :keymaps 'org-mode-map
  "SPC v n" '(org-narrow-to-element :which-key "Narrow")
  )
+
 
 (provide 'keys)
 ;;; keys.el ends here

@@ -370,11 +370,16 @@
 
 (use-package git-auto-commit-mode
   :hook
-  (prog-mode . git-auto-commit-mode)
+  (fundamental-mode . git-auto-commit-mode)
   :custom
   (gac-ask-for-summary-p t))
 
 (use-package google-translate)
+
+(use-package flycheck
+  :init (global-flycheck-mode))
+
+(use-package helm-dash)
 
 (provide 'packages)
 ;;; packages.el ends here

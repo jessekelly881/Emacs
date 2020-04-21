@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: React - Default Component
-# key: !
+# key: !!
 # --
 export default function $1 (props){
 return (

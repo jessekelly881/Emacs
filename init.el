@@ -21,6 +21,7 @@
    '("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "43b219a31db8fddfdc8fdbfdbd97e3d64c09c1c9fdd5dff83f3ffc2ddb8f0ba0" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default))
  '(evil-collection-setup-minibuffer t)
  '(fringe-mode 10 nil (fringe))
+ '(gac-ask-for-summary-p t t)
  '(git-commit-major-mode 'org-mode)
  '(git-gutter:added-sign "+ ")
  '(git-gutter:deleted-sign "- ")
@@ -56,7 +57,7 @@
  '(org-ellipsis "  .")
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
-   '(prettier-js indium clojure-mode js-doc js-mode dart-server dart-mode auto-package-update ob-rust togetherly gitconfig-mode gitattributes-mode gitignore-mode magit-todos rust-mode ledger-mode htmlize fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
+   '(helm-dash git-auto-commit-mode prettier-js indium clojure-mode js-doc js-mode dart-server dart-mode auto-package-update ob-rust togetherly gitconfig-mode gitattributes-mode gitignore-mode magit-todos rust-mode ledger-mode htmlize fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(safe-local-variable-values
@@ -172,3 +173,4 @@
  '(writegood-passive-voice-face ((t (:background "undefinded-bg" :weight bold))))
  '(writegood-weasels-face ((t (:background "undefinded-bg" :weight bold)))))
 (put 'narrow-to-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
