@@ -231,6 +231,7 @@
 ;; View
 (view-leader-key :states '(normal visual)
   "b" '(beacon-blink :which-key "Beacon")
+  "e" '(flycheck-list-errors :which-key "List errors")
   "t" '(toggle-truncate-lines :which-key "Toggle truncate lines")
   "r" '(ruler-mode :which-key "Ruler")
   "o" 'olivetti-mode
