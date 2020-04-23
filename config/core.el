@@ -11,7 +11,7 @@
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
 
-;; Defaults
+;; Set browser
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "surf")
 

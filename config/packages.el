@@ -266,8 +266,6 @@
 
 ;; Company
 (use-package company
-  :defer t
-  :hook (after-init . global-company-mode)
   :config
   (add-to-list 'company-backends 'company-files)
   (add-to-list 'company-backends 'company-yasnippet t)
@@ -379,7 +377,65 @@
 (use-package flycheck
   :init (global-flycheck-mode))
 
-(use-package helm-dash)
+(use-package helm-dash
+  :config
+
+  (defun go-doc ()
+    (interactive)
+    (setq-local dash-docs-docsets '("Go")))
+
+  (defun js-doc ()
+    (interactive)
+    (setq-local dash-docs-docsets '("React" "CSS" "HTML" "Redux" "Ramda" "Express" "Ionic")))
+
+  (defun python-doc ()
+    (interactive)
+    (setq-local dash-docs-docsets '("Python 3" "Django" "Flask" "SciPy")))
+
+  (defun scss-doc ()
+    (interactive)
+    (setq-local dash-docs-docsets '("CSS" "Sass")))
+
+  :hook
+  (go-mode . go-doc)
+  (js-mode . js-doc)
+  (python-mode . python-doc)
+  (scss-mode . scss-doc)
+  )
+
+(use-package company-tabnine
+  :defer 1
+  :custom
+  (company-tabnine-max-num-results 9)
+  :hook
+  (lsp-after-open . (lambda ()
+                      (setq company-tabnine-max-num-results 5)
+                      (add-to-list 'company-transformers 'company//sort-by-tabnine t)
+                      (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))))
+  (kill-emacs . company-tabnine-kill-process)
+  :config
+  ;; Enable TabNine on default
+  (add-to-list 'company-backends #'company-tabnine)
+
+  ;; Integrate company-tabnine with lsp-mode
+  (defun company//sort-by-tabnine (candidates)
+    (if (or (functionp company-backend)
+           (not (and (listp company-backend) (memq 'company-tabnine company-backend))))
+        candidates
+      (let ((candidates-table (make-hash-table :test #'equal))
+            candidates-lsp
+            candidates-tabnine)
+        (dolist (candidate candidates)
+          (if (eq (get-text-property 0 'company-backend candidate)
+                 'company-tabnine)
+              (unless (gethash candidate candidates-table)
+                (push candidate candidates-tabnine))
+            (push candidate candidates-lsp)
+            (puthash candidate t candidates-table)))
+        (setq candidates-lsp (nreverse candidates-lsp))
+        (setq candidates-tabnine (nreverse candidates-tabnine))
+        (nconc (seq-take candidates-tabnine 3)
+               (seq-take candidates-lsp 6))))))
 
 (provide 'packages)
 ;;; packages.el ends here
