@@ -266,11 +266,14 @@
 
 ;; Company
 (use-package company
+  :hook
+  (after-init . global-company-mode)
   :config
   (add-to-list 'company-backends 'company-files)
   (add-to-list 'company-backends 'company-yasnippet t)
   :custom
   (company-idle-delay 0)
+  (company-minimum-prefix-length 1)
   )
 
 (use-package company-lsp)
@@ -437,5 +440,6 @@
         (nconc (seq-take candidates-tabnine 3)
                (seq-take candidates-lsp 6))))))
 
+(setq indium-chrome-executable "google-chrome-stable")
 (provide 'packages)
 ;;; packages.el ends here
