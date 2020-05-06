@@ -72,7 +72,6 @@
   )
 
 (use-package writegood-mode
-  :defer t
   :hook
   (markdown-mode . writegood-mode)
   (org-mode . writegood-mode)
@@ -379,6 +378,9 @@
 
 (use-package flycheck
   :init (global-flycheck-mode))
+
+(use-package flyspell ;; depends on aspell; yay -S aspell
+  :init (global-flyspell-mode))
 
 (use-package helm-dash
   :config
