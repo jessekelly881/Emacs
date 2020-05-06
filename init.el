@@ -32,6 +32,7 @@
  '(highlight-indent-guides-auto-enabled nil)
  '(highlight-indent-guides-method 'column)
  '(highlight-indentation-blank-lines t t)
+ '(indium-chrome-executable "google-chrome-stable" t)
  '(keyfreq-excluded-commands
    '(evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo) t)
  '(ledger-clear-whole-transactions t t)
@@ -60,7 +61,7 @@
  '(org-ellipsis "  .")
  '(org-mu4e-link-query-in-headers-mode nil t)
  '(package-selected-packages
-   '(devdocs helm-dash git-auto-commit-mode prettier-js indium clojure-mode js-doc js-mode dart-server dart-mode auto-package-update ob-rust togetherly gitconfig-mode gitattributes-mode gitignore-mode magit-todos rust-mode ledger-mode htmlize fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
+   '(npm-mode treemacs devdocs helm-dash git-auto-commit-mode prettier-js indium clojure-mode js-doc js-mode dart-server dart-mode auto-package-update ob-rust togetherly gitconfig-mode gitattributes-mode gitignore-mode magit-todos rust-mode ledger-mode htmlize fancy-narrow smart-semicolon restart-emacs drag-stuff move-text yankpad forge python-black pyimpsort impatient-mode simple-httpd hide-mode-line-mode org-mu4e mu4e smart-backspace evil-dvorak js2-mode hippie-expand-slime smart-tab ox-twbs lsp-ui xclip company-lsp highlight-indent-guides lsp-python-ms lsp-python spinner borg lsp-mode elfeed git-timemachine smart-hungry-delete keyfreq evil-mc dashboard skeletor highlight-thing writegood-mode try nlinum-hl nlinum-relative evil-collection evil-magit nord-theme fill-column-indicator org-link-minor-mode org-plus-contrib rainbow-delimiters hide-mode-line insert-shebang google-translate posframe smartparens all-the-icons beacon neotree gist dumb-jump loccur hyperbole golden-ratio go-mode go yaml-mode origami web-mode dired-sidebar helm-projectile emmet-mode docker symbol-overlay highlight highlight-symbol evil-surround evil-exchange monochrome-theme sublime-themes clues-theme blackboard-theme helm-themes crux dracula-theme git-gutter-fringe coffee-mode tide fish-mode telephone-line mark-multiple multiple-cursors nand2tetris helm-mode-manager helm-swoop helm-chronos chronos olivetti lorem-ipsum expand-region helm-c-yasnippet helm-ag ag magit markdown-mode pug-mode avy elpy yasnippet which-key smart-mode-line linum-relative yas hydra helm use-package "use-package" ##))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(safe-local-variable-values
@@ -94,8 +95,8 @@
  '(flymake-error ((t (:underline t))))
  '(flymake-note ((t nil)))
  '(font-lock-builtin-face ((t (:foreground "magenta"))))
- '(font-lock-comment-delimiter-face ((t (:foreground "color-241"))))
- '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "color-241"))))
+ '(font-lock-comment-delimiter-face ((t (:foreground "magenta"))))
+ '(font-lock-comment-face ((t (:background "unspecified-bg" :foreground "magenta"))))
  '(font-lock-constant-face ((t (:foreground "white"))))
  '(font-lock-function-name-face ((t (:foreground "blue"))))
  '(font-lock-keyword-face ((t (:foreground "magenta"))))
@@ -168,6 +169,7 @@
  '(rainbow-delimiters-depth-4-face ((t (:inherit rainbow-delimiters-base-face :foreground "blue"))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face))))
  '(region ((t (:background "#1D1F21" :weight bold))))
+ '(ruler-mode-column-number ((t (:inherit ruler-mode-default :foreground "yellow"))))
  '(ruler-mode-default ((t (:inherit default :background "undefinded-bg" :foreground "blue"))))
  '(show-paren-match ((t (:background "unspecified-bg" :foreground "color-52" :weight bold))))
  '(tab-bar ((t (:background "undefinded-bg"))))

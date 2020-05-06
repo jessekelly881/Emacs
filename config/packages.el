@@ -440,6 +440,13 @@
         (nconc (seq-take candidates-tabnine 3)
                (seq-take candidates-lsp 6))))))
 
-(setq indium-chrome-executable "google-chrome-stable")
+
+(use-package indium
+  :custom (indium-chrome-executable "google-chrome-stable")
+  :hook (js-mode . indium-interaction-mode))
+
+(use-package js-doc)
+(use-package npm-mode)
+
 (provide 'packages)
 ;;; packages.el ends here

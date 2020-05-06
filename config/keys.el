@@ -63,8 +63,7 @@
 
   "p" '(mc/mark-previous-word-like-this :which-key "Mark previous")
   "n" '(mc/mark-next-word-like-this :which-key "Mark next")
-  "a f" '(mc/mark-all-words-like-this-in-defun :which-key "Mark all in function")
-  "a b" '(mc/mark-all-words-like-this :which-key "Mark all in buffer")
+  "a" '(mc/mark-all-like-this :which-key "Mark all")
   "A" '(mc/edit-lines :which-key "Edit lines")
 
   "RET" '(mc/skip-to-next-like-this :which-key "Skip next")
@@ -240,7 +239,8 @@
   "m" '(hide-mode-line-mode :which-key "Toggle modeline")
   "l" 'linum-relative-mode
   "L" 'display-line-numbers-mode
-  "f" 'fold-this-unfold-all
+  "f" '(lsp-ui-imenu :which-key "Function tree")
+  "F" 'fold-this-unfold-all
   "c" 'my/clean-view
   "T" 'helm-themes
 
