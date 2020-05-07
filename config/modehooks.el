@@ -29,5 +29,9 @@
   (hs-hide-all))
 (add-hook 'prog-mode-hook 'my/hide-all)
 
+;; fixed line wrapping
+(add-hook 'prog-mode-hook #'visual-line-mode)
+
+
 (provide 'modehooks)
 ;;; modehooks.el ends here
