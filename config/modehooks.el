@@ -21,5 +21,13 @@
                    (setq emmet-use-css-transform t)
                  (setq emmet-use-css-transform nil)))))
 
+;; Enable hs-minor-mode in all prog buffers and fold all definitions
+;; @see https://stackoverflow.com/questions/12763566/how-to-permanently-enable-the-hs-minor-mode-in-emacs
+(defun my/hide-all()
+  (interactive)
+  (hs-minor-mode)
+  (hs-hide-all))
+(add-hook 'prog-mode-hook 'my/hide-all)
+
 (provide 'modehooks)
 ;;; modehooks.el ends here

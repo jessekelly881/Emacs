@@ -33,7 +33,7 @@
   ))
 
 (defun my/quit ()
-  "An overloaded quit function. Takes context into account."
+  "An overloaded quit function.  Takes context into account."
   (interactive)
   (cond
    ((bound-and-true-p loccur-mode) (loccur-current))

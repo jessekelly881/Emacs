@@ -4,3 +4,6 @@
 [submodule "submodules/focus"]
 	path = submodules/focus
 	url = https://github.com/larstvei/Focus
+[submodule "submodules/js-refactor"]
+	path = submodules/js-refactor
+	url = https://github.com/magnars/js2-refactor.el

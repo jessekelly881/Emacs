@@ -18,6 +18,8 @@
 ;; Load normalize.el
 (load (expand-file-name "config/normalize.el"  user-emacs-directory))
 
+(load (expand-file-name "submodules/js-refactor/js2-refactor.el"  user-emacs-directory))
+
 ;; Core packages
 (load (expand-file-name "config/packages.el" user-emacs-directory))
 (load (expand-file-name "config/utils.el" user-emacs-directory))
