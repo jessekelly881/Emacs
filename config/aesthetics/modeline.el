@@ -2,10 +2,10 @@
 ;; Mode Line
 (setq-default mode-line-format
   (list
-   '(:eval (propertize "%b " 'face 'font-lock-keyword-face
+   '(:eval (propertize " %b " 'face 'font-lock-keyword-face
                       'help-echo (buffer-file-name)))
 
-   (propertize "%I" 'face 'font-lock-constant-face) ;; size
+   (propertize " %I " 'face 'font-lock-constant-face) ;; size
 
    " (" (propertize "%l" 'face 'font-lock-type-face) ")"
 
