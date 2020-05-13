@@ -271,8 +271,8 @@
   (add-to-list 'company-backends 'company-files)
   (add-to-list 'company-backends 'company-yasnippet t)
   :custom
-  (company-idle-delay 0)
-  (company-minimum-prefix-length 1)
+  (company-idle-delay 1)
+  (company-minimum-prefix-length 3)
   )
 
 (use-package company-lsp)
@@ -414,7 +414,7 @@
   (company-tabnine-max-num-results 9)
   :hook
   (lsp-after-open . (lambda ()
-                      (setq company-tabnine-max-num-results 5)
+                      (setq company-tabnine-max-num-results 3)
                       (add-to-list 'company-transformers 'company//sort-by-tabnine t)
                       (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))))
   (kill-emacs . company-tabnine-kill-process)

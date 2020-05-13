@@ -1,5 +1,8 @@
-((magit-commit nil)
+((magit-blame
+  ("-w"))
+ (magit-commit nil)
  (magit-diff
+  (("--" "src/index.js"))
   (("--" "src/components/forms/BusinessForm.js"))
   (("--" "src/components/forms/AddressForm/index.js"))
   (("--" "src/services/i18n/trans/base.yml"))

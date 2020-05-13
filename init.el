@@ -78,7 +78,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#2E3440" :foreground "#D8DEE9" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 95 :width normal :foundry "CYEL" :family "Iosevka"))))
  '(avy-background-face ((t nil)))
  '(avy-goto-char-timer-face ((t (:foreground "color-52" :underline t :weight bold))))
  '(avy-lead-face ((t (:background "undefinded-bg" :foreground "color-52" :underline t :weight bold))))
