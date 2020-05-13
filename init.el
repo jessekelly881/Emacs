@@ -18,7 +18,6 @@
  '(company-minimum-prefix-length 3)
  '(company-tabnine-max-num-results 9)
  '(evil-collection-setup-minibuffer t)
- '(fringe-mode 10 nil (fringe))
  '(gac-ask-for-summary-p t t)
  '(git-commit-major-mode 'org-mode)
  '(git-gutter:added-sign "+ ")
@@ -35,11 +34,7 @@
  '(linum-relative-backend 'display-line-numbers-mode)
  '(magit-stage-all-confirm nil t)
  '(magit-unstage-all-confirm nil t)
- '(main-line-color1 "#222232")
- '(main-line-color2 "#333343")
  '(org-confirm-babel-evaluate nil)
- '(powerline-color1 "#222232")
- '(powerline-color2 "#333343")
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(webpaste-paste-confirmation t))
 (custom-set-faces
@@ -47,9 +42,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#181a26" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :foundry "CYEL" :family "Iosevka"))))
- '(highlight ((t (:background "undefined-bg" :foreground "white" :weight bold))))
+ '(default ((t (:background nil))))
+ '(highlight ((t (:background "undefinded-bg" :foreground "white"))))
  '(highlight-thing ((t (:inherit 'highlight))))
+ '(hl-line ((t (:extend t :background "undefinded-bg" :underline t))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))
