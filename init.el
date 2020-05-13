@@ -35,6 +35,8 @@
  '(magit-stage-all-confirm nil t)
  '(magit-unstage-all-confirm nil t)
  '(org-confirm-babel-evaluate nil)
+ '(package-selected-packages
+   '(dracula-theme yankpad yaml-mode xclip writegood-mode which-key webpaste web-mode use-package try tide sublime-themes smartparens smart-semicolon smart-hungry-delete smart-backspace skeletor rust-mode restart-emacs ranger rainbow-delimiters python-django pug-mode prettier-js posframe origami org-sticky-header olivetti ob-rust npm-mode nord-theme nodejs-repl nand2tetris monochrome-theme mermaid-mode magit-todos lsp-ui lorem-ipsum loccur linum-relative ledger-mode keyfreq js-doc insert-shebang indium hydra highlight-thing highlight-indent-guides highlight hide-mode-line helm-themes helm-swoop helm-projectile helm-eww helm-dash helm-chronos helm-c-yasnippet helm-ag google-translate golden-ratio gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-gutter git-auto-commit-mode gist general fold-this focus expand-region evil-surround evil-exchange evil-collection emmet-mode elfeed dumb-jump drag-stuff dockerfile-mode docker devdocs dart-mode crux company-tabnine company-lsp coffee-mode clues-theme bug-hunter blackboard-theme beacon auto-package-update ag ace-window))
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(webpaste-paste-confirmation t))
 (custom-set-faces
@@ -43,6 +45,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil))))
+ '(helm-selection ((t (:background "undefinded-bg" :underline t))))
  '(highlight ((t (:background "undefinded-bg" :foreground "white"))))
  '(highlight-thing ((t (:inherit 'highlight))))
  '(hl-line ((t (:extend t :background "undefinded-bg" :underline t))))
