@@ -14,19 +14,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
  '(company-idle-delay 1)
  '(company-minimum-prefix-length 3)
  '(company-tabnine-max-num-results 9)
  '(evil-collection-setup-minibuffer t)
  '(gac-ask-for-summary-p t t)
  '(git-commit-major-mode 'org-mode)
- '(git-gutter:added-sign "+ ")
- '(git-gutter:deleted-sign "- ")
- '(git-gutter:modified-sign "~ ")
+ '(git-gutter:added-sign " + ")
+ '(git-gutter:deleted-sign " - ")
+ '(git-gutter:modified-sign " ~ ")
  '(highlight-indent-guides-auto-enabled nil)
  '(highlight-indent-guides-method 'column)
  '(highlight-indentation-blank-lines t t)
- '(indium-chrome-executable "google-chrome-stable" t)
+ '(indium-chrome-executable "google-chrome-stable")
  '(keyfreq-excluded-commands
    '(evil-append evil-backward-char evil-change evil-delete evil-delete evil-forward-char evil-insert evil-insert-line evil-next-line evil-normal-state evil-open-below evil-previous-line evil-repeat helm-M-x helm-next-line helm-previous-line keyboard-quit magit-next-line magit-previous-line minibuffer-complete my/quit next-line org-self-insert-command save-buffer self-insert-command self-insert-command undo-tree-undo) t)
  '(ledger-clear-whole-transactions t t)
@@ -36,7 +37,7 @@
  '(magit-unstage-all-confirm nil t)
  '(org-confirm-babel-evaluate nil)
  '(package-selected-packages
-   '(dracula-theme yankpad yaml-mode xclip writegood-mode which-key webpaste web-mode use-package try tide sublime-themes smartparens smart-semicolon smart-hungry-delete smart-backspace skeletor rust-mode restart-emacs ranger rainbow-delimiters python-django pug-mode prettier-js posframe origami org-sticky-header olivetti ob-rust npm-mode nord-theme nodejs-repl nand2tetris monochrome-theme mermaid-mode magit-todos lsp-ui lorem-ipsum loccur linum-relative ledger-mode keyfreq js-doc insert-shebang indium hydra highlight-thing highlight-indent-guides highlight hide-mode-line helm-themes helm-swoop helm-projectile helm-eww helm-dash helm-chronos helm-c-yasnippet helm-ag google-translate golden-ratio gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-gutter git-auto-commit-mode gist general fold-this focus expand-region evil-surround evil-exchange evil-collection emmet-mode elfeed dumb-jump drag-stuff dockerfile-mode docker devdocs dart-mode crux company-tabnine company-lsp coffee-mode clues-theme bug-hunter blackboard-theme beacon auto-package-update ag ace-window))
+   '(paper-theme js-import dired-subtree emr rainbow-mode almost-mono-themes purp-theme dracula-theme yankpad yaml-mode xclip writegood-mode which-key webpaste web-mode use-package try tide sublime-themes smartparens smart-semicolon smart-hungry-delete smart-backspace skeletor rust-mode restart-emacs ranger rainbow-delimiters python-django pug-mode prettier-js posframe origami org-sticky-header olivetti ob-rust npm-mode nord-theme nodejs-repl nand2tetris monochrome-theme mermaid-mode magit-todos lsp-ui lorem-ipsum loccur linum-relative ledger-mode keyfreq js-doc insert-shebang indium hydra highlight-thing highlight-indent-guides highlight hide-mode-line helm-themes helm-swoop helm-projectile helm-eww helm-dash helm-chronos helm-c-yasnippet helm-ag google-translate golden-ratio gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-gutter git-auto-commit-mode gist general fold-this focus expand-region evil-surround evil-exchange evil-collection emmet-mode elfeed dumb-jump drag-stuff dockerfile-mode docker devdocs dart-mode crux company-tabnine company-lsp coffee-mode clues-theme bug-hunter blackboard-theme beacon auto-package-update ag ace-window))
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(webpaste-paste-confirmation t))
 (custom-set-faces
@@ -45,10 +46,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil))))
+ '(dired-subtree-depth-1-face ((t (:background "undefinded-bg"))))
+ '(dired-subtree-depth-2-face ((t (:background "undefinded-bg"))))
+ '(flycheck-warning ((t (:underline "dim gray" :weight extra-bold))))
  '(helm-selection ((t (:background "undefinded-bg" :underline t))))
- '(highlight ((t (:background "undefinded-bg" :foreground "white"))))
+ '(highlight ((t (:background "undefinded-bg" :underline t))))
  '(highlight-thing ((t (:inherit 'highlight))))
  '(hl-line ((t (:extend t :background "undefinded-bg" :underline t))))
+ '(mode-line ((t (:background "undefinded-bg" :foreground "#000000"))))
  '(org-level-1 ((t (:inherit outline-1 :height 1.0))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.0))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.0))))

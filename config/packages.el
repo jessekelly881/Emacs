@@ -450,5 +450,15 @@
 (use-package js-doc)
 (use-package npm-mode)
 
+(use-package rainbow-mode)
+
+(use-package dired-subtree :ensure t
+  :after dired
+  :config
+  (bind-key "<tab>" #'dired-subtree-toggle dired-mode-map)
+  (bind-key "<backtab>" #'dired-subtree-cycle dired-mode-map))
+
+(use-package paper-theme)
+
 (provide 'packages)
 ;;; packages.el ends here

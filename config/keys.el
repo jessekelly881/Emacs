@@ -241,7 +241,7 @@
   "L" 'display-line-numbers-mode
   "f" '(lsp-ui-imenu :which-key "Function tree")
   "F" 'fold-this-unfold-all
-  "c" 'my/clean-view
+  "c" '(rainbow-mode :which-key "Rainbow mode")
   "T" 'helm-themes
 
   "g" '(git-gutter :which-key "Gutter")
