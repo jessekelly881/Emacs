@@ -139,11 +139,17 @@
   (set-face-background 'highlight-indent-guides-even-face "color-233")
   (set-face-foreground 'highlight-indent-guides-character-face "color-233"))
 
-;; Themes
+;; Theme Collection
 (use-package sublime-themes)
 (use-package blackboard-theme :defer t)
 (use-package clues-theme :defer t)
 (use-package monochrome-theme :defer t)
+(use-package paper-theme)
+(use-package zenburn-theme)
+(use-package solarized-theme)
+(use-package spacemacs-theme)
+
+
 (use-package golden-ratio :config (golden-ratio-mode 1))
 
 ;; Aesthetics
@@ -457,8 +463,6 @@
   :config
   (bind-key "<tab>" #'dired-subtree-toggle dired-mode-map)
   (bind-key "<backtab>" #'dired-subtree-cycle dired-mode-map))
-
-(use-package paper-theme)
 
 (provide 'packages)
 ;;; packages.el ends here
