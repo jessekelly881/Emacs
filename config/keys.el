@@ -262,7 +262,7 @@
 )
 
 ;; Insert
-(insert-leader-key :keymaps 'normal
+(insert-leader-key :states '(normal)
   "y" '(yankpad-insert :which-key "Yankpad")
   "l" '(lorem-ipsum-insert-paragraphs :which-key "Lorem text")
   "s" '(helm-c-yas-complete :which-key "Snippet")
@@ -293,6 +293,13 @@
 ;;  :keymaps 'lsp-mode-map
 ;;  "g d" '(lsp-find-definition :which-key "Goto def")
 ;;  )
+
+(insert-leader-key
+ :states '(normal visual)
+ :keymaps 'js-mode-map
+ "<SPC>" '(html-insert-nbsp :which-key "Insert nbsp")
+ )
+
 
 ;; org
 (general-define-key

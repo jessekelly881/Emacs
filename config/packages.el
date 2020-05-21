@@ -271,7 +271,7 @@
   (add-to-list 'company-backends 'company-files)
   (add-to-list 'company-backends 'company-yasnippet t)
   :custom
-  (company-idle-delay 1)
+  (company-idle-delay 0.5)
   (company-minimum-prefix-length 3)
   )
 

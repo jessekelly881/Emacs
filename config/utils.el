@@ -114,5 +114,10 @@
     (while (search-forward "\r" nil :noerror)
       (replace-match ""))))
 
+(defun html-insert-nbsp ()
+  "Insert <p></p> at cursor point."
+  (interactive)
+  (insert "&nbsp;"))
+
 (provide 'util)
 ;;; utils.el ends here

@@ -29,6 +29,13 @@
   (hs-hide-all))
 (add-hook 'prog-mode-hook 'my/hide-all)
 
+;; dired - hide details by default
+(add-hook 'dired-mode-hook
+      (lambda ()
+        (dired-hide-details-mode)
+        (linum-relative-mode)
+        ))
+
 ;; fixed line wrapping
 (add-hook 'prog-mode-hook #'visual-line-mode)
 
