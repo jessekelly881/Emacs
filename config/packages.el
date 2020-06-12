@@ -141,14 +141,22 @@
 
 ;; Theme Collection
 (use-package sublime-themes)
-(use-package blackboard-theme :defer t)
-(use-package clues-theme :defer t)
-(use-package monochrome-theme :defer t)
+(use-package blackboard-theme)
+(use-package clues-theme)
+(use-package monochrome-theme)
 (use-package paper-theme)
 (use-package zenburn-theme)
 (use-package solarized-theme)
 (use-package spacemacs-theme)
-
+(use-package ample-theme)
+(use-package plan9-theme)
+(use-package anti-zenburn-theme)
+(use-package espresso-theme)
+(use-package soft-stone-theme)
+(use-package faff-theme)
+(use-package subatomic-theme)
+(use-package tango-plus-theme)
+(use-package github-theme)
 
 (use-package golden-ratio :config (golden-ratio-mode 1))
 
@@ -159,7 +167,7 @@
 (use-package olivetti)
 (use-package linum-relative
   :custom
-  (linum-format "%d")
+  (linum-format " %d ")
   (linum-relative-backend 'display-line-numbers-mode)
   :hook
   (prog-mode . linum-relative-on)
@@ -364,8 +372,6 @@
   (yaml-mode . prettier-js-mode)
   (typescript-mode . prettier-js-mode)
   (markdown-mode . prettier-js-mode)
-  (web-mode . prettier-js-mode)
-  (html-mode . prettier-js-mode)
   :config
   (setq prettier-js-args '(
                            "--trailing-comma" "all"
