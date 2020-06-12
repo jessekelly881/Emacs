@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name: React - Default Component
-# key: !!
+# name: React - Const Component
+# key: rcc
 # --
-export default function $1 (props){
-return (
-$0
+/**
+ * ${1:Name}
+*/
+export const $1 = props => (
+    $0
 )
-}
