@@ -69,7 +69,7 @@
            ))))
 
 ;; Web
-(add-hook 'typescript-mode-hook
+(add-hook 'js-mode-hook
  (lambda ()
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
          '(
