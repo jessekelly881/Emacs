@@ -1,6 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 ;; Theme
-(load-theme 'spacemacs-light t)
 
 ;; Load other libraries
 (load (expand-file-name "config/aesthetics/pretty-symbols.el" user-emacs-directory))
@@ -10,6 +9,7 @@
 (defun on-frame-open (&optional frame)
   "If the FRAME created in terminal don't load background color."
   (unless (display-graphic-p frame)
+    (load-theme 'spacemacs-light t)
     (set-face-background 'default "unspecified-bg" frame)
     (set-face-background 'font-lock-comment-face "unspecified-bg" frame)
     (set-face-foreground 'linum "unspecified-bg" frame)
