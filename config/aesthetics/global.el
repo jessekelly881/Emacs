@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t; -*-
 ;; Theme
-(load-theme 'nord t)
+(load-theme 'spacemacs-light t)
 
 ;; Load other libraries
 (load (expand-file-name "config/aesthetics/pretty-symbols.el" user-emacs-directory))
