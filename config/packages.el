@@ -167,7 +167,7 @@
 (use-package olivetti)
 (use-package linum-relative
   :custom
-  (linum-format " %d ")
+  (linum-format "%d ")
   (linum-relative-backend 'display-line-numbers-mode)
   :hook
   (prog-mode . linum-relative-on)
@@ -224,9 +224,9 @@
 ;; Git
 (use-package git-gutter
     :custom
-    (git-gutter:modified-sign "~ ")
-    (git-gutter:added-sign    "+ ")
-    (git-gutter:deleted-sign  "- ")
+    (git-gutter:modified-sign "~")
+    (git-gutter:added-sign    "+")
+    (git-gutter:deleted-sign  "-")
     :config
     (global-git-gutter-mode +1))
 
@@ -453,6 +453,8 @@
         (setq candidates-tabnine (nreverse candidates-tabnine))
         (nconc (seq-take candidates-tabnine 3)
                (seq-take candidates-lsp 6))))))
+
+(use-package fancy-narrow)
 
 
 (use-package indium
