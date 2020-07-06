@@ -167,7 +167,7 @@
 (use-package olivetti)
 (use-package linum-relative
   :custom
-  (linum-format "%d ")
+  (linum-format " %d  ")
   (linum-relative-backend 'display-line-numbers-mode)
   :hook
   (prog-mode . linum-relative-on)
@@ -266,6 +266,7 @@
   (add-to-list 'lsp-language-id-configuration '(js-mode . "typescriptreact"))
   :hook
   (latex-mode      . lsp)
+  (clojure-mode    . lsp)
   (python-mode     . lsp)
   (c-mode          . lsp)
   (c++-mode        . lsp)
@@ -466,11 +467,22 @@
 
 (use-package rainbow-mode)
 
-(use-package dired-subtree :ensure t
+(use-package dired-subtree
   :after dired
   :config
   (bind-key "<tab>" #'dired-subtree-toggle dired-mode-map)
   (bind-key "<backtab>" #'dired-subtree-cycle dired-mode-map))
+
+(use-package dired-narrow
+  :after dired
+  :config
+  (bind-key "/" #'dired-narrow dired-mode-map)
+  )
+
+(use-package clojure-mode)
+(use-package haskell-mode)
+
+
 
 (provide 'packages)
 ;;; packages.el ends here

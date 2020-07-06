@@ -19,6 +19,10 @@
   "TAB" 'hippie-expand
 )
 
+;; Dired
+(bind-key "C-x d" #'dired-jump prog-mode-map)
+
+
 ;; Normal Mode
 (general-def 'normal
   "C-m" 'hlt-unhighlight-region

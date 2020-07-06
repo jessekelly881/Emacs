@@ -2,20 +2,25 @@
 ;; Theme
 
 ;; Load other libraries
+
 (load (expand-file-name "config/aesthetics/pretty-symbols.el" user-emacs-directory))
 (load (expand-file-name "config/aesthetics/modeline.el" user-emacs-directory))
 
-;; Transparent Background
-(defun on-frame-open (&optional frame)
-  "If the FRAME created in terminal don't load background color."
-  (unless (display-graphic-p frame)
-    (load-theme 'spacemacs-light t)
-    (set-face-background 'default "unspecified-bg" frame)
-    (set-face-background 'font-lock-comment-face "unspecified-bg" frame)
-    (set-face-foreground 'linum "unspecified-bg" frame)
-    ))
+(set-face-font 'default "Roboto Mono Light 12")
+(load-theme 'ample-flat t)
 
-(add-hook 'after-make-frame-functions 'on-frame-open)
+;; Transparent Background
+(defun my/makeBgTransparent (&optional frame)
+  "If the FRAME created in terminal don't load background color."
+  (progn
+    (unless (display-graphic-p frame)
+      (set-face-background 'default "unspecified-bg" frame)
+      (set-face-background 'font-lock-comment-face "unspecified-bg" frame)
+      (set-face-foreground 'linum "unspecified-bg" frame)
+      ))
+  )
+
+(add-hook 'after-make-frame-functions 'my/makeBgTransparent)
 
 
 ;;Highlight Curent Line

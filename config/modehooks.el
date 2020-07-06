@@ -39,6 +39,11 @@
 ;; fixed line wrapping
 (add-hook 'prog-mode-hook #'visual-line-mode)
 
+(defun my/prettify-dired ()
+  "Custom `dired-mode' behaviours."
+  (setq truncate-lines t))
+(add-hook 'dired-mode-hook 'my/prettify-dired)
+
 
 (provide 'modehooks)
 ;;; modehooks.el ends here

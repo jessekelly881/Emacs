@@ -115,7 +115,7 @@
       (replace-match ""))))
 
 (defun html-insert-nbsp ()
-  "Insert <p></p> at cursor point."
+  "Insert &nbsp; at cursor point."
   (interactive)
   (insert "&nbsp;"))
 
