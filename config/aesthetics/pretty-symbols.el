@@ -57,6 +57,22 @@
         ("else"    . #x00BB)
         ("else if" . #x00BF)
         ("elif"    . #x00BF)
+
+        ("None" .     #x2205)
+        ("null" .     #x2205)
+
+        ("function" . #x0192)
+        ("class" .    #x039E)
+        ("implements" . #x22B4)
+        ("export" .   #x21F1)
+        ("return" .   #x219E)
+        ("yield" .    #x21E0)
+        ("this" .     #x21BA)
+
+        ("import" .   #x03A9)
+        ("from" .     #x00A7)
+
+        ("div" .      #x2023)
         ))))
 
 ;; Org
@@ -68,39 +84,16 @@
            ("[X]"         . #x2714)
            ))))
 
-;; Web
-(add-hook 'js-mode-hook
- (lambda ()
-   (mapc (lambda (pair) (push pair prettify-symbols-alist))
-         '(
-           ("function" . #x0192)
-           ("class" .    #x039E)
-           ("implements" . #x22B4)
-           ("export" .   #x21F1)
-           ("return" .   #x219E)
-           ("this" .     #x21BA)
-
-           ("import" .   #x03A9)
-           ("from" .     #x00A7)
-
-           ("div" .      #x2023)
-           ))))
-
 ;; Python
 (add-hook 'python-mode-hook
  (lambda ()
    (mapc (lambda (pair) (push pair prettify-symbols-alist))
          '(
            ("def" .      #x0192)
-           ("return" .   #x219E)
-           ("yield" .    #x21E0)
            ("class" .    #x039E)
-           ("import" .   #x03A9)
-           ("from" .     #x00A7)
            ("self" .     #x21BA)
            ("break" .    #x21B5)
            ("pass" .     #x21B7)
-           ("None" .     #x2205)
            ("del" .      #x2296)
            ("super" .    #x25EE)
            ;; Base Types

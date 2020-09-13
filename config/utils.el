@@ -119,5 +119,13 @@
   (interactive)
   (insert "&nbsp;"))
 
+(defun cljfmt ()
+  (when (or (eq major-mode 'clojure-mode)
+            (eq major-mode 'clojurescript-mode))
+    (shell-command-to-string (format "cljfmt %s" buffer-file-name))
+    (revert-buffer :ignore-auto :noconfirm)))
+
+(add-hook 'after-save-hook #'cljfmt)
+
 (provide 'util)
 ;;; utils.el ends here

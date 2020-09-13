@@ -15,6 +15,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
+ '(clojure-indent-style 'always-indent)
  '(company-idle-delay 1)
  '(company-minimum-prefix-length 3)
  '(company-quickhelp-color-background "#4F4F4F")
@@ -54,6 +55,7 @@
    '("#b6a576" "#ac7b5a" "#9f5c5c" "#aa5790" "#85749c" "#57a2a4" "#5dacaf" "#488249"))
  '(hl-fg-colors
    '("#3F3F3F" "#3F3F3F" "#3F3F3F" "#3F3F3F" "#3F3F3F" "#3F3F3F" "#3F3F3F" "#3F3F3F"))
+ '(hl-paren-background-colors '("#e8fce8" "#c1e7f8" "#f8e8e8"))
  '(hl-paren-colors '("#93E0E3" "#F0DFAF" "#8CD0D3" "#bbb0cb" "#7F9F7F"))
  '(hl-todo-keyword-faces
    '(("TODO" . "#dc752f")
@@ -82,14 +84,19 @@
  '(magit-unstage-all-confirm nil t)
  '(nrepl-message-colors
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#488249" "#95d291" "#57a2a4" "#93E0E3" "#DC8CC3" "#bbb0cb"))
+ '(org-attach-git-annex-cutoff 10000 t)
  '(org-confirm-babel-evaluate nil)
  '(package-selected-packages
-   '(haskell-mode cider clojure-mode dired dired-jump dired-narrow dired-rainbow fancy-narrow cyberpunk-theme spacemacs-theme solarized-theme zenburn-theme paper-theme js-import dired-subtree emr rainbow-mode almost-mono-themes purp-theme dracula-theme yankpad yaml-mode xclip writegood-mode which-key webpaste web-mode use-package try tide sublime-themes smartparens smart-semicolon smart-hungry-delete smart-backspace skeletor rust-mode restart-emacs ranger rainbow-delimiters python-django pug-mode prettier-js posframe origami org-sticky-header olivetti ob-rust npm-mode nord-theme nodejs-repl nand2tetris monochrome-theme mermaid-mode magit-todos lsp-ui lorem-ipsum loccur linum-relative ledger-mode keyfreq js-doc insert-shebang indium hydra highlight-thing highlight-indent-guides highlight hide-mode-line helm-themes helm-swoop helm-projectile helm-eww helm-dash helm-chronos helm-c-yasnippet helm-ag google-translate golden-ratio gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-gutter git-auto-commit-mode gist general fold-this focus expand-region evil-surround evil-exchange evil-collection emmet-mode elfeed dumb-jump drag-stuff dockerfile-mode docker devdocs dart-mode crux company-tabnine company-lsp coffee-mode clues-theme bug-hunter blackboard-theme beacon auto-package-update ag ace-window))
+   '(ts-comint js-comint elm-mode ob-clojurescript git-annex haskell-mode clojure-mode dired dired-jump dired-narrow dired-rainbow fancy-narrow cyberpunk-theme spacemacs-theme solarized-theme zenburn-theme paper-theme js-import dired-subtree emr rainbow-mode almost-mono-themes purp-theme dracula-theme yankpad yaml-mode xclip writegood-mode which-key webpaste web-mode use-package try tide sublime-themes smartparens smart-semicolon smart-hungry-delete smart-backspace skeletor rust-mode restart-emacs ranger rainbow-delimiters python-django pug-mode prettier-js posframe origami org-sticky-header olivetti ob-rust npm-mode nord-theme nodejs-repl nand2tetris monochrome-theme mermaid-mode magit-todos lsp-ui lorem-ipsum loccur linum-relative ledger-mode keyfreq js-doc insert-shebang indium hydra highlight-thing highlight-indent-guides highlight hide-mode-line helm-themes helm-swoop helm-projectile helm-eww helm-dash helm-chronos helm-c-yasnippet helm-ag google-translate golden-ratio gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-gutter git-auto-commit-mode gist general fold-this focus expand-region evil-surround evil-exchange evil-collection emmet-mode elfeed dumb-jump drag-stuff dockerfile-mode docker devdocs dart-mode crux company-tabnine company-lsp coffee-mode clues-theme bug-hunter blackboard-theme beacon auto-package-update ag ace-window))
  '(pdf-view-midnight-colors '("#b2b2b2" . "#262626"))
  '(pos-tip-background-color "#4F4F4F")
  '(pos-tip-foreground-color "#FFFFEF")
  '(skeletor-project-directory "/home/jesse/dev/projects/active")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#7F9F7F" "#4F4F4F" 0.2))
+ '(sml/active-background-color "#98ece8")
+ '(sml/active-foreground-color "#424242")
+ '(sml/inactive-background-color "#4fa8a8")
+ '(sml/inactive-foreground-color "#424242")
  '(term-default-bg-color "#3F3F3F")
  '(term-default-fg-color "#DCDCCC")
  '(vc-annotate-background nil)
@@ -143,6 +150,7 @@
  '(highlight ((t (:background "undefinded-bg" :underline t))))
  '(highlight-thing ((t (:inherit 'highlight))))
  '(hl-line ((t (:extend t :background "undefinded-bg" :underline t))))
+ '(lsp-ui-doc-background ((t nil)))
  '(magit-diff-added ((t (:extend t :background "undefinded-bg"))))
  '(magit-diff-added-highlight ((t (:extend t :background "undefinded-bg"))))
  '(magit-diff-base ((t (:extend t :background "undefinded-bg"))))

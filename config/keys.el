@@ -93,7 +93,8 @@
 
 ;; Leader Keys
 (general-create-definer leader-key :prefix "SPC")
-(general-create-definer config-leader-key :prefix "SPC c")
+(general-create-definer refactor-leader-key :prefix "SPC r")
+(general-create-definer config-leader-key :prefix "SPC C")
 
 (general-create-definer git-leader-key :prefix "SPC g")
 (general-create-definer project-leader-key :prefix "SPC p")
@@ -107,7 +108,7 @@
 (general-create-definer insert-leader-key :prefix "SPC i")
 (general-create-definer info-leader-key :prefix "SPC I")
 (general-create-definer text-leader-key :prefix "SPC t")
-(general-create-definer resource-leader-key :prefix "SPC r")
+(general-create-definer resource-leader-key :prefix "SPC R")
 
 (which-key-add-key-based-replacements
   "SPC c" "Config"
@@ -313,6 +314,13 @@
  :keymaps 'org-mode-map
  "SPC v n" '(org-narrow-to-element :which-key "Narrow")
  )
+
+;; Refactor
+(refactor-leader-key :states '(normal visual)
+  "i" '(lsp-organize-imports :which-key "Organize imports")
+)
+
+(which-key-add-key-based-replacements "SPC r" "Refactor")
 
 
 (provide 'keys)

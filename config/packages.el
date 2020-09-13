@@ -146,6 +146,7 @@
   :config
   (require 'lsp-clients)
   (add-to-list 'lsp-language-id-configuration '(js-mode . "typescriptreact"))
+  (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescriptreact"))
   :hook
   (latex-mode      . lsp)
   (clojure-mode    . lsp)
@@ -317,6 +318,8 @@
   )
 (use-package magit-todos
   :hook (after-init . magit-todos-mode))
+(use-package git-annex
+  :custom (org-attach-git-annex-cutoff 10000))
 
 ;;;; Projective
 (use-package projectile :config (projectile-mode))
@@ -346,6 +349,7 @@
      (python . t)
      (shell  . t)
      (rust   . t)
+     (clojure   . t)
      )))
 (use-package org-sticky-header
   :defer t
@@ -359,7 +363,9 @@
 (use-package web-mode)
 (use-package coffee-mode :mode ("\\.coffee\\'" . coffee-mode))
 (use-package markdown-mode :mode ("\\.md\\'" . markdown-mode))
-(use-package clojure-mode)
+(use-package clojure-mode
+  :custom
+  (clojure-indent-style 'always-indent))
 (use-package haskell-mode)
 (use-package nand2tetris
   :init (setq nand2tetris-core-base-dir "~/dev/projects/nand2tetris")
@@ -379,6 +385,7 @@
 (use-package gitattributes-mode)
 (use-package gitconfig-mode)
 (use-package yaml-mode)
+(use-package elm-mode)
 
 ;;;; Mode utils
 (use-package dired-subtree
@@ -438,11 +445,16 @@
     (interactive)
     (setq-local dash-docs-docsets '("CSS" "Sass")))
 
+  (defun clojure-doc ()
+    (interactive)
+    (setq-local dash-docs-docsets '("Clojure")))
+
   :hook
   (go-mode . go-doc)
   (js-mode . js-doc)
   (python-mode . python-doc)
   (scss-mode . scss-doc)
+  (clojure-mode . clojure-doc)
   )
 (use-package webpaste
   ;; This mode allows to paste whole buffers or parts of buffers to pastebin-like services.
