@@ -148,16 +148,7 @@
   (add-to-list 'lsp-language-id-configuration '(js-mode . "typescriptreact"))
   (add-to-list 'lsp-language-id-configuration '(typescript-mode . "typescriptreact"))
   :hook
-  (latex-mode      . lsp)
-  (clojure-mode    . lsp)
-  (python-mode     . lsp)
-  (c-mode          . lsp)
-  (c++-mode        . lsp)
-  (shell-mode      . lsp)
-  (web-mode        . lsp)
-  (rust-mode       . lsp)
-  (typescript-mode . lsp)
-  (js-mode         . lsp ))
+  (prog-mode . lsp))
 (use-package lsp-ui)
 
 ;;;; Company

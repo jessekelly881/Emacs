@@ -10,6 +10,8 @@
 
 (add-hook 'prog-mode-hook  'delete-carrage-returns)
 
+(add-hook 'typescript-mode-hook  'lsp)
+
 (setq web-mode-ac-sources-alist
   '(("html" . (ac-source-emmet-html-aliases ac-source-emmet-html-snippets))
     ("css" . (ac-source-css-property ac-source-emmet-css-snippets))))
