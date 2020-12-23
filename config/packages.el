@@ -4,6 +4,7 @@
 ;; Start server on init.
 
 ;; Elisp Libraries --------------------------------------------
+(require 'ob-typescript)
 (use-package crux)
 (use-package hydra)
 (use-package general)
@@ -159,43 +160,7 @@
   (add-to-list 'company-backends 'company-files)
   (add-to-list 'company-backends 'company-yasnippet t)
   :custom
-  (company-idle-delay 0.5)
-  (company-minimum-prefix-length 3)
-  )
-(use-package company-lsp)
-(use-package company-tabnine
-  :defer 1
-  :custom
-  (company-tabnine-max-num-results 9)
-  :hook
-  (lsp-after-open . (lambda ()
-                      (setq company-tabnine-max-num-results 3)
-                      (add-to-list 'company-transformers 'company//sort-by-tabnine t)
-                      (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))))
-  (kill-emacs . company-tabnine-kill-process)
-  :config
-  ;; Enable TabNine on default
-  (add-to-list 'company-backends #'company-tabnine)
-
-  ;; Integrate company-tabnine with lsp-mode
-  (defun company//sort-by-tabnine (candidates)
-    (if (or (functionp company-backend)
-           (not (and (listp company-backend) (memq 'company-tabnine company-backend))))
-        candidates
-      (let ((candidates-table (make-hash-table :test #'equal))
-            candidates-lsp
-            candidates-tabnine)
-        (dolist (candidate candidates)
-          (if (eq (get-text-property 0 'company-backend candidate)
-                 'company-tabnine)
-              (unless (gethash candidate candidates-table)
-                (push candidate candidates-tabnine))
-            (push candidate candidates-lsp)
-            (puthash candidate t candidates-table)))
-        (setq candidates-lsp (nreverse candidates-lsp))
-        (setq candidates-tabnine (nreverse candidates-tabnine))
-        (nconc (seq-take candidates-tabnine 3)
-               (seq-take candidates-lsp 6))))))
+  (company-idle-delay 0.5))
 
 ;;;; Yasnippet
 (use-package yasnippet
@@ -338,6 +303,8 @@
    'org-babel-load-languages
    '(
      (python . t)
+     (typescript . t)
+     (js . t)
      (shell  . t)
      (rust   . t)
      (clojure   . t)

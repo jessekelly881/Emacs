@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: newtype
+# key: newtype
+# --
+/**
+  * @interface ${1:Type}
+  * @desc ${3:Dscription}
+  *
+  * @author Jesse Kelly <kellyjesse881@gmail.com>
+  */
+interface $1 extends Newtype<{
+    readonly $1: unique symbol
+}, ${2:number}> {}
+
+const $1ISO = iso<$1>()

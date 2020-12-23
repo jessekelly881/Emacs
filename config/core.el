@@ -11,6 +11,12 @@
 ;; Copyright string
 (setq my/copyright-string (concat "Copyright (C) " (format-time-string "%Y") " " user-full-name))
 
+;; Append NODE_PATH
+(setenv "NODE_PATH" (concat
+    (getenv "HOME") "/.org/js/node_modules" ":" (getenv "NODE_PATH")
+))
+
+
 ;; Set browser
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "surf")

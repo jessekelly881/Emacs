@@ -84,6 +84,8 @@
   "Y g" '(gist-region :which-key "Gist")
   "Y w" '(webpaste-paste-region :which-key "Webpaste")
   "Y s" '(yas-new-snippet :which-key "Snippet(yas)")
+
+  "x c" '(carbon-now-sh)
   )
 
 (general-def 'visual

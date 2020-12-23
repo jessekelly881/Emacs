@@ -9,4 +9,5 @@
   (("--" "src/services/api/users/index.js"))
   (("--" "modules/statistics/templates/statistics/employees_statistics.html")))
  (magit-gitignore nil)
+ (magit-merge nil)
  (magit-push nil))

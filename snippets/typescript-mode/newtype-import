@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: newtype import
+# key: newtype-import
+# --
+import { Newtype, iso } from 'newtype-ts'

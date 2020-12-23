@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: morphic
+# key: morphic
+# --
+/**
+  * ${1:Type} Morphic
+  * @desc ${4:Description}
+  *
+  * @see https://github.com/sledorze/morphic-ts
+  * @author Jesse Kelly <kellyjesse881@gmail.com>
+  */
+const $1M = summon(F =>
+  ${2:F.interface($3)}
+)
+
+type $1 = t.TypeOf<typeof $1M>
