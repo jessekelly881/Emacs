@@ -259,6 +259,7 @@
   "n" '(narrow-to-defun :which-key "Narrow to function")
 )
 
+
 (which-key-add-key-based-replacements "SPC v g" "Git")
 
 ;; Config
